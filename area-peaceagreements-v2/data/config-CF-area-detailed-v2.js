@@ -27,13 +27,13 @@
 var FIELDS = [
 		{
 			"Con":
-				  { human: "Country-Entity", areafilter: "0", type:"text", exclude:"0", areafilter: "0", type:"text", exclude:"0"},
+				  { human: "Country-Entity", areafilter: "0", type:"text", exclude:"0"},
 			"Contp":
-				  { human: "Conflict type", areafilter: "0", type:"text", exclude:"0", areafilter: "0", type:"text", exclude:"0"},
+				  { human: "Conflict type", areafilter: "0", type:"text", exclude:"0"},
 			"PP":
 				  { human: "Peace Process Number", areafilter: "0", type:"text", exclude:"0"},
  			"PPName":
-			    { human: "Peace Process Name", areafilter: "0", type:"text", exclude:"0"},
+			    	  { human: "Peace Process Name", areafilter: "0", type:"text", exclude:"0"},
 			"Reg":
 				  { human: " Region", areafilter: "0", type:"text", exclude:"0"},
 			"AgtId":
