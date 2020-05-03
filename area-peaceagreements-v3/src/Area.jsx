@@ -1,21 +1,24 @@
 // Libraries
 import React from "react";
 import { groupBy} from "lodash";
-import _ from 'lodash'
+import _ from 'lodash';
 
 // Area components
 import Groups from "./Groups";
 import FilterList from "./FilterList";
+import FilterForm from "./FilterForm";
 import { OutputFileType } from "typescript";
 
 export default class Area extends React.Component {
     constructor() {
         super();
         this.state = {
-        
+            param1 : "Reg",
+            param2 : "Reg",
+            filter : "human",
         }
     }
-
+    
     addIdPropertyToAr(ar){
         var newArWithId = ar.map((x, i) => {
             x.id = i + 1;
@@ -41,10 +44,15 @@ export default class Area extends React.Component {
         var area_y = 900;
         var colors_approach = "fix"; // fix, random, gradient
         var area_title = "PeaceAgreements.org";
-        var param1 = "Reg";
-        var param2 = "Reg";
-        var filter = "human";
+        
+        var param1 = this.state.param1;
+        var param2 = this.state.param2;
+        var filter = this.state.filter;
+        console.log("current filter :",filter);
 
+        var totalDataEntries = this.props.data.length;
+
+        console.log('total data length: ',totalDataEntries);
         // Add id to Array
         var dataWithId = this.addIdPropertyToAr(this.props.data);
 
@@ -54,7 +62,7 @@ export default class Area extends React.Component {
         try{ delete groupedByParam1[param1]; }catch(err){}
         // Sort and 
         var groupedByParam1SortedBySize = this.ObjToArSortedBySize(groupedByParam1);
-        // Sort  
+        // Sort by propety name
         var groupedByParam1SortedByName = _.sortBy( groupedByParam1SortedBySize, 'key' ); 
 
         // Calculate size group SVG
@@ -88,6 +96,7 @@ export default class Area extends React.Component {
 
         return (
             <div>
+                <FilterForm />
                 <FilterList items={groupedByParam1} keyStr={"Param1"} />
                 <FilterList items={groupedByParam2} keyStr={"Param2"} />
                 <Groups
@@ -95,7 +104,6 @@ export default class Area extends React.Component {
                 colourData={groupedByParam2}
                 param1={param1}
                 param2={param2}
-                filter={filter}
                 groupWidth={groupWidth}
                 groupHeight={groupHeight}
                 blockWidth={blockWidth}

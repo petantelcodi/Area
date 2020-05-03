@@ -1,10 +1,12 @@
 import React from "react";
+import PubSub from 'pubsub-js';
 
 export default class Block extends React.Component {
   constructor() {
     super();
     this.state = {
       active: false,
+      filter: '',
       // Color list for coloring param2
       colors: [
         "#CC5151",
@@ -52,11 +54,23 @@ export default class Block extends React.Component {
       };
     });
   };
+
+  handleNewFilter= (event, data) => {
+    console.log('new filter: '+event+' '+data);
+    this.setState({filter:data})
+  }
   // AgtId
 
   // colourData -> array for the colours
 
   //
+  componentDidMount() {
+    PubSub.subscribe("filter-submit", this.handleNewFilter);
+  }
+
+  componentWillUnmount() {
+  }
+
   render() {
     // Set color
     var color = this.state.colors[0];
@@ -64,35 +78,29 @@ export default class Block extends React.Component {
 
     // Find position block
     var index = this.props.index;
-    console.log('== index:', index,' dim_block:',this.props.dim_block );
+    //console.log('== index:', index,' dim_block:',this.props.dim_block );
     //console.group('this.props.dim_block',this.props.dim_block);
     var n = index /  this.props.dim_block;
-    console.log('n:', n );
+    //console.log('n:', n );
     var my_x = this.props.blockWidth * ( index % Math.floor(this.props.groupWidth/this.props.blockWidth));
-    console.log('n % 1',n % 1);
-    /*
-    if ( n % 1 === 0 ) {
-      my_x = 0;
-    }else{
-      my_x = my_x + this.props.blockWidth;
-    }
-    */
+    //console.log('n % 1',n % 1);
+    
     var  my_y = Math.floor(n) * this.props.blockHeight;
-    console.log('my_x :',my_x)
-    console.log('my_y :',my_y)
+    //console.log('my_x :',my_x)
+    //console.log('my_y :',my_y)
     
     // Search filter in
     var foundFilter = false;
     Object.entries(this.props.item).forEach(([key, value]) => {
       //console.log(value);
-      if(typeof value === 'string' && value.indexOf(this.props.filter)!==-1){
-        console.log('===== found the filter:',this.props.filter, 'value :',value);  
+      if(typeof value === 'string' && value.toLowerCase().indexOf(this.state.filter.toLowerCase())!==-1){
+        console.log('===== found the filter:',this.state.filter, 'value :',value);  
         foundFilter = true;
       } 
     });
     //var info = this.props.item.blockInfo;
     // Render
-    return <rect ref={'block_'+this.props.item.id} x={my_x} y={my_y} stroke="#FFFFFF" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={foundFilter?colorFilter:color} />;
+    return <rect ref={'block_'+this.props.item.id} x={my_x} y={my_y} stroke="#FFFFFF" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={foundFilter?color:colorFilter} />;
   }
 }
 
