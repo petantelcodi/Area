@@ -1,0 +1,14 @@
+NEW IN PAX V3
+
+DELET:
+
+GENDER -> GeSo
+
+ADD:
+
+"GeLgbti": 
+	  { human: "LGBTI references", areafilter: "0", type:"text", exclude:"0"},
+"GeLgbtiPos": 
+	  { human: "Positive LGBTI references", areafilter: "0", type:"text", exclude:"0"},
+"GeLgbtiNeg": 
+	  { human: "Negative LGBTI references
