@@ -73,8 +73,7 @@ export default class Block extends React.Component {
   }
 
   render() {
-    console.log('this.props.colorAr:',this.props.colorAr);
-
+    
     // Find position block
     var index = this.props.index;
     //console.log('== index:', index,' dim_block:',this.props.dim_block );
@@ -109,17 +108,24 @@ export default class Block extends React.Component {
     var param2Value = this.props.item[param2];
     //console.log('param2Value:',param2Value);
     //console.log('this.props.colourData:',this.props.colourData);
+    //console.log('this.props.colorAr:',this.props.colorAr);
 
     var color = this.state.colors[this.props.colorAr[param2Value]];
     var colorFilter =  '#CCCCCC';
    
+    var opacity = 1;
     // Makes lighter the ones not selected
     if(!foundFilter && this.props.filter!==""){
-      color = Color(color).lighten(0.5).hex();
+      //color = Color(color).alpha(0.8).lighten(0.5).hex();
+      //opacity = 0.5;
+      color = colorFilter;
     }
     
     // Render
-    return <rect ref={'block_'+this.props.groupId+'_'+this.props.item.id} x={my_x} y={my_y} stroke="#FFFFFF" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={color} onClick={this.showData} />;
+    return <g>
+      {!foundFilter && this.props.filter!==""?<circle ref={'block_circle_'+this.props.groupId+'_'+this.props.item.id} x={my_x+2} y={my_y+2} r="4"  fill="white" />:null}
+      <rect ref={'block_rect_'+this.props.groupId+'_'+this.props.item.id} x={my_x} y={my_y} stroke="#FFFFFF" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={color} onClick={this.showData} />
+      </g>;
   }
 }
 

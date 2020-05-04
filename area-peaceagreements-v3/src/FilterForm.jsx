@@ -40,7 +40,7 @@ export default class FilterForm extends React.Component {
      
         <form onSubmit={this.handleSubmit}>
           <label>
-            Filter:
+            Search:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Filter" />
