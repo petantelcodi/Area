@@ -5,12 +5,16 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "color": "^3.1.2",
     "d3": "^5.0.0",
     "lodash": "4.17.15",
     "pubsub-js": "^1.8.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-scripts": "3.0.1"
+    "react-popupbox": "^2.0.8",
+    "react-scripts": "3.0.1",
+    "react-select": "^3.1.0",
+    "react-select-reborn": "^3.2.0"
   },
   "devDependencies": {
     "typescript": "3.8.3"

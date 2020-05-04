@@ -14,9 +14,11 @@ import cat from "./data/config_filters.json";
 import cat_hierarchy from "./data/cats-hierarchy.json";
 
 export default function App() {
+  
   return (
     <div className="Area">
       <Area data={data} cat_filters={cat} cat_hierarchy={cat_hierarchy} />
     </div>
   );
+
 }

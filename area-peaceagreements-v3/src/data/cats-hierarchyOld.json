@@ -1,0 +1,427 @@
+{
+    "cat hierarchy": [
+      {
+        "Basic information": [
+          "Con",
+          "Contp",
+          "PP",
+          "PPName",
+          "Reg",
+          "AgtId",
+          "Agt",
+          "Dat",
+          "Year",
+          "Status",
+          "Lgt",
+          "N_characters",
+          "Agtp",
+          "Stage",
+          "StageSub",
+          "Part",
+          "ThrdPart",
+          "OthAgr",
+          "Loc1ISO",
+          "Loc2ISO",
+          "Loc1GWNO",
+          "Loc2GWNO",
+          "UcdpCon",
+          "UcdpAgr",
+          "PamAgr",
+          "CowWar"
+        ]
+      },
+      {
+        "GROUPS": [
+          {
+            "GCh": [
+              "GChRhet",
+              "GChAntid",
+              "GChSubs",
+              "GChOth"
+            ]
+          },
+          {
+            "GDis": [
+              "GDisRhet",
+              "GDisAntid",
+              "GDisSubs",
+              "GDisOth"
+            ]
+          },
+          {
+            "GAge": [
+              "GAgeRhet",
+              "GAgeAntid",
+              "GAgeSubs",
+              "GAgeOth"
+            ]
+          },
+          {
+            "GMig": [
+              "GMigRhet",
+              "GMigAntid",
+              "GMigSubs",
+              "GMigOth"
+            ]
+          },
+          {
+            "GRa": [
+              "GRaRhet",
+              "GRaAntid",
+              "GRaSubs",
+              "GRaOth",
+              "GRe",
+              "GReRhet",
+              "GReAntid",
+              "GReSubs",
+              "GReOth"
+            ]
+          },
+          {
+            "GInd": [
+              "GIndRhet",
+              "GIndAntid",
+              "GIndSubs",
+              "GIndOth"
+            ]
+          },
+          {
+            "GOth": [
+              "GOthRhet",
+              "GOthAntid",
+              "GOthSubs",
+              "GOthOth"
+            ]
+          },
+          {
+            "GRef": [
+              "GRefRhet",
+              "GRefSubs",
+              "GRefOth"
+            ]
+          },
+          {
+            "GSoc": [
+              "GSocRhet",
+              "GSocAntid",
+              "GSocSubs",
+              "GSocOth"
+            ]
+          }
+        ]
+      },
+      {
+        "GENDER": [
+          "GeWom",
+          {
+            "GeMe": [
+              "GeMeNu",
+              "GeMeOth"
+            ]
+          },
+          "GeSo",
+          "GeLgbti",
+          "GeLgbtiPos",
+          "GeLgbtiNeg",
+          "GeFa"
+        ]
+      },
+      {
+        "State definition": [
+          {
+            "StDef": [
+              "StGen",
+              "StCon",
+              "StSd",
+              "StRef",
+              "StSym",
+              "StInd",
+              "StUni",
+              "StBor",
+              "StXbor"
+            ]
+          }
+        ]
+      },
+      {
+        "Governance": [
+          {
+            "Pol": [
+              "PolGen",
+              "PolNewInd",
+              "PolNewTemp"
+            ]
+          },
+          "Cons",
+          "Ele",
+          "ElecComm",
+          {
+            "PolPar": [
+              "PolParTrans",
+              "PolParOth"
+            ]
+          },
+          "Civso",
+          "Tral",
+          "Pubad"
+        ]
+      },
+      {
+        "Powersharing": [
+          {
+            "Polps": [
+              "PpsSt",
+              "PpsSub",
+              "PpsEx",
+              "PpsOro",
+              "PpsOthPr",
+              "PpsVet",
+              "PpsAut",
+              "PpsInt",
+              "PpsOth"
+            ]
+          },
+          {
+            "Terps": [
+              "TpsSub",
+              "TpsLoc",
+              "TpsAut",
+              "TpsOth"
+            ]
+          },
+          {
+            "Eps": [
+              "EpsRes",
+              "EpsFis",
+              "EpsOth"
+            ]
+          },
+          {
+            "Mps": [
+              "MpsMe",
+              "MpsJt",
+              "MpsPro",
+              "MpsOth"
+            ]
+          }
+        ]
+      },
+      {
+        "Human rights and equality": [
+          "HrGen",
+          "EqGen",
+          "HrDem",
+          {
+            "Prot": [
+              "ProtCiv",
+              "ProtGrp",
+              "ProtLgl",
+              "ProtOth"
+            ]
+          },
+          {
+            "HrFra": [
+              "HrfSp",
+              "HrfBor",
+              "HrfTinc",
+              "HrfOth"
+            ]
+          },
+          {
+            "HrCp": [
+              "CprLife",
+              "CprTort",
+              "CprEq",
+              "CprSlav",
+              "CprLib",
+              "CprDet",
+              "CprFmov",
+              "CprFspe",
+              "CprFass",
+              "CprTria",
+              "CprPriv",
+              "CprVote",
+              "CprReli",
+              "CprOth"
+            ]
+          },
+          {
+            "HrSec": [
+              "SerProp",
+              "SerWork",
+              "SerHeal",
+              "SerEdu",
+              "SerStdl",
+              "SerShel",
+              "SerSs",
+              "SerCult",
+              "SerOth"
+            ]
+          },
+          "HrNi",
+          {
+            "HrNiMe": [
+              "HrNiNe",
+              "HrNiOth"
+            ]
+          },
+          {
+            "HrIi": [
+              "HrIiMon",
+              "HrIiBod",
+              "HrIiOth"
+            ]
+          },
+          "HrMob",
+          "HrDet",
+          {
+            "Med": [
+              "MedGov",
+              "MedSubs",
+              "MedLog",
+              "MedOth"
+            ]
+          },
+          {
+            "HrCit": [
+              "CitGen",
+              "CitRights",
+              "CitDef",
+              "CitOth"
+            ]
+          }
+        ]
+      },
+      {
+        "Justice Sector Reform": [
+          {
+            "JusCr": [
+              "JusCrSp",
+              "JusCrSys",
+              "JusCrPow"
+            ]
+          },
+          "JusEm",
+          "JusJu",
+          "JusPri",
+          "JusTra"
+        ]
+      },
+      {
+        "Socio-Economic Reconstruction": [
+          {
+            "Dev": [
+              "DevSoc",
+              "DevHum",
+              "DevInfra"
+            ]
+          },
+          "NEC",
+          "NatRes",
+          "IntFu",
+          "Bus",
+          {
+            "Tax": [
+              "TaxPo",
+              "TaxRef",
+              "TaxOth"
+            ]
+          },
+          {
+            "Ban": [
+              "CenBan",
+              "BanPers",
+              "BanInt",
+              "BanXb"
+            ]
+          },
+          {
+            "LaRef": [
+              "LaRefMan",
+              "LaRefRet",
+              "LaRefOth"
+            ]
+          },
+          "LaNom",
+          {
+            "LaCH": [
+              "LaCHTa",
+              "LaCHIt",
+              "LaCHPro",
+              "LaCHOth"
+            ]
+          },
+          "LaEn",
+          "Wat"
+        ]
+      },
+      {
+        "Security Sector": [
+          "SsrGua",
+          {
+            "Ce": [
+              "CeProv",
+              "CeGen"
+            ]
+          },
+          "SsrPol",
+          "SsrArm",
+          {
+            "SsrDdr": [
+              "DdrDemil",
+              "DdrProg"
+            ]
+          },
+          "SsrInt",
+          "SsrPsf",
+          "SsrFf",
+          "Cor",
+          "SsrCrOcr",
+          "SsrDrugs",
+          "Terr"
+        ]
+      },
+      {
+        "Transitional Justice": [
+          "TjGen",
+          {
+            "TjAm": [
+              "TjAmPro",
+              "TjSan",
+              "TjPower",
+              "TjAmBan"
+            ]
+          },
+          {
+            "TjCou": [
+              "TjJaNc",
+              "TjJaIc"
+            ]
+          },
+          "TjMech",
+          "TjPrire",
+          "TjVet",
+          "TjVic",
+          "TjMis",
+          {
+            "TjRep": [
+              "TjRSym",
+              "TjRMa"
+            ]
+          },
+          "TjNR"
+        ]
+      },
+      {
+        "Implementation": [
+          "ImUN",
+          "ImOth",
+          "ImRef",
+          "ImPK",
+          "ImE",
+          "ImSrc",
+          "ConRen"
+        ]
+      }
+    ]
+  }

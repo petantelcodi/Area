@@ -1,5 +1,6 @@
 import React from "react";
-import PubSub from 'pubsub-js';
+import PubSub from "pubsub-js";
+import Color from "color";
 
 export default class Block extends React.Component {
   constructor() {
@@ -55,26 +56,24 @@ export default class Block extends React.Component {
     });
   };
 
-  handleNewFilter= (event, data) => {
-    console.log('new filter: '+event+' '+data);
-    this.setState({filter:data})
-  }
-  // AgtId
 
+  // AgtId
   // colourData -> array for the colours
 
-  //
   componentDidMount() {
-    PubSub.subscribe("filter-submit", this.handleNewFilter);
+    //console.log('block mount again')
+    //this.setState({filter:this.props.filter});
   }
 
-  componentWillUnmount() {
+  showData = () =>{
+    //alert(JSON.stringify(this.props.items));
+    //console.log(JSON.stringify(this.props.items));
+    //console.log(this.props.item);
+    this.props.openPopupbox(this.props.item);
   }
 
   render() {
-    // Set color
-    var color = this.state.colors[0];
-    var colorFilter =  '#CCCCCC';
+    console.log('this.props.colorAr:',this.props.colorAr);
 
     // Find position block
     var index = this.props.index;
@@ -91,27 +90,36 @@ export default class Block extends React.Component {
     
     // Search filter in
     var foundFilter = false;
-    Object.entries(this.props.item).forEach(([key, value]) => {
-      //console.log(value);
-      if(typeof value === 'string' && value.toLowerCase().indexOf(this.state.filter.toLowerCase())!==-1){
-        console.log('===== found the filter:',this.state.filter, 'value :',value);  
-        foundFilter = true;
-      } 
-    });
-    //var info = this.props.item.blockInfo;
+    
+    if(this.props.filter!==""){
+      
+      //console.log('filter:',this.props.filter);
+
+      Object.entries(this.props.item).forEach(([key, value]) => {
+        //console.log(value);
+        if(typeof value === 'string' && value.toLowerCase().indexOf(this.props.filter.toLowerCase())!==-1){ 
+          foundFilter = true;
+          //console.log("== foundFilter :",value);
+        } 
+      });
+    }
+
+    // Set color
+    var param2 = this.props.param2;
+    var param2Value = this.props.item[param2];
+    //console.log('param2Value:',param2Value);
+    //console.log('this.props.colourData:',this.props.colourData);
+
+    var color = this.state.colors[this.props.colorAr[param2Value]];
+    var colorFilter =  '#CCCCCC';
+   
+    // Makes lighter the ones not selected
+    if(!foundFilter && this.props.filter!==""){
+      color = Color(color).lighten(0.5).hex();
+    }
+    
     // Render
-    return <rect ref={'block_'+this.props.item.id} x={my_x} y={my_y} stroke="#FFFFFF" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={foundFilter?color:colorFilter} />;
+    return <rect ref={'block_'+this.props.groupId+'_'+this.props.item.id} x={my_x} y={my_y} stroke="#FFFFFF" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={color} onClick={this.showData} />;
   }
 }
 
-
-/* 
-<div onClick={this.toggle}>
-        <div className={this.state.active ? "active" : null}>
-          {this.props.item.id}
-        </div>
-        {this.state.active && (
-          <pre>{JSON.stringify(this.props.item, null, 2)}</pre>
-        )}
-      </div>
-*/

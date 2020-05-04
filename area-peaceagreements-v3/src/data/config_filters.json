@@ -6,7 +6,7 @@
 		"exclude": "0"
 	},
 	"Contp": {
-		"human": "Conflict ",
+		"human": "Conflict",
 		"type": "text",
 		"areafilter": "0",
 		"exclude": "0"
@@ -24,7 +24,7 @@
 		"exclude": "0"
 	},
 	"Reg": {
-		"human": " Region",
+		"human": "Region",
 		"areafilter": "0",
 		"type": "text",
 		"exclude": "0"
@@ -72,7 +72,7 @@
 		"exclude": "0"
 	},
 	"Agtp": {
-		"human": "Agreement-conflict ",
+		"human": "Agreement-conflict",
 		"areafilter": "0",
 		"type": "text",
 		"exclude": "0"
@@ -144,13 +144,13 @@
 		"exclude": "0"
 	},
 	"PamAgr": {
-		"human": "PAM agreement code ",
+		"human": "PAM agreement code",
 		"areafilter": "0",
 		"type": "text",
 		"exclude": "0"
 	},
 	"CowWar": {
-		"human": "CoW War Number ",
+		"human": "CoW War Number",
 		"areafilter": "0",
 		"type": "text",
 		"exclude": "0"
