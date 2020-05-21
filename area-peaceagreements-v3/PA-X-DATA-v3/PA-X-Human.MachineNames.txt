@@ -1,0 +1,532 @@
+PA-X Paràmeters: 
+[Human Name: machine name]
+
+Migrant workers: GMig
+
+International finance: BanInt
+
+Other groups: GOth
+
+Regional or international human rights institutions: HrIi
+
+Other: GRaOth
+
+Substantive: GRefSubs
+
+Secondary location ISO code: Loc2ISO
+
+Referendum: StRef
+
+Prisons and detention: JusPri
+
+Other Proportionality.: PpsOthPr
+
+Banks: Ban
+
+Humanitarian assistance: DevHum
+
+Other: LaRefOth
+
+Freedom of association: CprFass
+
+Protection of civilians: ProtCiv
+
+Other: GChOth
+
+Media Roles: MedSubs
+
+Delimitation of powers in Criminal Justice System: JusCrPow
+
+LGBTI references Pos: GeLgbtiPos
+
+Electoral Commission: ElecComm
+
+Source: ImSrc
+
+Citizenship other: CitOth
+
+Citizenship: HrCit
+
+Date Signed: Dat
+
+UN Signatory: ImUN
+
+Substantive: GMigSubs
+
+Other International Signatory: ImOth
+
+Work: SerWork
+
+Other: GDisOth
+
+Criminal Justice System Reform: JusCrSys
+
+Prisoner release: TjPrire
+
+Media Other: MedOth
+
+Accession-unification: StUni
+
+Segmental autonomy.: PpsAut
+
+Power to amnesty: TjPower
+
+Criminal Justice and Emergency law: JusCr
+
+International Mission-Force-Similar: ImPK
+
+Reparations: TjRep
+
+Other: TpsOth
+
+Drugs: SsrDrugs
+
+Secondary location GWNO code : Loc2GWNO
+
+DDR Programme: DdrProg
+
+Central bank: CenBan
+
+Other: GMigOth
+
+Judiciary and courts: JusJu
+
+Rhetorical: GRaRhet
+
+Intelligence service: SsrInt
+
+Cultural heritage: LaCH
+
+LGBTI references Neg: GeLgbtiNeg
+
+Nature of State - general: StGen
+
+Environment: LaEn
+
+Anti-discrimination: GIndAntid
+
+Other: GSocOth
+
+Cultural rights: SerCult
+
+Shelter-housing: SerShel
+
+Taxation: Tax
+
+Incorporation of human rights treaties, humanitarian law, or international criminal law treaties (Treaty Incorporation: HrfTinc
+
+Security Sector (General): SsrGua
+
+Humane treatment in detention: CprDet
+
+Relief of other Sanctions: TjSan
+
+Other: CprOth
+
+Adequate standard of living: SerStdl
+
+Pastoralist-nomadism rights: LaNom
+
+Substantive: GRaSubs
+
+Other form of political powersharing: PpsOth
+
+Constitutional renewal-affirmation: ConRen
+
+CoW War Number : CowWar
+
+Rhetorical: GChRhet
+
+DDR: SsrDdr
+
+Public Administration (Civil Service): Pubad
+
+Life: CprLife
+
+Cultural Heritage: Intangible: LaCHIt
+
+Agreement length (characters): N_characters
+
+General references to ceasefires: CeGen
+
+Region: Reg
+
+Amnesty-pardon: TjAm
+
+Media and communication: Med
+
+Peace Process Number: PP
+
+mobility-access: HrMob
+
+Other: GOthOth
+
+Peace Process Name: PPName
+
+Form of veto or communal majority.: PpsVet
+
+State symbols: StSym
+
+State level powersharing: PpsSt
+
+Refugees- displaced persons: GRef
+
+Parties: Part
+
+Body tasked.: HrIiBod
+
+Property return, restitution, and dispute mechanisms.: LaRefRet
+
+Cross-border provision: StXbor
+
+Torture: CprTort
+
+Cross-border financial flows: BanXb
+
+Agreement stage: Stage
+
+Substantive: GReSubs
+
+Women, girls and gender: GeWom
+
+State definition: StDef
+
+Democracy: HrDem
+
+Fair trial: CprTria
+
+Economic powersharing: Eps
+
+Liberty and security of person: CprLib
+
+Demilitarisation: DdrDemil
+
+Conflict type: Contp
+
+Other protection measures: ProtOth
+
+Agreement Name: Agt
+
+Crime-Organised crime: SsrCrOcr
+
+National Courts: TjJaNc
+
+Detention Procedures: HrDet
+
+State configuration: StCon
+
+Constitutional reform-making: Cons
+
+Anti-discrimination: GDisAntid
+
+Other: SerOth
+
+Amnesty prohibition: TjAmBan
+
+Children-Youth: GCh
+
+Rhetorical: GOthRhet
+
+Anti-discrimination: GReAntid
+
+Anti-discrimination: GRaAntid
+
+Fiscal federalism: EpsFis
+
+Religious groups: GRe
+
+Men and Boys: GeMe
+
+Racial-ethnic-national groups: GRa
+
+Disabled persons: GDis
+
+Other: GIndOth
+
+rebels transitioning to political parties: PolParTrans
+
+Agreement-conflict type.: Agtp
+
+temporary institutional arrangement: PolNewTemp
+
+Rhetorical: GIndRhet
+
+Socio-economic rights: HrSec
+
+Reform to specific laws: JusCrSp
+
+Freedom of speech: CprFspe
+
+Other: GAgeOth
+
+Protection measures: Prot
+
+New or fundamentally revised NHRI: HrNiNe
+
+National economic plan: NEC
+
+Property: SerProp
+
+Elections: Ele
+
+Cultural Heritage Other: LaCHOth
+
+Vetting: TjVet
+
+Governance of Media.: MedGov
+
+Water or riparian (river) rights-access: Wat
+
+Thought, opinion, conscience and religion: CprReli
+
+Proportionality: MpsPro
+
+Agreement Definition and Status: Status
+
+LGBTI references: GeLgbti
+
+symbolic reparations: TjRSym
+
+Enforcement Mechanism: ImE
+
+Rhetorical: GMigRhet
+
+Slavery: CprSlav
+
+Territorial powersharing: Terps
+
+Business: Bus
+
+subcoding of stage: StageSub
+
+Infrastructure and reconstruction: DevInfra
+
+Terrorism: Terr
+
+Armed Forces: SsrArm
+
+Other instances of political party reform-regulation.: PolParOth
+
+Rhetorical: GSocRhet
+
+Vote and take part: CprVote
+
+Mechanism: TjMech
+
+Transitional Justice General: TjGen
+
+Proportionality in the legislature.: PpsOro
+
+Amnesty-pardon proper: TjAmPro
+
+Gender neutrality wording: GeMeNu
+
+Self determination: StSd
+
+Power to Tax: TaxPo
+
+Agreement length (pages): Lgt
+
+Military powersharing: Mps
+
+Anti-discrimination: GMigAntid
+
+Health: SerHeal
+
+Anti-discrimination: GOthAntid
+
+Land reform, transfer, and management: LaRefMan
+
+Sub-state level powersharing: PpsSub
+
+Substantive: GIndSubs
+
+Reform of Taxation: TaxRef
+
+Joint Command Structure: MpsJt
+
+Agreement ID: AgtId
+
+Development or socio-economic reconstruction: Dev
+
+Independence-secession: StInd
+
+Primary location GWNO code : Loc1GWNO
+
+Anti-discrimination: GSocAntid
+
+Sharing of resources: EpsRes
+
+Protection of groups: ProtGrp
+
+Rhetorical: GAgeRhet
+
+Victims: TjVic
+
+Rhetorical: GRefRhet
+
+Equality: EqGen
+
+Equality: CprEq
+
+International funds: IntFu
+
+Third Parties: ThrdPart
+
+General References to Political institutions: PolGen
+
+Isolated rights: HrfSp
+
+Substantive: GSocSubs
+
+Bill of Rights.: HrfBor
+
+Development provisions : DevSoc
+
+Human Rights Framework: HrFra
+
+Rhetorical: GDisRhet
+
+Merger of forces: MpsMe
+
+Ceasefire: Ce
+
+Privacy and family life: CprPriv
+
+Reconciliation: TjNR
+
+Natural resources: NatRes
+
+Personal or commercial banking: BanPers
+
+Other: GRefOth
+
+Border delimitation: StBor
+
+Other: TaxOth
+
+Civil Society: Civso
+
+Substantive: GOthSubs
+
+Referendum for agreement: ImRef
+
+State of Emergency Provisions: JusEm
+
+Social security: SerSs
+
+Federal or similarly sub-divided: TpsSub
+
+Cultural Heritage, Promotion of values: LaCHPro
+
+Civil and political rights: HrCp
+
+Substantive: GAgeSubs
+
+Anti-discrimination: GChAntid
+
+Human Rights- Rule of Law: HrGen
+
+Citizens, specific rights: CitRights
+
+Other NHRI: HrNiOth
+
+Primary location ISO code : Loc1ISO
+
+Indigenous people: GInd
+
+Social Class: GSoc
+
+Media Logistics: MedLog
+
+International Courts: TjJaIc
+
+Other: GReOth
+
+PAM agreement code : PamAgr
+
+Political Powersharing: Polps
+
+Education: SerEdu
+
+Withdrawal of foreign forces: SsrFf
+
+Protection of rights and legal frameworks: ProtLgl
+
+International involvement.: PpsInt
+
+Other Agreement: OthAgr
+
+Citizenship delimitation: CitDef
+
+Rebel-opposition-Para-statal forces: SsrPsf
+
+Land reform-rights: LaRef
+
+UCDP agreement code: UcdpAgr
+
+UCDP conflict code : UcdpCon
+
+Rhetorical: GReRhet
+
+Other: EpsOth
+
+Substantive: GDisSubs
+
+Corruption: Cor
+
+Traditional-Religious Leaders: Tral
+
+Political parties reform: PolPar
+
+Other.: HrfOth
+
+Mentions of NHRI: HrNiMe
+
+other: GeMeOth
+
+Citizen, general.: CitGen
+
+Local-Municipal: TpsLoc
+
+Autonomy: TpsAut
+
+New political institutions: PolNewInd
+
+Country-Entity: ﻿Con
+
+Police: SsrPol
+
+Freedom of movement: CprFmov
+
+Traditional- Religious Laws: JusTra
+
+Other regional or international human rights institutions: HrIiOth
+
+Cultural Heritage: Tangible: LaCHTa
+
+Substantive: GChSubs
+
+Executive coalition.: PpsEx
+
+Family: GeFa
+
+NHRI (National Human Rights Institution): HrNi
+
+Elderly-Age: GAge
+
+Anti-discrimination: GAgeAntid
+
+Political Institutions: Pol
+
+Courts: TjCou
+
+Ceasefire provisions: CeProv
+
+Other: MpsOth
+
+Missing: TjMis
+
+Material reparations (includes compensation): TjRMa
+
+Monitoring calls.: HrIiMon

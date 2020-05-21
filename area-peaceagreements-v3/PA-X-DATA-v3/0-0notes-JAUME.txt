@@ -1,0 +1,263 @@
+
+ToDo:
+
+FET> Actualitzar la DATA csv2 json de v3
+FET> Cercar React dropdown hrml5
+> Enviar email a Christine and Co explicant com va la cosa.
+> DATA of the DATA's STructures: 
+    -> Initially working in a Google sheet:
+       https://docs.google.com/spreadsheets/d/1_aNRIoKe2hSIf_G-Yzb6pplwbyjo_HE3-99ARxMnUf0/edit#gid=466834714
+       > I'm not including Parameters witha distinct number over 29
+         EXception: only ofr CeadseFire:
+            StageSub(21 discinct values) = [PreMix	MultIss	ExtSub	Prin	ImpMod	Proc	Iss	ImpOth		FrAg	FrparOth	Ceas	Rel	Repre	Conf	PreOth	Reimp	ExtPar	FrCons	CeaMix	Resub	Reoth]   
+         Check file: pax-disticnt-values.csv
+Continue in a Jupyter.notebook: pax-data-esctructure
+
+
+---------------
+NOT
+Daniel D3:ç
+ > Fer Sankey Verttical (?)
+ > Fer xollapsable cada nivell via clic a la pastilla
+ > Veure si hi ha altres llinies de link més "artístiques"
+ > Afegir links URL a cada paraula
+ > Etiquetes sempre a la drta de les pasilles
+ > Donar un padding a cada pastilla per a poder fer les etiquetes (font-size) més grans sense overlapping
+ > 
+-------------------------
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Prepare the data by Category and prepare examples for some of the next:
+
+
+
+DELIVER SEVERAL DIAGRAMS:
+1) Alluvial
+OK -> Just the diagram
+   -> addons to make it browsable:
+OK      > Add links to each node with <text id="">
+        > fisheye (??) like https://observablehq.com/@pstuffa/cartesian-fisheye-distortion
+
+
+2- Dendrogram + Grouped Horizontal Bar Chart
+https://bl.ocks.org/vpletzke/9607d012e725638343ee01a8e8fa6310
+OK _ with 3 categories, just for testing -> http://localhost:8000/dedogram-barchart.html
+
+
+3- Sunburst Plot navegable 
+HERE A LOT MORE EXAMPLES -> https://observablehq.com/@cbuie/expose-of-graph-visualizations1
+And
+Zoomable Sunburst
+https://observablehq.com/@d3/zoomable-sunburst
+
+4-d3-hypertree ImageNet Class Hierarchy
+https://observablehq.com/d/0ae10b10308ced78
+data es  carrega per URL json
+
+ 5- Radial Tidy Tree -> Not showing proportions, just hierarchy
+https://observablehq.com/@d3/radial-tidy-tree
+
+6- Hierarchical Bar Chart -> ineresting but poor... can I add something sexy to it??
+https://observablehq.com/@d3/hierarchical-bar-chart
+
+7- Where’s that $2 trillion going?
+https://observablehq.com/@mbostock/wheres-that-2-trillion-going
+
+8- d3.v5 Org Chart -> just hierarchy BUT collabsable and hackable to show sizes , I guess (?)
+https://observablehq.com/@bumbeishvili/d3-v5-organization-chart
+
+!!!!
+9- Geological Time Scale -> Hierarchycal, navigable and showing proportions (!)
+https://observablehq.com/@julesblm/geological-timescale
+
+10. Navigable Nested Tree -> Hierarchycal, navigable
+https://observablehq.com/@git-ashish/navigable-nested-tree
+
+
+
+!!!!!!!!!!!!!!!!!!!
+
+MILLOR PYTHON 
+-> per a cada Parametre trobar Distinct (Ja fet al Area Overview!) i contar el numero de vegades d ecada valor.
+-> O posar el disctinc + num de cada valor al fitxer CONFIG (precalculat)
+
+!!!!!!!!!!!!!!!!!!!
+
+    -> PENSAR SOLUCIONS ARTÍSTIQUES
+       Preguntar a Daniel Alcaide
+       > Afegir enllaços a recerca de P-X oel valor
+       > Posar noms Humans i escyrçar els massa llargs
+       > fisheye (??) like https://observablehq.com/@pstuffa/cartesian-fisheye-distortion
+       > 
+       > 
+
+---------------------------
+
+GENERAL:
+- URL amb les variables (param1, param1 , filtre) -> MAR
+
+ToDo Per a Area (Mar) 
+https://board.net/p/paxarea
+
+https://docs.google.com/spreadsheets/d/1EEInuOxZuouDcV67cqB3YQ_KLysxJtvPAEp8dBx2mHw/edit?ts=5ead9923#gid=1864652946
+
+
+- Afegir el tema de la variable Max_distinct: O afegirlo  al runtime o córrer un script que genera el numero disctinc per a cada parametre i es posa com un argument més al fitxer de configuracio d'Area --> JAUME afegir argument distinc l fitxer config (config, mirar de tenir)
+
+DONE--> bew area config file generated in github ofr REACT 
+area-peaceagreements-v3/PA-X-DATA-v3/config-area-detailed-v3.json 
+
+- Canviar el nom del fitxer de configuració a un únic. Abans n'hi havia un per CF i un per PA que son iiguals. L'actual és a PA-X-DATA-v3/config-area-detailed-v3.json --> JAUME pujar els data definitius a v3/scr/data CF.jsn i PA.json
+
+- Pot ser interessant les variables de config que tinc jo per al Títol i la Descripció d'Area. I decidir un lloc per posar-les (a dalt)
+
+4 BOTONS a portada:
+--> PA-Simple, PA-detailed, CF-Simple, CF-detailed -> MAR pensa com ho setegem al Config!
+
+----------
+DROPDOWNS
+- Crec que pot quedar millor posar-los a dreta (param1) i esquerre (param2) en comptes d'un a sobre l'altre 
+- Crec que aquest està prou bé i amb un dropdown es poden seleccionar els dos parametres (Callimitar-ho a dos...) https://dowjones.github.io/react-dropdown-tree-select/#/story/with-material-design-styles  -> CHECK si l
+
+----------
+DISSENY COLORS
+- alguna idea més per a donar un toc més dramàti? (com diu la Christine)
+- Revisar el llistat de colors actuals per a param2
+
+----------
+PARAM2 COLORS:
+- Quan selecciones el param2 cal  agrupar els Blocks per color , i deins de cada color ccom estava, per data. (fer un doble sort date y group color)
+- Als valors de param2 que apareixen en seleccionar-lo, cal afegir els colors a la llegenda.
+
+----------
+Block popup
+- Block popup amb la info -> cal: No mostrar els paraletres amb valor 0. Cal Ordenar amb la jerarquia (?) la resta de parametres a i valors amb un format presentació HRNL. El popup pot ocupar quasi l'¡amplada d'Area.
+Valor que tenen 0 no es mostren
+
+----------
+FILTRE:
+- Afegir els número de resultats del filtre.
+- Afegir els número de Blocs al costat de cada nom de Group (Com ho veus això?
+- Els colors del filtre: filtrats(no filtrats. Potser posar una marca (tipus creueta) i deixar els colors del Param2 com estaven. (svg marcar)
+
+
+
+#####################################
+
+DELIVERIES Googñe document:
+https://docs.google.com/document/d/1EhmB2t9qrABtbvdQvTyJTF1cP7BmnKy2OuGaXYch5xk/edit#heading=h.vnl6a05am45q
+
+#####################################
+TASK 3 Alluvial
+
+- Looking for a better alluvial or Sankey:
+Check:
+!!!! OBSERVABLE D3js!
+>  https://observablehq.com/d/d6be7c0f38dee096
+
+OPTIONS:
+> Barrs + dropdown https://patterns.boston.gov/components/detail/chart--barchartselect.html
+                   https://patterns.boston.gov/components/detail/chart--groupedbarchartselect.html
+
+
+
+
+
+#####################################
+
+TASK 1 and 2
+
+AREA DEVELOPMENT with MAR
+---> https://codesandbox.io/s/nice-poitras-133yp?file=/src/App.json
+
+---------
+
+-> Code Process
+1--
+    > Read the RAWGraph email about v2
+    > Repeat the transformation CSVs from PA site TO Area JSON
+        >> version 1 is in: ~/Dropbox/0-CODES-Project/CODE-Area/area-peaceagreements-v1/data/PA-Data
+
+DATA PROCESS:
+
+1) Get the data in CSV including headers
+    There are 3 flavors of the data: 2 strait from PAX and 1  that I proposed:
+    A) SIMPLE -> is the Cospus format witout the "Agreement text" column- That is 11 columns 
+        [AgreementId, Name, Region, Country, "Peace Process", "Peace Process Name", Stage, "Signed Date", "Agreement/Conflict Level", "Conflict Nature", "Agreement Status"]
+       DONE as: 
+                1-Jaume-1-pax_corpusSIMPLE_368_agreements_15-03-20.csv
+                4-Jaume-2-pax_corpusSIMPLE_325_agreements_16-03-20.csv
+
+    B) DATA -> is the "data" format that comes strait from the PA-X export search results:
+                1-Jaume-1-pax_data_368_agreements_15-03-20.csv
+                4-Jaume-2-pax_data_325_agreements_16-03-20.csv
+
+2) Concatenate the 2 CSV in one inc headers
+        # Concatenate two CSV files in one: sed 1d 1-Jaume-1-pax_corpus_368_agreements_15-03-20.csv 4-Jaume-2-pax_corpus_325_agreements_16-03-20.csv  > 5-693-CF-Data.csv
+
+
+3) Convert to json -> that the propierty names are ok in ths json files
+        > CSV -> export adding a first columns with index namber
+    In the JSON
+    > (vim) :%s/}, {/},\r{/g 
+    Remplacements in the final JS:
+        >  "Agreement/Conflict Level" ->  "Agreement_Conflict_Level"
+        > Tranasform  , "Signed Date": "(\d\d\d\d)- -> ."rem_year"; \1 , "Signed Date": "\1-
+        > ;any more changes and data-debugging.
+
+4) convert to JS -> Try it in Area.
+
+DONE, It works with 693 CF agreements
+
+
+    > Check CF-Area (data))
+
+2--
+    > Colors & fonts: Add CSS from PA site to local Area-CF site and arrange possible CSS interferences.
+
+3--
+    > When done -> upload it to my server
+
+#####################################
+
+FINAL DATA is:
+
+Simple metadata:
+1-Jaume-1-pax_data_368_agreements_15-03-20.csv
++
+4-Jaume-2-pax_data_325_agreements_16-03-20.csv
+
+And Detailled metadata (CORPUS):
+1-Jaume-1-pax_corpus_368_agreements_15-03-20.csv
++
+4-Jaume-2-pax_corpus_325_agreements_16-03-20.csv
+
+
+#####################################
+
+-> DATA CF: initial list
+
+According to Christine, the list may incllude:
+1) 375 ceasefire documents 
+and  
+2) approximately 465 additional documents
+
+
+What I tried;
+1) PAX message: "found 368 agreements which match your criteria: with stage Ceasefire/related."
+    fike saved: 
+        > pax_data_368_agreements_15-03-20.csv
+        > pax_corpus_368_agreements_15-03-20-csv
+
+2) For the "additional documents" I'm not sure wich filters to set. I tried
+"We found 425 agreements which match your criteria: where the agreement document contains text Ceasefire", but obviously the Agreements present in (1) are also included in these result.
+
+
+- CHristine's filters:
+Plus: going to ‘advanced search - choosing ALL the other types of agreements and NOT ceasefires (you need to add each section ‘all sub-stages’ one at a time omitting ‘ceasefires’ category in the ‘stages’ filter), and combining this with a search for ‘ceasefires’ as a category and ‘ceasefire provisions’ as a sub category (so NOT ceasefire general).
+
+- The link with CHristine's filters is:
+https://www.peaceagreements.org/searchadv?SearchForm%5Bname%5D=&SearchForm%5Bdate_after%5D=&SearchForm%5Bdate_before%5D=&SearchForm%5Bcategory_addressed%5D%5B%5D=76&SearchForm%5Bsubcategory_addressed%5D%5B%5D=176&SearchForm%5Bcategory_mode%5D=any&SearchForm%5Bagreement_text%5D=&SearchForm%5Bagreement_stage_sub%5D%5B%5D=Pre-negotiation%2Fprocess&SearchForm%5Bagreement_stage_sub%5D%5B%5D=Framework%2Fsubstantive+-+partial&SearchForm%5Bagreement_stage_sub%5D%5B%5D=Framework%2Fsubstantive+-+comprehensive&SearchForm%5Bagreement_stage_sub%5D%5B%5D=Implementation%2Frenegotiation&SearchForm%5Bagreement_stage_sub%5D%5B%5D=Renewal&SearchForm%5Bagreement_stage_sub%5D%5B%5D=Other&SearchForm%5Bversion%5D=&s=Search+Database
+
+
+

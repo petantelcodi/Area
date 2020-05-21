@@ -1,0 +1,621 @@
+source,target,value
+Basic information,Contp,10
+Contp,Contp Government/territory,835
+Contp,Contp Government,653
+Contp,Contp Territory,108
+Contp,Contp Inter-group,235
+Contp,Contp Other,1
+Basic information,Reg,10
+Reg,Reg Europe and Eurasia,410
+Reg Cross-regional,Middle East and North Africa,0
+Reg,Reg Africa (excl MENA),554
+Reg,Reg Asia and Pacific,377
+Reg,Reg Americas,195
+Basic information,Status,10
+Status,Status Multiparty signed/agreed,1691
+Status,Status Unilateral document,124
+Status,Status Status unclear,10
+Status,Status Agreement with subsequent status,7
+Basic information,Agtp,10
+Agtp,Agtp Intra,1273
+Agtp,Agtp InterIntra,236
+Agtp,Agtp Inter,72
+Agtp,Agtp IntraLocal,251
+Basic information,Stage,10
+Stage,Stage Pre,510
+Stage,Stage SubPar,457
+Stage,Stage Imp,331
+Stage,Stage SubComp,110
+Stage Cea,Ren,0
+Stage,Stage Oth,1
+Basic information,StageSub,10
+StageSub,StageSub PreMix,88
+StageSub,StageSub MultIss,250
+StageSub,StageSub ExtSub,107
+StageSub,StageSub Prin,114
+StageSub,StageSub ImpMod,188
+StageSub,StageSub Proc,168
+StageSub,StageSub Iss,191
+StageSub,StageSub ImpOthFrAg,0
+StageSub,StageSub FrparOth,13
+StageSub,StageSub Ceas,210
+StageSub,StageSub Rel,128
+StageSub,StageSub Repre,Conf,0
+StageSub,StageSub PreOth,45
+StageSub,StageSub Reimp,15
+StageSub,StageSub ExtPar,FrCons,0
+StageSub,StageSub CeaMix,43
+StageSub Resub,Reoth,0
+Groups,GCh,10
+GCh,GCh 2,110
+GCh,GCh 1,121
+GCh,GCh 3,79
+GCh,GChRhet,10
+GChRhet,GChRhet 1,150
+GCh,GChAntid,10
+GChAntid,GChAntid 1,6
+GCh,GChSubs,10
+GChSubs,GChSubs 1,192
+GCh,GChOth,10
+GChOth,GChOth 1,20
+Groups,GDis,10
+GDis,GDis 2,56
+GDis,GDis 3,39
+GDis,GDis 1,23
+GDis,GDisRhet,10
+GDisRhet,GDisRhet 1,38
+GDis,GDisAntid,10
+GDisAntid,GDisAntid 1,18
+GDis,GDisSubs,10
+GDisSubs,GDisSubs 1,88
+GDis,GDisOth,10
+GDisOth,GDisOth 1,5
+Groups,GAge,10
+GAge,GAge 3,24
+GAge,GAge 1,25
+GAge,GAge 2,35
+GAge,GAgeRhet,10
+GAgeRhet,GAgeRhet 1,33
+GAge,GAgeAntid,10
+GAgeAntid,GAgeAntid 1,14
+GAge,GAgeSubs,10
+GAgeSubs,GAgeSubs 1,54
+GAge,GAgeOth,10
+Groups,GMig,10
+GMig,GMig 3,6
+GMig,GMig 2,13
+GMig,GMig 1,5
+GMig,GMigRhet,10
+GMigRhet,GMigRhet 1,5
+GMig,GMigAntid,10
+GMigAntid,GMigAntid 1,1
+GMig,GMigSubs,10
+GMigSubs,GMigSubs 1,18
+GMig,GMigOth,10
+Groups,GRa,10
+GRa,GRa 1,110
+GRa,GRa 3,97
+GRa,GRa 2,148
+GRa,GRaRhet,10
+GRaRhet,GRaRhet 1,193
+GRa,GRaAntid,10
+GRaAntid,GRaAntid 1,102
+GRa,GRaSubs,10
+GRaSubs,GRaSubs 1,188
+GRa,GRaOth,10
+GRaOth,GRaOth 1,10
+GRa,GRe,10
+GRe,GRe 2,107
+GRe,GRe 1,62
+GRe,GRe 3,65
+GRa,GReRhet,10
+GReRhet,GReRhet 1,97
+GRa,GReAntid,10
+GReAntid,GReAntid 1,89
+GRa,GReSubs,10
+GReSubs,GReSubs 1,128
+GRa,GReOth,10
+GReOth,GReOth 1,12
+Groups,GInd,10
+GInd,GInd 3,41
+GInd,GInd 1,34
+GInd,GInd 2,41
+GInd,GIndRhet,10
+GIndRhet,GIndRhet 1,56
+GInd,GIndAntid,10
+GIndAntid,GIndAntid 1,6
+GInd,GIndSubs,10
+GIndSubs,GIndSubs 1,80
+GInd,GIndOth,10
+GIndOth,GIndOth 1,3
+Groups,GOth,10
+GOth,GOth 2,27
+GOth,GOth 3,15
+GOth,GOth 1,8
+GOth,GOthRhet,10
+GOthRhet,GOthRhet 1,13
+GOth,GOthAntid,10
+GOthAntid,GOthAntid 1,25
+GOth,GOthSubs,10
+GOthSubs,GOthSubs 1,23
+GOth,GOthOth,10
+GOthOth,GOthOth 1,1
+Groups,GRef,10
+GRef,GRef 2,106
+GRef,GRef 1,262
+GRef,GRef 3,108
+GRef,GRefRhet,10
+GRefRhet,GRefRhet 1,217
+GRef,GRefSubs,10
+GRefSubs,GRefSubs 1,290
+GRef,GRefOth,10
+GRefOth,GRefOth 1,7
+Groups,GSoc,10
+GSoc,GSoc 2,44
+GSoc,GSoc 1,18
+GSoc,GSoc 3,14
+GSoc,GSocRhet,10
+GSocRhet,GSocRhet 1,33
+GSoc,GSocAntid,10
+GSocAntid,GSocAntid 1,35
+GSoc,GSocSubs,10
+GSocSubs,GSocSubs 1,31
+GSoc,GSocOth,10
+GSocOth,GSocOth 1,2
+Gender,GeWom,10
+GeWom,GeWom 1,363
+Gender,GeMe,10
+GeMe,GeMe 1,95
+GeMe,GeMeNu,10
+GeMeNu,GeMeNu 1,83
+GeMe,GeMeOth,10
+GeMeOth,GeMeOth 1,11
+Gender,GeLgbti,10
+GeLgbti,GeLgbti 1,11
+GeLgbti,GeLgbtiPos,10
+GeLgbtiPos,GeLgbtiPos 1,8
+GeLgbti,GeLgbtiNeg,10
+GeLgbtiNeg,GeLgbtiNeg 1,3
+Gender,GeFa,10
+GeFa,GeFa 1,192
+State definition,StGen,10
+StGen,StGen 1,389
+State definition,StCon,10
+StCon,StCon 1,183
+State definition,StSd,10
+StSd,StSd 1,80
+State definition,StRef,10
+StRef,StRef 1,93
+State definition,StSym,10
+StSym,StSym 1,71
+State definition,StInd,10
+StInd,StInd 1,59
+State definition,StUni,10
+StUni,StUni 1,11
+State definition,StBor,10
+StBor,StBor 1,115
+State definition,StXbor,10
+StXbor,StXbor 1,136
+Governance,Pol,10
+Pol,Pol 1,200
+Pol,Pol 2,116
+Pol,Pol 3,84
+Pol,PolGen,10
+PolGen,PolGen 1,240
+Pol,PolNewInd,10
+PolNewInd,PolNewInd 1,79
+Pol,PolNewTemp,10
+PolNewTemp,PolNewTemp 1,155
+Governance,Cons,10
+Cons,Cons 1,85
+Cons,Cons 3,117
+Cons,Cons 2,73
+Governance,Ele,10
+Ele,Ele 1,200
+Ele,Ele 2,96
+Ele,Ele 3,48
+Governance,ElecComm,10
+ElecComm,ElecComm 1,61
+ElecComm,ElecComm 2,47
+ElecComm,ElecComm 3,22
+ElecComm,PolPar,10
+PolPar,PolPar 2,32
+PolPar,PolPar 1,80
+PolPar,PolPar 3,19
+PolPar,PolParTrans,10
+PolParTrans,PolParTrans 1,54
+PolPar,PolParOth,10
+PolParOth,PolParOth 1,86
+Governance,Civso,10
+Civso,Civso 1,674
+Governance,Tral,10
+Tral,Tral 1,223
+Governance,Pubad,10
+Pubad,Pubad 2,27
+Pubad,Pubad 1,169
+Pubad,Pubad 3,20
+Powersharing,Polps,10
+Polps,Polps 3,114
+Polps,Polps 1,132
+Polps,Polps 2,69
+Polps,PpsSt,10
+PpsSt,PpsSt 1,235
+Polps,PpsSub,10
+PpsSub,PpsSub 1,107
+Polps,PpsEx,10
+PpsEx,PpsEx 1,149
+Polps,PpsOro,10
+PpsOro,PpsOro 1,112
+Polps,PpsOthPr,10
+PpsOthPr,PpsOthPr 1,81
+Polps,PpsVet,10
+PpsVet,PpsVet 1,50
+Polps,PpsAut,10
+PpsAut,PpsAut 1,15
+Polps,PpsInt,10
+PpsInt,PpsInt 1,34
+Polps,PpsOth,10
+PpsOth,PpsOth 1,64
+Powersharing,Terps,10
+Terps,Terps 3,108
+Terps,Terps 1,83
+Terps,Terps 2,38
+Terps,TpsSub,10
+TpsSub,TpsSub 1,88
+Terps,TpsLoc,10
+TpsLoc,TpsLoc 1,80
+Terps,TpsAut,10
+TpsAut,TpsAut 1,89
+Terps,TpsOth,10
+TpsOth,TpsOth 1,71
+Powersharing,Eps,10
+Eps,Eps 2,20
+Eps,Eps 3,50
+Eps,Eps 1,54
+Eps,EpsRes,10
+EpsRes,EpsRes 1,106
+Eps,EpsFis,10
+EpsFis,EpsFis 1,26
+Eps,EpsOth,10
+EpsOth,EpsOth 1,3
+Powersharing,Mps,10
+Mps,Mps 2,61
+Mps,Mps 3,83
+Mps,Mps 1,70
+Mps,MpsMe,10
+MpsMe,MpsMe 1,121
+Mps,MpsJt,10
+MpsJt,MpsJt 1,84
+Mps,MpsPro,10
+MpsPro,MpsPro 1,102
+Mps,MpsOth,10
+MpsOth,MpsOth 1,7
+Human rights and equality,HrGen,10
+HrGen,HrGen 1,548
+Human rights and equality,EqGen,10
+EqGen,EqGen 1,177
+EqGen,EqGen 2,34
+EqGen,EqGen 3,60
+Human rights and equality,HrDem,10
+HrDem,HrDem 2,77
+HrDem,HrDem 1,242
+HrDem,HrDem 3,62
+HrDem,Prot,10
+Prot,Prot 1,247
+Prot,Prot 2,37
+Prot,Prot 3,39
+Prot,ProtCiv,10
+ProtCiv,ProtCiv 1,96
+Prot,ProtGrp,10
+ProtGrp,ProtGrp 1,131
+Prot,ProtLgl,10
+ProtLgl,ProtLgl 1,101
+Prot,ProtOth,10
+ProtOth,ProtOth 1,162
+HrDem,HrFra,10
+HrFra,HrFra 3,127
+HrFra,HrFra 1,163
+HrFra,HrFra 2,66
+HrFra,HrfSp,10
+HrfSp,HrfSp 1,67
+HrFra,HrfBor,10
+HrfBor,HrfBor 1,46
+HrFra,HrfTinc,10
+HrfTinc,HrfTinc 1,288
+HrFra,HrfOth,10
+HrfOth,HrfOth 1,34
+HrDem,HrCp,10
+HrCp,HrCp 1,287
+HrCp,CprLife,10
+CprLife,CprLife 1,68
+HrCp,CprTort,10
+CprTort,CprTort 1,45
+HrCp,CprEq,10
+CprEq,CprEq 1,40
+HrCp,CprSlav,10
+CprSlav,CprSlav 1,28
+HrCp,CprLib,10
+CprLib,CprLib 1,75
+HrCp,CprDet,10
+CprDet,CprDet 1,30
+HrCp,CprFmov,10
+CprFmov,CprFmov 1,98
+HrCp,CprFspe,10
+CprFspe,CprFspe 1,7
+HrCp,CprFass,10
+CprFass,CprFass 1,85
+HrCp,CprTria,10
+CprTria,CprTria 1,57
+HrCp,CprPriv,10
+CprPriv,CprPriv 1,31
+HrCp,CprVote,10
+CprVote,CprVote 1,81
+HrCp,CprReli,10
+CprReli,CprReli 1,128
+HrCp,CprOth,10
+CprOth,CprOth 1,79
+HrDem,HrSec,10
+HrSec,HrSec 1,144
+HrSec,SerProp,10
+SerProp,SerProp 1,83
+HrSec,SerWork,10
+SerWork,SerWork 1,50
+HrSec,SerHeal,10
+SerHeal,SerHeal 1,33
+HrSec,SerEdu,10
+SerEdu,SerEdu 1,51
+HrSec,SerStdl,10
+SerStdl,SerStdl 1,28
+HrSec,SerShel,10
+SerShel,SerShel 1,25
+HrSec,SerSs,10
+SerSs,SerSs 1,25
+HrSec,SerCult,10
+SerCult,SerCult 1,51
+HrSec,SerOth,10
+SerOth,SerOth 1,42
+HrNi,HrNiMe,10
+HrNiMe,HrNiMe 1,47
+HrNiMe,HrNiNe,10
+HrNiNe,HrNiNe 1,59
+HrNiMe,HrNiOth,10
+HrNi,HrIi,10
+HrIi,HrIi 3,17
+HrIi,HrIi 1,15
+HrIi,HrIi 2,14
+HrIi,HrIiMon,10
+HrIiMon,HrIiMon 1,38
+HrIi,HrIiBod,10
+HrIiBod,HrIiBod 1,9
+HrIi,HrIiOth,10
+HrIiOth,HrIiOth 1,1
+HrIi,HrMob,10
+HrMob,HrMob 1,526
+HrIi,HrDet,10
+HrDet,HrDet 1,39
+HrDet,Med,10
+Med,Med 1,248
+Med,Med 2,118
+Med,Med 3,115
+Med,MedGov,10
+MedGov,MedGov 1,50
+Med,MedSubs,10
+MedSubs,MedSubs 1,333
+Med,MedLog,10
+MedLog,MedLog 1,68
+Med,MedOth,10
+MedOth,MedOth 1,99
+HrDet,HrCit,10
+HrCit,HrCit 2,80
+HrCit,HrCit 1,102
+HrCit,HrCit 3,25
+HrCit,CitGen,10
+CitGen,CitGen 1,98
+HrCit,CitRights,10
+CitRights,CitRights 1,110
+HrCit,CitDef,10
+CitDef,CitDef 1,41
+HrCit,CitOth,10
+CitOth,CitOth 1,23
+Justice Sector Reform,JusCr,10
+JusCr,JusCr 1,158
+JusCr,JusCrSp,10
+JusCrSp,JusCrSp 1,103
+JusCr,JusCrSys,10
+JusCrSys,JusCrSys 1,65
+JusCr,JusCrPow,10
+JusCrPow,JusCrPow 1,43
+Justice Sector Reform,JusEm,10
+JusEm,JusEm 1,59
+Justice Sector Reform,JusJu,10
+JusJu,JusJu 1,262
+Justice Sector Reform,JusPri,10
+JusPri,JusPri 1,63
+Justice Sector Reform,JusTra,10
+JusTra,JusTra 1,123
+Socio-Economic Reconstruction,Dev,10
+Dev,Dev 1,495
+Dev,Dev 2,150
+Dev,Dev 3,98
+Dev,DevSoc,10
+DevSoc,DevSoc 1,543
+Dev,DevHum,10
+DevHum,DevHum 1,217
+Dev,DevInfra,10
+DevInfra,DevInfra 1,172
+Socio-Economic Reconstruction,NEC,10
+NEC,NEC 1,79
+Socio-Economic Reconstruction,NatRes,10
+NatRes,NatRes 1,203
+Socio-Economic Reconstruction,IntFu,10
+IntFu,IntFu 1,301
+Socio-Economic Reconstruction,Bus,10
+Bus,Bus 1,155
+Bus,Bus 3,49
+Bus,Bus 2,70
+Bus,Tax,10
+Tax,Tax 1,80
+Tax,Tax 3,43
+Tax,Tax 2,42
+Tax,TaxPo,10
+TaxPo,TaxPo 1,64
+Tax,TaxRef,10
+TaxRef,TaxRef 1,106
+Tax,TaxOth,10
+TaxOth,TaxOth 1,6
+Bus,Ban,10
+Ban,Ban 1,111
+Ban,CenBan,10
+CenBan,CenBan 1,64
+Ban,BanPers,10
+BanPers,BanPers 1,38
+Ban,BanInt,10
+BanInt,BanInt 1,46
+Ban,BanXb,10
+BanXb,BanXb 1,14
+Bus,LaRef,10
+LaRef,LaRef 1,217
+LaRef,LaRefMan,10
+LaRefMan,LaRefMan 1,119
+LaRef,LaRefRet,10
+LaRefRet,LaRefRet 1,108
+LaRef,LaRefOth,10
+LaRefOth,LaRefOth 1,79
+Socio-Economic Reconstruction,LaNom,10
+LaNom,LaNom 1,55
+LaNom,LaCH,10
+LaCH,LaCH 1,228
+LaCH,LaCHTa,10
+LaCHTa,LaCHTa 1,106
+LaCH,LaCHIt,10
+LaCHIt,LaCHIt 1,94
+LaCH,LaCHPro,10
+LaCHPro,LaCHPro 1,124
+LaCH,LaCHOth,10
+LaCHOth,LaCHOth 1,29
+Socio-Economic Reconstruction,LaEn,10
+LaEn,LaEn 1,192
+Socio-Economic Reconstruction,Wat,10
+Wat,Wat 1,176
+Security Sector,SsrGua,10
+SsrGua,SsrGua 1,716
+SsrGua,Ce,10
+Ce,Ce 1,229
+Ce,Ce 2,414
+Ce,Ce 3,201
+Ce,CeProv,10
+CeProv,CeProv 1,660
+Ce,CeGen,10
+CeGen,CeGen 1,202
+Security Sector,SsrPol,10
+SsrPol,SsrPol 1,238
+SsrPol,SsrPol 2,153
+SsrPol,SsrPol 3,46
+Security Sector,SsrArm,10
+SsrArm,SsrArm 1,126
+SsrArm,SsrArm 3,51
+SsrArm,SsrArm 2,135
+SsrArm,SsrDdr,10
+SsrDdr,SsrDdr 2,183
+SsrDdr,SsrDdr 1,214
+SsrDdr,SsrDdr 3,95
+SsrDdr,DdrDemil,10
+DdrDemil,DdrDemil 1,268
+SsrDdr,DdrProg,10
+DdrProg,DdrProg 1,228
+Security Sector,SsrInt,10
+SsrInt,SsrInt 1,28
+SsrInt,SsrInt 2,16
+SsrInt,SsrInt 3,11
+Security Sector,SsrPsf,10
+SsrPsf,SsrPsf 1,705
+Security Sector,SsrFf,10
+SsrFf,SsrFf 1,118
+Security Sector,Cor,10
+Cor,Cor 1,77
+Cor,Cor 2,36
+Cor,Cor 3,25
+Security Sector,SsrCrOcr,10
+SsrCrOcr,SsrCrOcr 2,39
+SsrCrOcr,SsrCrOcr 1,58
+SsrCrOcr,SsrCrOcr 3,16
+Security Sector,SsrDrugs,10
+SsrDrugs,SsrDrugs 2,25
+SsrDrugs,SsrDrugs 1,42
+SsrDrugs,SsrDrugs 3,7
+Security Sector,Terr,10
+Terr,Terr 1,173
+Transitional Justice,TjGen,10
+TjGen,TjGen 2,19
+TjGen,TjGen 1,71
+TjGen,TjGen 3,6
+TjGen,TjAm,10
+TjAm,TjAm 2,126
+TjAm,TjAm 3,44
+TjAm,TjAm 1,57
+TjAm,TjAmPro,10
+TjAmPro,TjAmPro 1,195
+TjAm,TjSan,10
+TjSan,TjSan 1,30
+TjAm,TjPower,10
+TjPower,TjPower 1,19
+TjAm,TjAmBan,10
+TjAmBan,TjAmBan 1,4
+TjGen,TjCou,10
+TjCou,TjCou 1,59
+TjCou,TjCou 2,31
+TjCou,TjCou 3,7
+TjCou,TjJaNc,10
+TjJaNc,TjJaNc 1,70
+TjCou,TjJaIc,10
+TjJaIc,TjJaIc 1,31
+Transitional Justice,TjMech,10
+TjMech,TjMech 2,67
+TjMech,TjMech 3,35
+TjMech,TjMech 1,15
+Transitional Justice,TjPrire,10
+TjPrire,TjPrire 1,127
+TjPrire,TjPrire 3,53
+TjPrire,TjPrire 2,147
+Transitional Justice,TjVet,10
+TjVet,TjVet 2,7
+TjVet,TjVet 3,4
+TjVet,TjVet 1,7
+Transitional Justice,TjVic,10
+TjVic,TjVic 1,106
+TjVic,TjVic 2,104
+TjVic,TjVic 3,19
+Transitional Justice,TjMis,10
+TjMis,TjMis 1,25
+TjMis,TjMis 2,39
+TjMis,TjMis 3,9
+TjMis,TjRep,10
+TjRep,TjRep 1,106
+TjRep,TjRep 3,25
+TjRep,TjRep 2,69
+TjRep,TjRSym,10
+TjRSym,TjRSym 1,20
+TjRep,TjRMa,10
+TjRMa,TjRMa 1,185
+Transitional Justice,TjNR,10
+TjNR,TjNR 1,326
+TjNR,TjNR 3,23
+TjNR,TjNR 2,74
+Implementation,ImUN,10
+ImUN,ImUN 1,361
+Implementation,ImOth,10
+ImOth,ImOth 1,438
+Implementation,ImRef,10
+ImRef,ImRef 1,18
+Implementation,ImPK,10
+ImPK,ImPK 1,539
+Implementation,ImE,10
+ImE,ImE 1,708
+Implementation,ImSrc,10
+ImSrc,ImSrc 1,1831
+Implementation,ConRen,10
+ConRen,ConRen 2,24
+ConRen,ConRen 1,38
+ConRen,ConRen 3,36
+Implementation,ConRen,10
+ConRen,ConRen 1,38
