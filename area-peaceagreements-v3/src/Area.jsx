@@ -18,6 +18,7 @@ import "react-popupbox/dist/react-popupbox.css"
 // Area components
 import Groups from "./Groups";
 import FilterList from "./FilterList";
+import FilterListColours from "./FilterListColours";
 import FilterForm from "./FilterForm";
 import SimpleSelectProperties from "./SimpleSelectProperties";
 import { OutputFileType } from "typescript";
@@ -145,7 +146,7 @@ export default class Area extends React.Component {
         var groupedByParam1SortedBySize = this.ObjToArSortedBySize(groupedByParam1);
 
         // sort by colour group and year
-        for(let i=0;i<groupedByParam1SortedBySize.length;i++ ){
+        for(let i=0; i<groupedByParam1SortedBySize.length; i++ ){
             var myObject = groupBy(groupedByParam1SortedBySize[i].value, param2);
             console.log('myObject: ',myObject)
             var arSorted = this.ObjToArSortedBySize(myObject);
@@ -156,7 +157,6 @@ export default class Area extends React.Component {
                 var sortedAr = _.sortBy(  arSorted[j].value, 'Dat' );
                 outAr = outAr.concat(sortedAr)
                 console.log('Sortby ArSorted: ',outAr.length, sortedAr);
-                
             }
 
             /*
@@ -222,7 +222,7 @@ export default class Area extends React.Component {
                     </div>
                     <div className="filterSelect">
                         <SimpleSelectProperties updateParam={this.updateParam2} text="(Colours):" param="Reg"/>
-                        <FilterList items={groupedByParam2} keyStr={"Param2"} />
+                        <FilterListColours items={groupedByParam2} keyStr={"Param2"} />
                     </div>
                 </div>
                 <div className="vizArea">
