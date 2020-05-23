@@ -1,0 +1,73 @@
+source,target,value
+Basic information,Groups,1
+
+Groups,GCh,1
+GCh,GChRhet,1
+GCh,GChAntid,1
+GCh,GChSubs,1
+GCh,GChOth,1
+Groups,GDis,1
+GDis,GDisRhet,1
+GDis,GDisAntid,1
+GDis,GDisSubs,1
+GDis,GDisOth,1
+Groups,GAge,1
+GAge,GAgeRhet,1
+GAge,GAgeAntid,1
+GAge,GAgeSubs,1
+GAge,GAgeOth,1
+Groups,GMig,1
+GMig,GMigRhet,1
+GMig,GMigAntid,1
+GMig,GMigSubs,1
+GMig,GMigOth,1
+Groups,GRa,1
+GRa,GRaRhet,1
+GRa,GRaAntid,1
+GRa,GRaSubs,1
+GRa,GRaOth,1
+GRa,GRe,1
+GRa,GReRhet,1
+GRa,GReAntid,1
+GRa,GReSubs,1
+GRa,GReOth,1
+Groups,GInd,1
+GInd,GIndRhet,1
+GInd,GIndAntid,1
+GInd,GIndSubs,1
+GInd,GIndOth,1
+Groups,GOth,1
+GOth,GOthRhet,1
+GOth,GOthAntid,1
+GOth,GOthSubs,1
+GOth,GOthOth,1
+Groups,GRef,1
+GRef,GRefRhet,1
+GRef,GRefSubs,1
+GRef,GRefOth,1
+Groups,GSoc,1
+GSoc,GSocRhet,1
+GSoc,GSocAntid,1
+GSoc,GSocSubs,1
+GSoc,GSocOth,1
+
+
+
+Basic information,Gender,661
+Gender,GeWom,363
+Gender,GeMe,95
+GeMe,GeMeNu,83
+GeMe,GeMeOth,11
+Gender,GeLgbti,11
+GeLgbti,GeLgbtiPos,8 
+GeLgbti,GeLgbtiNeg,3 
+Gender,GeFa,192
+Basic information,State definition,1
+Basic information,Governance,1
+Basic information,Powersharing,1
+Basic information,Human rights and equality,1
+Basic information,Justice Sector Reform,1
+Basic information,Socio-Economic Reconstruction,1
+Basic information,Security Sector,1
+Basic information,Transitional Justice,1
+Basic information,Implementation,1

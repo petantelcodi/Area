@@ -1,0 +1,269 @@
+source,target,value
+Basic information,Con,1
+Basic information,Contp,1
+Basic information,PP,1
+Basic information,PPName,1
+Basic information,Reg,1
+Basic information,AgtId,1
+Basic information,Agt,1
+Basic information,Dat,1
+Basic information,Year,1
+Basic information,Status,1
+Basic information,Lgt,1
+Basic information,N_characters,1
+Basic information,Agtp,1
+Basic information,Stage,1
+Basic information,StageSub,1
+Basic information,Part,1
+Basic information,ThrdPart,1
+Basic information,OthAgr,1
+Basic information,Loc1ISO,1
+Basic information,Loc2ISO,1
+Basic information,Loc1GWNO,1
+Basic information,Loc2GWNO,1
+Basic information,UcdpCon,1
+Basic information,UcdpAgr,1
+Basic information,PamAgr,1
+Basic information,CowWar,1
+
+
+GROUPS,GCh,1
+GCh,GChRhet,1
+GCh,GChAntid,1
+GCh,GChSubs,1
+GCh,GChOth,1
+GROUPS,GDis,1
+GDis,GDisRhet,1
+GDis,GDisAntid,1
+GDis,GDisSubs,1
+GDis,GDisOth,1
+GROUPS,GAge,1
+GAge,GAgeRhet,1
+GAge,GAgeAntid,1
+GAge,GAgeSubs,1
+GAge,GAgeOth,1
+GROUPS,GMig,1
+GMig,GMigRhet,1
+GMig,GMigAntid,1
+GMig,GMigSubs,1
+GMig,GMigOth,1
+GROUPS,GRa,1
+GRa,GRaRhet,1
+GRa,GRaAntid,1
+GRa,GRaSubs,1
+GRa,GRaOth,1
+GRa,GRe,1
+GRa,GReRhet,1
+GRa,GReAntid,1
+GRa,GReSubs,1
+GRa,GReOth,1
+GROUPS,GInd,1
+GInd,GIndRhet,1
+GInd,GIndAntid,1
+GInd,GIndSubs,1
+GInd,GIndOth,1
+GROUPS,GOth,1
+GOth,GOthRhet,1
+GOth,GOthAntid,1
+GOth,GOthSubs,1
+GOth,GOthOth,1
+GROUPS,GRef,1
+GRef,GRefRhet,1
+GRef,GRefSubs,1
+GRef,GRefOth,1
+GROUPS,GSoc,1
+GSoc,GSocRhet,1
+GSoc,GSocAntid,1
+GSoc,GSocSubs,1
+GSoc,GSocOth,1
+
+
+Gender,GeWom,363
+Gender,GeMe,95
+GeMe,GeMeNu,83
+GeMe,GeMeOth,11
+Gender,GeLgbti,11
+GeLgbti,GeLgbtiPos,8 
+GeLgbti,GeLgbtiNeg,3 
+Gender,GeFa,192
+State definition,StGen,1
+State definition,StCon,1
+State definition,StSd,1
+State definition,StRef,1
+State definition,StSym,1
+State definition,StInd,1
+State definition,StUni,1
+State definition,StBor,1
+State definition,StXbor,1
+Governance,Pol,1
+Pol,PolGen,1
+Pol,PolNewInd,1
+Pol,PolNewTemp,1
+Governance,Cons,1
+Governance,Ele,1
+Governance,ElecComm,1
+ElecComm,PolPar,1
+PolPar,PolParTrans,1
+PolPar,PolParOth,1
+Governance,Civso,1
+Governance,Tral,1
+Governance,Pubad,1
+Powersharing,Polps,1
+Polps,PpsSt,1
+Polps,PpsSub,1
+Polps,PpsEx,1
+Polps,PpsOro,1
+Polps,PpsOthPr,1
+Polps,PpsVet,1
+Polps,PpsAut,1
+Polps,PpsInt,1
+Polps,PpsOth,1
+Powersharing,Terps,1
+Terps,TpsSub,1
+Terps,TpsLoc,1
+Terps,TpsAut,1
+Terps,TpsOth,1
+Powersharing,Eps,1
+Eps,EpsRes,1
+Eps,EpsFis,1
+Eps,EpsOth,1
+Powersharing,Mps,1
+Mps,MpsMe,1
+Mps,MpsJt,1
+Mps,MpsPro,1
+Mps,MpsOth,1
+Human rights and equality,HrGen,1
+Human rights and equality,EqGen,1
+Human rights and equality,HrDem,1
+HrDem,Prot,1
+Prot,ProtCiv,1
+Prot,ProtGrp,1
+Prot,ProtLgl,1
+Prot,ProtOth,1
+HrDem,HrFra,1
+HrFra,HrfSp,1
+HrFra,HrfBor,1
+HrFra,HrfTinc,1
+HrFra,HrfOth,1
+HrDem,HrCp,1
+HrCp,CprLife,1
+HrCp,CprTort,1
+HrCp,CprEq,1
+HrCp,CprSlav,1
+HrCp,CprLib,1
+HrCp,CprDet,1
+HrCp,CprFmov,1
+HrCp,CprFspe,1
+HrCp,CprFass,1
+HrCp,CprTria,1
+HrCp,CprPriv,1
+HrCp,CprVote,1
+HrCp,CprReli,1
+HrCp,CprOth,1
+HrDem,HrSec,1
+HrSec,SerProp,1
+HrSec,SerWork,1
+HrSec,SerHeal,1
+HrSec,SerEdu,1
+HrSec,SerStdl,1
+HrSec,SerShel,1
+HrSec,SerSs,1
+HrSec,SerCult,1
+HrSec,SerOth,1
+HrNi,HrNiMe,1
+HrNiMe,HrNiNe,1
+HrNiMe,HrNiOth,1
+HrNi,HrIi,1
+HrIi,HrIiMon,1
+HrIi,HrIiBod,1
+HrIi,HrIiOth,1
+HrIi,HrMob,1
+HrIi,HrDet,1
+HrDet,Med,1
+Med,MedGov,1
+Med,MedSubs,1
+Med,MedLog,1
+Med,MedOth,1
+HrDet,HrCit,1
+HrCit,CitGen,1
+HrCit,CitRights,1
+HrCit,CitDef,1
+HrCit,CitOth,1
+Justice Sector Reform,JusCr,1
+JusCr,JusCrSp,1
+JusCr,JusCrSys,1
+JusCr,JusCrPow,1
+Justice Sector Reform,JusEm,1
+Justice Sector Reform,JusJu,1
+Justice Sector Reform,JusPri,1
+Justice Sector Reform,JusTra,1
+Socio-Economic Reconstruction,Dev,1
+Dev,DevSoc,1
+Dev,DevHum,1
+Dev,DevInfra,1
+Socio-Economic Reconstruction,NEC,1
+Socio-Economic Reconstruction,NatRes,1
+Socio-Economic Reconstruction,IntFu,1
+Socio-Economic Reconstruction,Bus,1
+Bus,Tax,1
+Tax,TaxPo,1
+Tax,TaxRef,1
+Tax,TaxOth,1
+Bus,Ban,1
+Ban,CenBan,1
+Ban,BanPers,1
+Ban,BanInt,1
+Ban,BanXb,1
+Bus,LaRef,1
+LaRef,LaRefMan,1
+LaRef,LaRefRet,1
+LaRef,LaRefOth,1
+Socio-Economic Reconstruction,LaNom,1
+LaNom,LaCH,1
+LaCH,LaCHTa,1
+LaCH,LaCHIt,1
+LaCH,LaCHPro,1
+LaCH,LaCHOth,1
+Socio-Economic Reconstruction,LaEn,1
+Socio-Economic Reconstruction,Wat,1
+Security Sector,SsrGua,1
+SsrGua,Ce,1
+Ce,CeProv,1
+Ce,CeGen,1
+Security Sector,SsrPol,1
+Security Sector,SsrArm,1
+SsrArm,SsrDdr,1
+SsrDdr,DdrDemil,1
+SsrDdr,DdrProg,1
+Security Sector,SsrInt,1
+Security Sector,SsrPsf,1
+Security Sector,SsrFf,1
+Security Sector,Cor,1
+Security Sector,SsrCrOcr,1
+Security Sector,SsrDrugs,1
+Security Sector,Terr,1
+Transitional Justice,TjGen,1
+TjGen,TjAm,1
+TjAm,TjAmPro,1
+TjAm,TjSan,1
+TjAm,TjPower,1
+TjAm,TjAmBan,1
+TjGen,TjCou,1
+TjCou,TjJaNc,1
+TjCou,TjJaIc,1
+Transitional Justice,TjMech,1
+Transitional Justice,TjPrire,1
+Transitional Justice,TjVet,1
+Transitional Justice,TjVic,1
+Transitional Justice,TjMis,1
+TjMis,TjRep,1
+TjRep,TjRSym,1
+TjRep,TjRMa,1
+Transitional Justice,TjNR,1
+Implementation,ImUN,1
+Implementation,ImOth,1
+Implementation,ImRef,1
+Implementation,ImPK,1
+Implementation,ImE,1
+Implementation,ImSrc,1
+Implementation,ConRen,1

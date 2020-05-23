@@ -1,0 +1,1859 @@
+[
+    {
+      "Con ": {
+        "human": "Country-Entity",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 168
+      },
+      "Contp ": {
+        "human": "Conflict type",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 5
+      },
+      "PP ": {
+        "human": "Peace Process Number",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 155
+      },
+      "PPName ": {
+        "human": "Peace Process Name",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 155
+      },
+      "Reg ": {
+        "human": " Region",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 6
+      },
+      "AgtId ": {
+        "human": "Agreement ID",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1832
+      },
+      "Agt ": {
+        "human": "Agreement Name",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1794
+      },
+      "Dat ": {
+        "human": "Date Signed",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1504
+      },
+      "Status ": {
+        "human": "Agreement Definition and Status",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "Lgt ": {
+        "human": "Agreement length (pages)",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 70
+      },
+      "N_characters ": {
+        "human": "Agreement length (characters)",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1693
+      },
+      "Agtp ": {
+        "human": "Agreement-conflict type",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "Stage ": {
+        "human": "Agreement stage",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 7
+      },
+      "StageSub ": {
+        "human": "subcoding of stage",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 21
+      },
+      "Part ": {
+        "human": "Parties",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1722
+      },
+      "ThrdPart ": {
+        "human": "Third Parties",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 878
+      },
+      "OthAgr ": {
+        "human": "Other Agreement",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 947
+      },
+      "Loc1ISO ": {
+        "human": "Primary location ISO code ",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 82
+      },
+      "Loc2ISO ": {
+        "human": "Secondary location ISO code",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 30
+      },
+      "Loc1GWNO ": {
+        "human": "Primary location GWNO code ",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 83
+      },
+      "Loc2GWNO ": {
+        "human": "Secondary location GWNO code ",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 30
+      },
+      "UcdpCon ": {
+        "human": "UCDP conflict code ",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 109
+      },
+      "UcdpAgr ": {
+        "human": "UCDP agreement code",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 293
+      },
+      "PamAgr ": {
+        "human": "PAM agreement code ",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 34
+      },
+      "CowWar ": {
+        "human": "CoW War Number ",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 64
+      },
+      "GCh ": {
+        "human": "Children-Youth",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GChRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GChAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GChSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GChOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GDis ": {
+        "human": "Disabled persons",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GDisRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GDisAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GDisSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GDisOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GAge ": {
+        "human": "Elderly-Age",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GAgeRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GAgeAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GAgeSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GAgeOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1
+      },
+      "GMig ": {
+        "human": "Migrant workers",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GMigRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GMigAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GMigSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GMigOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1
+      },
+      "GRa ": {
+        "human": "Racial-ethnic-national groups",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GRaRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GRaAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GRaSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GRaOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GRe ": {
+        "human": "Religious groups",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GReRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GReAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GReSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GReOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GInd ": {
+        "human": "Indigenous people",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GIndRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GIndAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GIndSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GIndOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GOth ": {
+        "human": "Other groups",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GOthRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GOthAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GOthSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GOthOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GRef ": {
+        "human": "Refugees- displaced persons",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GRefRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GRefSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GRefOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GSoc ": {
+        "human": "Social Class",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "GSocRhet ": {
+        "human": "Rhetorical",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GSocAntid ": {
+        "human": "Anti-discrimination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GSocSubs ": {
+        "human": "Substantive",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GSocOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GeWom ": {
+        "human": "Women, girls and gender",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GeMe ": {
+        "human": "Men and Boys",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GeMeNu ": {
+        "human": "Gender neutrality wording",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GeMeOth ": {
+        "human": "other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "GeLgbti ": {
+        "human": "LGBTI references",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "1",
+        "distincnum": 2
+      },
+      "GeLgbtiPos ": {
+        "human": "LGBTI references Pos",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "1",
+        "distincnum": 2
+      },
+      "GeLgbtiNeg ": {
+        "human": "LGBTI references Neg",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "1",
+        "distincnum": 2
+      },
+      "GeFa ": {
+        "human": "Family",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StDef ": {
+        "human": "State definition",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StGen ": {
+        "human": "Nature of State - general",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StCon ": {
+        "human": "State configuration",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StSd ": {
+        "human": "Self determination",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StRef ": {
+        "human": "Referendum",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StSym ": {
+        "human": "State symbols",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StInd ": {
+        "human": "Independence-secession",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StUni ": {
+        "human": "Accession-unification",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StBor ": {
+        "human": "Border delimitation",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "StXbor ": {
+        "human": "Cross-border provision",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Pol ": {
+        "human": "Political Institutions",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "PolGen ": {
+        "human": "General References to Political institutions",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PolNewInd ": {
+        "human": "New political institutions",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PolNewTemp ": {
+        "human": "temporary institutional arrangement",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ConRen ": {
+        "human": "Constitutional renewal-affirmation",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1
+      },
+      "Cons ": {
+        "human": "Constitutional reform-making",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "Ele ": {
+        "human": "Elections",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "ElecComm ": {
+        "human": "Electoral Commission",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "PolPar ": {
+        "human": "Political parties reform",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "PolParTrans ": {
+        "human": "rebels transitioning to political parties",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PolParOth ": {
+        "human": "Other instances of political party reform-regulation.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Civso ": {
+        "human": "Civil Society",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Tral ": {
+        "human": "Traditional-Religious Leaders",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Pubad ": {
+        "human": "Public Administration (Civil Service)",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "Polps ": {
+        "human": "Political Powersharing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "PpsSt ": {
+        "human": "State level powersharing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PpsSub ": {
+        "human": "Sub-state level powersharing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PpsEx ": {
+        "human": "Executive coalition.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PpsOro ": {
+        "human": "Proportionality in the legislature.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PpsOthPr ": {
+        "human": "Other Proportionality.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PpsVet ": {
+        "human": "Form of veto or communal majority.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PpsAut ": {
+        "human": "Segmental autonomy.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PpsInt ": {
+        "human": "International involvement.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "PpsOth ": {
+        "human": "Other form of political powersharing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Terps ": {
+        "human": "Territorial powersharing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TpsSub ": {
+        "human": "Federal or similarly sub-divided",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TpsLoc ": {
+        "human": "Local-Municipal",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TpsAut ": {
+        "human": "Autonomy",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TpsOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Eps ": {
+        "human": "Economic powersharing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "EpsRes ": {
+        "human": "Sharing of resources",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "EpsFis ": {
+        "human": "Fiscal federalism",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "EpsOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Mps ": {
+        "human": "Military powersharing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "MpsMe ": {
+        "human": "Merger of forces",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "MpsJt ": {
+        "human": "Joint Command Structure",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "MpsPro ": {
+        "human": "Proportionality",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "MpsOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrGen ": {
+        "human": "Human Rights- Rule of Law",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "EqGen ": {
+        "human": "Equality",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "HrDem ": {
+        "human": "Democracy",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "Prot ": {
+        "human": "Protection measures",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "ProtCiv ": {
+        "human": "Protection of civilians",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ProtGrp ": {
+        "human": "Protection of groups",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ProtLgl ": {
+        "human": "Protection of rights and legal frameworks",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ProtOth ": {
+        "human": "Other protection measures",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrFra ": {
+        "human": "Human Rights Framework",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "HrfSp ": {
+        "human": "Isolated rights",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrfBor ": {
+        "human": "Bill of Rights.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrfTinc ": {
+        "human": "Incorporation of human rights treaties, humanitarian law, or international criminal law treaties (Treaty Incorporation",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrfOth ": {
+        "human": "Other.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrCp ": {
+        "human": "Civil and political rights",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprLife ": {
+        "human": "Life",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprTort ": {
+        "human": "Torture",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprEq ": {
+        "human": "Equality",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprSlav ": {
+        "human": "Slavery",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprLib ": {
+        "human": "Liberty and security of person",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprDet ": {
+        "human": "Humane treatment in detention",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprFmov ": {
+        "human": "Freedom of movement",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprFspe ": {
+        "human": "Freedom of speech",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprFass ": {
+        "human": "Freedom of association",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprTria ": {
+        "human": "Fair trial",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprPriv ": {
+        "human": "Privacy and family life",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprVote ": {
+        "human": "Vote and take part",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprReli ": {
+        "human": "Thought, opinion, conscience and religion",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CprOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrSec ": {
+        "human": "Socio-economic rights",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerProp ": {
+        "human": "Property",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerWork ": {
+        "human": "Work",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerHeal ": {
+        "human": "Health",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerEdu ": {
+        "human": "Education",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerStdl ": {
+        "human": "Adequate standard of living",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerShel ": {
+        "human": "Shelter-housing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerSs ": {
+        "human": "Social security",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerCult ": {
+        "human": "Cultural rights",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SerOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrNi ": {
+        "human": "NHRI (National Human Rights Institution)",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "HrNiMe ": {
+        "human": "Mentions of NHRI",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrNiNe ": {
+        "human": "New or fundamentally revised NHRI",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrNiOth ": {
+        "human": "Other NHRI",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 1
+      },
+      "HrIi ": {
+        "human": "Regional or international human rights institutions",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "HrIiMon ": {
+        "human": " Monitoring calls.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrIiBod ": {
+        "human": "Body tasked.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrIiOth ": {
+        "human": "Other regional or international human rights institutions",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrMob ": {
+        "human": "mobility-access",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrDet ": {
+        "human": "Detention Procedures",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Med ": {
+        "human": "Media and communication",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "MedGov ": {
+        "human": "Governance of Media.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "MedSubs ": {
+        "human": " Media Roles",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "MedLog ": {
+        "human": "Media Logistics",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "MedOth ": {
+        "human": "Media Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "HrCit ": {
+        "human": "Citizenship",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "CitGen ": {
+        "human": "Citizen, general.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CitRights ": {
+        "human": "Citizens, specific rights",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CitDef ": {
+        "human": "Citizenship delimitation",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CitOth ": {
+        "human": "Citizenship other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "JusCr ": {
+        "human": "Criminal Justice and Emergency law",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "JusCrSp ": {
+        "human": "Reform to specific laws",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "JusCrSys ": {
+        "human": "Criminal Justice System Reform",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "JusCrPow ": {
+        "human": "Delimitation of powers in Criminal Justice System",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "JusEm ": {
+        "human": "State of Emergency Provisions",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "JusJu ": {
+        "human": "Judiciary and courts",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "JusPri ": {
+        "human": "Prisons and detention",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "JusTra ": {
+        "human": "Traditional- Religious Laws",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Dev ": {
+        "human": "Development or socio-economic reconstruction",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "DevSoc ": {
+        "human": "Development provisions ",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "DevHum ": {
+        "human": "Humanitarian assistance",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "DevInfra ": {
+        "human": "Infrastructure and reconstruction",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "NEC ": {
+        "human": "National economic plan",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "NatRes ": {
+        "human": "Natural resources",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "IntFu ": {
+        "human": "International funds",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Bus ": {
+        "human": "Business",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "Tax ": {
+        "human": "Taxation",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TaxPo ": {
+        "human": "Power to Tax",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TaxRef ": {
+        "human": "Reform of Taxation",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TaxOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Ban ": {
+        "human": "Banks",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CenBan ": {
+        "human": "Central bank",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "BanPers ": {
+        "human": "Personal or commercial banking",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "BanInt ": {
+        "human": "International finance",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "BanXb ": {
+        "human": "Cross-border financial flows",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaRef ": {
+        "human": "Land reform-rights",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaRefMan ": {
+        "human": "Land reform, transfer, and management",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaRefRet ": {
+        "human": "Property return, restitution, and dispute mechanisms.",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaRefOth ": {
+        "human": "Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaNom ": {
+        "human": "Pastoralist-nomadism rights",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaCH ": {
+        "human": "Cultural heritage",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaCHTa ": {
+        "human": "Cultural Heritage: Tangible",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaCHIt ": {
+        "human": "Cultural Heritage: Intangible",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaCHPro ": {
+        "human": "Cultural Heritage, Promotion of values",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaCHOth ": {
+        "human": "Cultural Heritage Other",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "LaEn ": {
+        "human": "Environment",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Wat ": {
+        "human": "Water or riparian (river) rights-access",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SsrGua ": {
+        "human": "Security Sector (General)",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Ce ": {
+        "human": "Ceasefire",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "CeProv ": {
+        "human": "Ceasefire provisions",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "CeGen ": {
+        "human": "General references to ceasefires",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SsrPol ": {
+        "human": "Police",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "SsrArm ": {
+        "human": "Armed Forces",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "SsrDdr ": {
+        "human": "DDR",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "DdrDemil ": {
+        "human": "Demilitarisation",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "DdrProg ": {
+        "human": "DDR Programme",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SsrInt ": {
+        "human": "Intelligence service",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "SsrPsf ": {
+        "human": "Rebel-opposition-Para-statal forces",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "SsrFf ": {
+        "human": "Withdrawal of foreign forces",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "Cor ": {
+        "human": "Corruption",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "SsrCrOcr ": {
+        "human": "Crime-Organised crime",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "SsrDrugs ": {
+        "human": "Drugs",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "Terr ": {
+        "human": "Terrorism",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjGen ": {
+        "human": "Transitional Justice General",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjAm ": {
+        "human": "Amnesty-pardon",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjAmPro ": {
+        "human": "Amnesty-pardon proper",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjSan ": {
+        "human": "Relief of other Sanctions",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjPower ": {
+        "human": "Power to amnesty",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjAmBan ": {
+        "human": "Amnesty prohibition",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjCou ": {
+        "human": "Courts",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjJaNc ": {
+        "human": "National Courts",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjJaIc ": {
+        "human": "International Courts",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjMech ": {
+        "human": "Mechanism",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjPrire ": {
+        "human": "Prisoner release",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjVet ": {
+        "human": "Vetting",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjVic ": {
+        "human": "Victims",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjMis ": {
+        "human": "Missing",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjRep ": {
+        "human": " Reparations",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "TjRSym ": {
+        "human": "symbolic reparations",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjRMa ": {
+        "human": " Material reparations (includes compensation)",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "TjNR ": {
+        "human": "Reconciliation",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 4
+      },
+      "ImUN ": {
+        "human": "UN Signatory",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ImOth ": {
+        "human": "Other International Signatory",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ImRef ": {
+        "human": "Referendum for agreement",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ImPK ": {
+        "human": "International Mission-Force-Similar",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ImE ": {
+        "human": "Enforcement Mechanism",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      },
+      "ImSrc ": {
+        "human": "Source",
+        "areafilte": "0",
+        "type": "text",
+        "exclude": "0",
+        "distincnum": 2
+      }
+    }
+  ]
