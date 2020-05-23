@@ -62,6 +62,13 @@ export default class Area extends React.Component {
         });
     }
 
+    ObjToAr(obj){ 
+        return Object.keys(obj)
+        .map(function(k) {
+            return { key: k, value: obj[k] };
+        })
+    }
+
     /*
     shouldComponentUpdate(nextProps, nextState) {
         console.log(nextProps, nextState)
@@ -138,6 +145,18 @@ export default class Area extends React.Component {
         data = _.sortBy(  data, 'Dat' );
         // Add id to Array
         var dataWithId = this.addIdPropertyToAr(data);
+
+        // Nesting param2 from data
+        var groupedByParam2 = groupBy(dataWithId, param2);
+        // Delete property with same name as param2
+        try{ delete groupedByParam2[param2]; }catch(err){}
+        // Array for colours
+        var count = 0;
+        Object.keys( groupedByParam2).map(function(key, index) {
+            count = count+1;
+            groupedByParam2[key] = count;
+        });
+
         // Nesting Array  output obj with array in each property of the object
         var groupedByParam1 = groupBy(dataWithId, param1);
         // Delete property with same name as param1
@@ -147,9 +166,20 @@ export default class Area extends React.Component {
 
         // Sort by colour group and year
         for(let i=0; i<groupedByParam1SortedBySize.length; i++ ){
+            //groupedByParam1SortedBySize[i].value = _.orderBy(groupedByParam1SortedBySize[i].value, [param2, 'Dat'], ['desc', 'desc']) 
+            //_.orderBy( groupedByParam1SortedBySize[i].value,[] )
+            
             var myObject = groupBy(groupedByParam1SortedBySize[i].value, param2);
             console.log('myObject: ',myObject)
-            var arSorted = this.ObjToArSortedBySize(myObject);
+            //var arSorted = this.ObjToArSortedBySize(myObject);
+
+            // Get object in order of object that is in menu
+            var myObjectSorted = {};
+            Object.keys( groupedByParam2).map(function(key, index) {
+                myObjectSorted[key] = myObject[key];
+            }); 
+            
+            var arSorted = this.ObjToAr(myObjectSorted);
             console.log('ArSorted: ',arSorted);
             var outAr = [];
             //var myObject2 = groupBy(arSorted, param2);
@@ -160,6 +190,7 @@ export default class Area extends React.Component {
             }
             // Obj to Ar
             groupedByParam1SortedBySize[i].value = outAr;
+            
         }
         // Sort by propety name
         var groupedByParam1SortedByName = _.sortBy( groupedByParam1SortedBySize, 'key' ); 
@@ -185,16 +216,7 @@ export default class Area extends React.Component {
         console.log('blockWidth: ',blockWidth);
         console.log('blockHeight: ',blockHeight);
         
-        // Nesting param2 from data
-        var groupedByParam2 = groupBy(dataWithId, param2);
-        // Delete property with same name as param2
-        try{ delete groupedByParam2[param2]; }catch(err){}
-        // Array for colours
-        var count = 0;
-        Object.keys( groupedByParam2).map(function(key, index) {
-            count = count+1;
-            groupedByParam2[key] = count;
-        });
+        
         console.log(groupedByParam2["Africa excl MENA"]);
         console.log("groupedByParam2",groupedByParam2);
         console.log("groupedBy:", groupedByParam1);

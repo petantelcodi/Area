@@ -25,9 +25,10 @@ body{
   border-bottom: white 1px solid;
   border-top: white 1px solid;
   padding:3px;
-  margin-top:5px;
-  margin-bottom:5px;
+  margin-top:10px;
+  margin-bottom:10px;
 }
+
 .vizArea{
   position:relative;
   width: 100%;
