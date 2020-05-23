@@ -32,6 +32,7 @@ export default class Area extends React.Component {
             param1 : Config.param1,
             param2 : Config.param2,
             filter: "",
+            typeArea:"PA-simple"
         };
         console.log('call constructor=========================');
     }
@@ -94,8 +95,9 @@ export default class Area extends React.Component {
         this.setState({param2: value})
     }
 
-    openDataDetails= () => {
-
+    areaTypeSelect = (value) => {
+        console.log('areaTypeSelect : ',value);
+        this.setState({typeArea: value})
     }
     /*
     openPopupbox = (data) => {
@@ -128,6 +130,8 @@ export default class Area extends React.Component {
         var area_y = 600;
         var colors_approach = "fix"; // fix, random, gradient
         var area_title = "PeaceAgreements.org";
+
+        var typeArea = this.state.typeArea;
         
         //const values = queryString.parse(this.props.location.search)
         //console.log(values)
@@ -239,7 +243,12 @@ export default class Area extends React.Component {
 
         return (
             <div>
-                <div className="typeAreaSelect"><p className="typeAreaBtSelect">PA-Simple</p> <p className="typeAreaBtSelect">PA-detailed</p> <p className="typeAreaBtSelect">CF-Simple</p> <p className="typeAreaBtSelect">CF-detailed</p></div>
+                <div className="typeAreaSelect">
+                    <div className={typeArea==='PA-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Simple')}}>PA-Simple</div> 
+                    <div className={typeArea==='PA-detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-detailed')}}>PA-detailed</div> 
+                    <div className={typeArea==='CF-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-Simple')}}>CF-Simple</div> 
+                    <div className={typeArea==='CF-detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-detailed')}}>CF-detailed</div>
+                </div>
                 <div className="filterArea">
                     <div className="filterSelect">
                         <SimpleSelectProperties updateParam={this.updateParam1} text="(blocks):" param="Reg"/>
