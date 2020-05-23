@@ -117,7 +117,7 @@ export default class Area extends React.Component {
 
         // Config variables
         var max_distinc = 50;
-        var area_x = 790;
+        var area_x = 989;
         var area_y = 600;
         var colors_approach = "fix"; // fix, random, gradient
         var area_title = "PeaceAgreements.org";
@@ -145,7 +145,7 @@ export default class Area extends React.Component {
         // Sort and 
         var groupedByParam1SortedBySize = this.ObjToArSortedBySize(groupedByParam1);
 
-        // sort by colour group and year
+        // Sort by colour group and year
         for(let i=0; i<groupedByParam1SortedBySize.length; i++ ){
             var myObject = groupBy(groupedByParam1SortedBySize[i].value, param2);
             console.log('myObject: ',myObject)
@@ -158,20 +158,8 @@ export default class Area extends React.Component {
                 outAr = outAr.concat(sortedAr)
                 console.log('Sortby ArSorted: ',outAr.length, sortedAr);
             }
-
-            /*
-            console.log('myObject: ',myObject);
-            var outAr = [];
-            Object.keys(myObject2).map(function(key, index) {
-                //myObject[key] = _.sortBy(  myObject[key], 'Dat' );
-                var sortByDate = _.sortBy(  myObject[key], 'Dat' )
-                outAr = outAr.concat(sortByDate);
-                //console.log('sortByDate: ',outAr.length,sortByDate)
-            });
-            */
             // Obj to Ar
             groupedByParam1SortedBySize[i].value = outAr;
-            //console.log('Group sort and nested: ',outAr,groupedByParam1SortedBySize[i].value);
         }
         // Sort by propety name
         var groupedByParam1SortedByName = _.sortBy( groupedByParam1SortedBySize, 'key' ); 
@@ -225,6 +213,10 @@ export default class Area extends React.Component {
                         <FilterListColours items={groupedByParam2} keyStr={"Param2"} />
                     </div>
                 </div>
+                <div className="filterAreaSearch">
+                    <FilterForm onNewFilter={this.onNewFilter} filter={filter}/>
+                    <div className="detailInfo"><p>{filter!==''?<span>Filter documents: {totalDataEntries} &#124; </span>:null} Number of documents: {totalDataEntries}<br/></p></div>
+                </div>
                 <div className="vizArea">
                     <div className="groups">
                         <Groups
@@ -241,16 +233,7 @@ export default class Area extends React.Component {
                         openPopupbox={this.openPopupbox}
                         />
                     </div>
-                    <div className="sideRightColumn">
-                        <div className="filterForInput">
-                            <FilterForm onNewFilter={this.onNewFilter} filter={filter}/>
-                        </div>
-                        <div className="filterForInput">
-                            <h2>Overview</h2>
-                            <p>Number of documents: {totalDataEntries}</p>
-                            <p><a href="#" onClick={this.openDataDetails}>View Data Details in Numbers</a></p>
-                        </div>
-                    </div>
+                    
                 </div>
                 
             </div>

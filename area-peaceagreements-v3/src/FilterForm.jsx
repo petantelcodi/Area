@@ -38,7 +38,7 @@ export default class FilterForm extends React.Component {
       //console.log('== render form filter');
       return (
      
-        <form onSubmit={this.handleSubmit}>
+        <form className="inputFilterForm" onSubmit={this.handleSubmit}>
           <label>
             
             <input type="text" value={this.state.value} onChange={this.handleChange} />

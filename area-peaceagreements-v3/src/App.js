@@ -9,6 +9,7 @@ import {
 import Area from "./Area"
 
 // CSS
+import "./reset.css";
 import "./styles.css";
 
 // Data
