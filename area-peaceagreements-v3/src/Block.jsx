@@ -55,20 +55,7 @@ export default class Block extends React.Component {
     //console.log('my_y :',my_y)
     
     // Search filter in
-    var foundFilter = false;
-    
-    if(this.props.filter!==""){
-      
-      //console.log('filter:',this.props.filter);
-
-      Object.entries(this.props.item).forEach(([key, value]) => {
-        //console.log(value);
-        if(typeof value === 'string' && value.toLowerCase().indexOf(this.props.filter.toLowerCase())!==-1){ 
-          foundFilter = true;
-          //console.log("== foundFilter :",value);
-        } 
-      });
-    }
+    var foundFilter = this.props.item.foundFilter; //false;
 
     // Set color
     var param2 = this.props.param2;

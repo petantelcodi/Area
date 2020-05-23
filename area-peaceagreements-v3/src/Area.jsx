@@ -165,10 +165,8 @@ export default class Area extends React.Component {
         var groupedByParam1SortedBySize = this.ObjToArSortedBySize(groupedByParam1);
 
         // Sort by colour group and year
+        var totalFoundFilter = 0;
         for(let i=0; i<groupedByParam1SortedBySize.length; i++ ){
-            //groupedByParam1SortedBySize[i].value = _.orderBy(groupedByParam1SortedBySize[i].value, [param2, 'Dat'], ['desc', 'desc']) 
-            //_.orderBy( groupedByParam1SortedBySize[i].value,[] )
-            
             var myObject = groupBy(groupedByParam1SortedBySize[i].value, param2);
             console.log('myObject: ',myObject)
 
@@ -183,8 +181,27 @@ export default class Area extends React.Component {
             var outAr = [];
             for(let j=0; j<arSorted.length; j++){
                 var sortedAr = _.sortBy(  arSorted[j].value, 'Dat' );
-                outAr = outAr.concat(sortedAr)
-                console.log('Sortby ArSorted: ',outAr.length, sortedAr);
+                // Sort for find if has filter
+                var foundFilter = false;
+                if(this.props.filter!=="" && sortedAr.length>0){
+                    //console.log('filter:',this.props.filter);
+                    console.log('sortedAr[0]: ',sortedAr)
+                    
+                    for(let k=0; k<sortedAr.length; k++){
+                        sortedAr[k].foundFilter = false;
+                        Object.entries(sortedAr[k]).forEach(([key, value]) => {
+                            //console.log(value, typeof value)
+                            if(typeof value === 'string' && !(value==="0") && !(value==="1") && value.toLowerCase().indexOf(filter.toLowerCase())!==-1){ 
+                                sortedAr[k].foundFilter = true;
+                                totalFoundFilter +=1;
+                            } 
+                        });
+                    }
+                    
+                }
+                // add to mergeAr
+                outAr = outAr.concat(sortedAr);
+                //console.log('Sortby ArSorted: ',outAr.length, sortedAr);
             }
             // Obj to Ar
             groupedByParam1SortedBySize[i].value = outAr;
@@ -235,7 +252,7 @@ export default class Area extends React.Component {
                 </div>
                 <div className="filterAreaSearch">
                     <FilterForm onNewFilter={this.onNewFilter} filter={filter}/>
-                    <div className="detailInfo"><p>{filter!==''?<span>Filter documents: {totalDataEntries} &#124; </span>:null} Number of documents: {totalDataEntries}<br/></p></div>
+                    <div className="detailInfo"><p>{filter!==''?<span style={{color:'yellow'}}>Filter documents: {totalFoundFilter} &#124; </span>:null} Number of documents: {totalDataEntries}<br/></p></div>
                 </div>
                 <div className="vizArea">
                     <div className="groups">
