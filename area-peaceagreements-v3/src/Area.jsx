@@ -3,11 +3,16 @@ import React from "react";
 import { groupBy} from "lodash";
 import _ from 'lodash';
 import PubSub from "pubsub-js";
-import {
+import {useParams, withRouter} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import queryString from 'query-string';
+
+/*import {
     PopupboxManager,
     PopupboxContainer
 } from 'react-popupbox';
 import "react-popupbox/dist/react-popupbox.css"
+*/
 // options: http://fraina.github.io/react-popupbox/
 
 // Area components
@@ -17,18 +22,24 @@ import FilterForm from "./FilterForm";
 import SimpleSelectProperties from "./SimpleSelectProperties";
 import { OutputFileType } from "typescript";
 
+import Config from "./Config"
+
 export default class Area extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            param1 : "Reg",
-            param2 : "Reg",
+            param1 : Config.param1,
+            param2 : Config.param2,
             filter: "",
         };
         console.log('call constructor=========================');
     }
     
     componentDidMount() {
+        //let query = this.useQuery();
+        //console.log('this.props.location.search:',this.props.location);
+        //console.log(query);
+        
         //PubSub.subscribe("filter-submit", this.onNewFilter);
     }
     
@@ -75,6 +86,10 @@ export default class Area extends React.Component {
         this.setState({param2: value})
     }
 
+    openDataDetails= () => {
+
+    }
+    /*
     openPopupbox = (data) => {
         console.log(data);
         const content = (
@@ -94,9 +109,11 @@ export default class Area extends React.Component {
             fadeInSpeed: 500
         } })
     }
-    
+    */
     render() {
-        
+        // exemple https://codesandbox.io/s/react-router-query-parameters-mfh8p?from-embed=&file=/example.js
+        //let query = new URLSearchParams(useLocation().search);
+
         // Config variables
         var max_distinc = 50;
         var area_x = 790;
@@ -104,9 +121,12 @@ export default class Area extends React.Component {
         var colors_approach = "fix"; // fix, random, gradient
         var area_title = "PeaceAgreements.org";
         
+        //const values = queryString.parse(this.props.location.search)
+        //console.log(values)
         var param1 = this.state.param1;
         var param2 = this.state.param2;
         var filter = this.state.filter;
+        
         console.log("Current filter :",filter);
 
         var totalDataEntries = this.props.data.length;
@@ -123,6 +143,36 @@ export default class Area extends React.Component {
         try{ delete groupedByParam1[param1]; }catch(err){}
         // Sort and 
         var groupedByParam1SortedBySize = this.ObjToArSortedBySize(groupedByParam1);
+
+        // sort by colour group and year
+        for(let i=0;i<groupedByParam1SortedBySize.length;i++ ){
+            var myObject = groupBy(groupedByParam1SortedBySize[i].value, param2);
+            console.log('myObject: ',myObject)
+            var arSorted = this.ObjToArSortedBySize(myObject);
+            console.log('ArSorted: ',arSorted);
+            var outAr = [];
+            //var myObject2 = groupBy(arSorted, param2);
+            for(let j=0; j<arSorted.length; j++){
+                var sortedAr = _.sortBy(  arSorted[j].value, 'Dat' );
+                outAr = outAr.concat(sortedAr)
+                console.log('Sortby ArSorted: ',outAr.length, sortedAr);
+                
+            }
+
+            /*
+            console.log('myObject: ',myObject);
+            var outAr = [];
+            Object.keys(myObject2).map(function(key, index) {
+                //myObject[key] = _.sortBy(  myObject[key], 'Dat' );
+                var sortByDate = _.sortBy(  myObject[key], 'Dat' )
+                outAr = outAr.concat(sortByDate);
+                //console.log('sortByDate: ',outAr.length,sortByDate)
+            });
+            */
+            // Obj to Ar
+            groupedByParam1SortedBySize[i].value = outAr;
+            //console.log('Group sort and nested: ',outAr,groupedByParam1SortedBySize[i].value);
+        }
         // Sort by propety name
         var groupedByParam1SortedByName = _.sortBy( groupedByParam1SortedBySize, 'key' ); 
 
@@ -136,7 +186,7 @@ export default class Area extends React.Component {
 
         // Calculate size block rect
         var maxBlocksInAGroup = groupedByParam1SortedBySize[0].value.length;
-        console.log(groupedByParam1SortedBySize)
+        console.log('groupedByParam1SortedBySize:',groupedByParam1SortedBySize)
         console.log('maxBlocksInAGroup',maxBlocksInAGroup);
         var dim_block = Math.sqrt(maxBlocksInAGroup);
         if (dim_block !== Math.floor(dim_block)) {
@@ -164,6 +214,7 @@ export default class Area extends React.Component {
 
         return (
             <div>
+                <div className="typeAreaSelect"><p className="typeAreaBtSelect">PA-Simple</p> <p className="typeAreaBtSelect">PA-detailed</p> <p className="typeAreaBtSelect">CF-Simple</p> <p className="typeAreaBtSelect">CF-detailed</p></div>
                 <div className="filterArea">
                     <div className="filterSelect">
                         <SimpleSelectProperties updateParam={this.updateParam1} text="(blocks):" param="Reg"/>
@@ -190,11 +241,18 @@ export default class Area extends React.Component {
                         openPopupbox={this.openPopupbox}
                         />
                     </div>
-                    <div className="filterForInput">
-                        <FilterForm onNewFilter={this.onNewFilter} filter={filter}/>
+                    <div className="sideRightColumn">
+                        <div className="filterForInput">
+                            <FilterForm onNewFilter={this.onNewFilter} filter={filter}/>
+                        </div>
+                        <div className="filterForInput">
+                            <h2>Overview</h2>
+                            <p>Number of documents: {totalDataEntries}</p>
+                            <p><a href="#" onClick={this.openDataDetails}>View Data Details in Numbers</a></p>
+                        </div>
                     </div>
                 </div>
-                <PopupboxContainer />
+                
             </div>
         );
     

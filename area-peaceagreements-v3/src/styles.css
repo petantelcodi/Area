@@ -36,18 +36,19 @@ rect {
 
 .filterSelect{
   position: relative;
-  width: 100%;
-  height: 75px;
+  width: 50%;
+  height: auto;
+  float: left;
 }
 
 .groups{
   position: relative;
   left:0px;
   width:800px;
-  height:600px;
+  height:auto;
   clear: both;
 }
-
+npm
 .selectSimple{
   width:330px;
   height: 35px;
@@ -57,26 +58,59 @@ rect {
   top:0px;
 }
 
+.lineBlock{
+  stroke:rgb(0,0,0);
+  stroke-width:1;
+}
+
+.lineBlockCross{
+  stroke:rgb(30,30,30);
+  stroke-width:1;
+}
+
 .selectDescription{
-  clear: both;position:absolute;
+  clear: both;
+  position:absolute;
   left:345px;
   top:10px;
 }
 
-
 .filterForInput{
-  position: absolute;
-  top:15px;
-  left:790px;
-  width: 300px;
-  height: 50px;
+  position: relative;
+  text-align: left;
 }
-
-
 
 .filterSelectProperties{
   float: left;
   border:1px solid #ffffff;
   padding: 1px;
   margin: 1px;
+  
+}
+
+.sideRightColumn{
+  position: relative;
+  width:cacl(1100px-800px);
+}
+
+a{
+  color: white;
+  padding: 2px;
+  border: solid 1px;
+  text-decoration: none;
+}
+
+.typeAreaSelect{
+  position: relative;
+  display:block;
+  width:1100px;
+  height:40px;
+}
+
+.typeAreaBtSelect{
+  position: relative;
+  float: left;
+  border:solid 1px white;
+  padding: 4px;
+  margin:2px; 
 }

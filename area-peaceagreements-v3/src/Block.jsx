@@ -2,6 +2,8 @@ import React from "react";
 import PubSub from "pubsub-js";
 import Color from "color";
 
+import Config from "./Config"
+
 export default class Block extends React.Component {
   constructor() {
     super();
@@ -9,42 +11,7 @@ export default class Block extends React.Component {
       active: false,
       filter: '',
       // Color list for coloring param2
-      colors: [
-        "#CC5151",
-        "#51CCCC",
-        "#8ECC51",
-        "#8E51CC",
-        "#CCAD51",
-        "#51CC70",
-        "#5170CC",
-        "#CC51AD",
-        "#CC7F51",
-        "#BCCC51",
-        "#60CC51",
-        "#51CC9E",
-        "#519ECC",
-        "#6051CC",
-        "#BC51CC",
-        "#9E1452",
-        "#CFA2B0",
-        "#CC9651",
-        "#4BEC4E",
-        "#E8FA14",
-        "#1170DD",
-        "#E8B080",
-        "#694C33",
-        "#D8A0CD",
-        "#803D73",
-        "DA8E95",
-        "#831E27",
-        "#A7B6BC",
-        "#143E4D",
-        "#9CF69C",
-        "#267826",
-        "#D3E19B",
-        "#646D40",
-        "#757575"
-      ]
+      colors: Config.colorList
     };
   }
 
@@ -69,7 +36,7 @@ export default class Block extends React.Component {
     //alert(JSON.stringify(this.props.items));
     //console.log(JSON.stringify(this.props.items));
     //console.log(this.props.item);
-    this.props.openPopupbox(this.props.item);
+    //this.props.openPopupbox(this.props.item);
   }
 
   render() {
@@ -109,8 +76,9 @@ export default class Block extends React.Component {
     //console.log('param2Value:',param2Value);
     //console.log('this.props.colourData:',this.props.colourData);
     //console.log('this.props.colorAr:',this.props.colorAr);
-
-    var color = this.state.colors[this.props.colorAr[param2Value]];
+    var colorArId = this.props.colorAr[param2Value]-1;
+    console.log('colorArId: ',colorArId);
+    var color = this.state.colors[colorArId];
     var colorFilter =  '#CCCCCC';
    
     var opacity = 1;
@@ -118,13 +86,12 @@ export default class Block extends React.Component {
     if(!foundFilter && this.props.filter!==""){
       //color = Color(color).alpha(0.8).lighten(0.5).hex();
       //opacity = 0.5;
-      color = colorFilter;
+      //color = colorFilter;
     }
-    
     // Render
     return <g>
-      {!foundFilter && this.props.filter!==""?<circle ref={'block_circle_'+this.props.groupId+'_'+this.props.item.id} x={my_x+2} y={my_y+2} r="4"  fill="white" />:null}
-      <rect ref={'block_rect_'+this.props.groupId+'_'+this.props.item.id} x={my_x} y={my_y} stroke="#FFFFFF" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={color} onClick={this.showData} />
+      <rect ref={'block_rect_'+this.props.groupId+'_'+this.props.item.id} x={my_x} y={my_y} stroke="#000000" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={color} onClick={this.showData} />
+      {foundFilter && this.props.filter!==""?<g><line x1={my_x} y1={my_y} x2={my_x+this.props.blockWidth} y2={my_y+this.props.blockHeight} className="lineBlockCross" /><line x1={my_x} y1={my_y+this.props.blockHeight} x2={my_x+this.props.blockWidth} y2={my_y} className="lineBlockCross"  /></g>:null}
       </g>;
   }
 }
