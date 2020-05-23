@@ -171,7 +171,6 @@ export default class Area extends React.Component {
             
             var myObject = groupBy(groupedByParam1SortedBySize[i].value, param2);
             console.log('myObject: ',myObject)
-            //var arSorted = this.ObjToArSortedBySize(myObject);
 
             // Get object in order of object that is in menu
             var myObjectSorted = {};
@@ -182,7 +181,6 @@ export default class Area extends React.Component {
             var arSorted = this.ObjToAr(myObjectSorted);
             console.log('ArSorted: ',arSorted);
             var outAr = [];
-            //var myObject2 = groupBy(arSorted, param2);
             for(let j=0; j<arSorted.length; j++){
                 var sortedAr = _.sortBy(  arSorted[j].value, 'Dat' );
                 outAr = outAr.concat(sortedAr)
