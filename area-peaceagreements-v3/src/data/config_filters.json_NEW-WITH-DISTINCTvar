@@ -56,6 +56,12 @@
         "exclude": "0",
         "distincnum": 1504
       },
+      "Year": {
+        "human": "Year Signed",
+        "areafilter": "0",
+        "type": "text",
+        "exclude": "0"
+      },
       "Status ": {
         "human": "Agreement Definition and Status",
         "areafilte": "0",
