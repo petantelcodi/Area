@@ -143,3 +143,7 @@ form{
   padding: 4px;
   margin:2px; 
 }
+
+.typeAreaBtSelected{
+  background-color: grey;
+}
