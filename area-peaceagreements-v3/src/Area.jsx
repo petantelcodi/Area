@@ -25,6 +25,13 @@ import { OutputFileType } from "typescript";
 
 import Config from "./Config"
 
+
+import dataCFsim from "./data/CFsim.json";
+import dataCF from "./data/CF.json";
+import dataPAsim from "./data/PAsim.json";
+import dataPA from "./data/PAsim.json";
+
+
 export default class Area extends React.Component {
     constructor(props) {
         super(props);
@@ -32,7 +39,7 @@ export default class Area extends React.Component {
             param1 : Config.param1,
             param2 : Config.param2,
             filter: "",
-            typeArea:"PA-simple"
+            typeArea:"PA-Simple"
         };
         console.log('call constructor=========================');
     }
@@ -132,6 +139,25 @@ export default class Area extends React.Component {
         var area_title = "PeaceAgreements.org";
 
         var typeArea = this.state.typeArea;
+        var data = [];
+        switch(typeArea){
+            case 'CF-Simple':
+                data = dataCFsim;
+                console.log('CF-Simple');
+                break;
+            case 'PA-detailed':
+                data = dataCF;
+                console.log('PA-detailed');
+                break;
+            case 'PA-Simple':
+                data = dataPAsim;
+                console.log('PA-Simple');
+                break;
+            case 'CF-detailed':
+                data = dataPA;
+                console.log('CF-detailed');
+                break;     
+        }
         
         //const values = queryString.parse(this.props.location.search)
         //console.log(values)
@@ -141,10 +167,10 @@ export default class Area extends React.Component {
         
         console.log("Current filter :",filter);
 
-        var totalDataEntries = this.props.data.length;
+        var totalDataEntries = data.length;//this.props.data.length;
         console.log('Total data length: ',totalDataEntries);
 
-        var data = this.props.data;
+        //var data = this.props.data;
         // Sort by date (From older to new)
         data = _.sortBy(  data, 'Dat' );
         // Add id to Array
@@ -217,7 +243,7 @@ export default class Area extends React.Component {
         // Calculate size group SVG
         var dim_groups = Math.sqrt(groupedByParam1SortedByName.length);
         if (dim_groups !== Math.floor(dim_groups)) {
-            dim_groups = Math.floor(dim_groups) + 1;
+            dim_groups = Math.floor(dim_groups) ;//+ 1
         }
         var groupWidth = Math.floor(area_x / dim_groups);
         var groupHeight = Math.floor(area_y / dim_groups);
