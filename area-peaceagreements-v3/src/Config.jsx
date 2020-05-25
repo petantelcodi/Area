@@ -1,14 +1,20 @@
 
 const Config = {
-  MAX_DISTINC : 50,
-	AREAX : 1100,
+  MAX_DISTINC : 35,
+	AREAX : 1000,
 	AREAY : 900,
 	COLORS_APPROACH : "fix", // fix, random, gradient
 	AREA_TITLE: "PeaceAgreements.org",
-  param1 : "Reg",
-  param2 : "Stage",
-  maxdistinc:20,
-  
+  PARAM1 : "Agtp",
+  PARAM2 : "Stage",
+  START_TYPE_AREA:"PA-Simple",
+  TYPE_AREA:[{name:"PA-Detailed",value:"PA-Detailed"},{name:"PA-Simple",value:"PA-Simple"},{name:"CF-Detailed",value:"CF-Detailed"},{name:"CF-Simple",value:"CF-Simple"}],
+  DESCRIPTION:{
+    "PA-Detailed":"PA: showing all Peace Agreements (detailled view with 65536 possible diagrams)",
+    "PA-Simple":"PAsim: showing all Peace Agreements (simple view with 36 possible diagrams)",
+    "CF-Detailed":"CF: showing all Cease Fire agreements (detailled view with 65536 possible diagrams)",
+    "CF-Simple":"CFsim: showing all Cease Fire agreements (simple view with 36 possible diagrams)",
+  },  
   colorList:[
     "#CC5151",
     "#51CCCC",

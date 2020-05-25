@@ -12,10 +12,13 @@
     "query-string": "^6.12.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "react-dropdown-tree-select": "github:mcanet/react-dropdown-tree-select",
     "react-router-dom": "latest",
     "react-scripts": "3.0.1",
     "react-select": "^3.1.0",
-    "react-select-reborn": "^3.2.0"
+    "react-select-reborn": "^3.2.0",
+    "array.partial": "^1.0.5",
+    "react-infinite-scroll-component": "^4.0.2"
   },
   "devDependencies": {
     "typescript": "3.8.3"
