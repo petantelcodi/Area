@@ -29,6 +29,16 @@ body{
   margin-bottom:10px;
 }
 
+.descriptionArea{
+  position:relative;
+  width: 96%;
+  height: auto;
+  display: flex;
+  border-bottom: white 1px solid;
+  padding:3px;
+  margin-bottom:10px;
+}
+
 .vizArea{
   position:relative;
   width: 100%;
@@ -101,12 +111,15 @@ rect {
 .inputFilterForm{
   margin-left: -2px;
 }
+.inputFilterForm > input[type=submit]{
+  cursor: pointer;
+}
 
 .filterSelectProperties{
   float: left;
   border:1px solid #ffffff;
-  padding: 1px;
-  margin: 1px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .detailInfo{
@@ -142,8 +155,69 @@ form{
   border:solid 1px white;
   padding: 4px;
   margin:2px; 
+  cursor: pointer;
 }
 
 .typeAreaBtSelected{
   background-color: grey;
+}
+
+/* design dropmenu */
+.react-dropdown-tree-select {
+  text-align: left;
+  padding: 5px;
+  width:400px;
+  height: flex;
+}
+
+
+.tag-item{
+  color: black;
+}
+
+.dropdown-content{
+  background-color: rgb(60, 60, 60);
+  padding: 15px;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-width: auto;
+}
+
+.dropdown-trigger{
+  padding: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.tag{
+  font-size: 15px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.searchContainer{
+  position: relative;
+  top:-1px;
+}
+
+.search{
+  height: 17px;
+}
+
+.dropdownCloseButton{
+  position: absolute;
+  top:40px;
+  left:350px;
+  height: 25px;
+  padding-left: 5px;
+  width:60px;
+  /*border: 1px solid white;*/
+  /*background-color: darkgray;*/
+  z-index: 100;
+}
+.imgDropdownCloseButton{
+  width:20px;
+  height:20px;
+  cursor: pointer;
 }

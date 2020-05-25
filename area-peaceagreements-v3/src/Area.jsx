@@ -20,26 +20,23 @@ import Groups from "./Groups";
 import FilterList from "./FilterList";
 import FilterListColours from "./FilterListColours";
 import FilterForm from "./FilterForm";
-import SimpleSelectProperties from "./SimpleSelectProperties";
+import SelectProperties from "./SelectProperties";
 import { OutputFileType } from "typescript";
 
 import Config from "./Config"
-
-
-import dataCFsim from "./data/CFsim.json";
-import dataCF from "./data/CF.json";
 import dataPAsim from "./data/PAsim.json";
-import dataPA from "./data/PAsim.json";
-
+import dataCFsim from "./data/CFsim.json";
+import dataPA from "./data/PA.json";
+import dataCF from "./data/CF.json";
 
 export default class Area extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            param1 : Config.param1,
-            param2 : Config.param2,
+            param1 : Config.PARAM1,
+            param2 : Config.PARAM2,
             filter: "",
-            typeArea:"PA-Simple"
+            typeArea:Config.START_TYPE_AREA
         };
         console.log('call constructor=========================');
     }
@@ -132,30 +129,31 @@ export default class Area extends React.Component {
         //let query = new URLSearchParams(useLocation().search);
 
         // Config variables
-        var max_distinc = 50;
-        var area_x = 989;
-        var area_y = 600;
-        var colors_approach = "fix"; // fix, random, gradient
+        const max_distinc = Config.MAX_DISTINC;
+        const area_x = Config.AREAX;
+        const area_y = Config.AREAY;
+        const colors_approach = Config.COLORS_APPROACH; 
         var area_title = "PeaceAgreements.org";
 
         var typeArea = this.state.typeArea;
         var data = [];
+        console.log("typeArea",typeArea)
         switch(typeArea){
             case 'CF-Simple':
                 data = dataCFsim;
                 console.log('CF-Simple');
                 break;
-            case 'PA-detailed':
-                data = dataCF;
-                console.log('PA-detailed');
-                break;
             case 'PA-Simple':
                 data = dataPAsim;
                 console.log('PA-Simple');
                 break;
-            case 'CF-detailed':
+            case 'PA-Detailed':
                 data = dataPA;
-                console.log('CF-detailed');
+                console.log('PA-Detailed');
+                break;
+            case 'CF-Detailed':
+                data = dataCF;
+                console.log('CF-Detailed');
                 break;     
         }
         
@@ -243,7 +241,7 @@ export default class Area extends React.Component {
         // Calculate size group SVG
         var dim_groups = Math.sqrt(groupedByParam1SortedByName.length);
         if (dim_groups !== Math.floor(dim_groups)) {
-            dim_groups = Math.floor(dim_groups) ;//+ 1
+            dim_groups = Math.floor(dim_groups) +1;//+ 1
         }
         var groupWidth = Math.floor(area_x / dim_groups);
         var groupHeight = Math.floor(area_y / dim_groups);
@@ -271,17 +269,20 @@ export default class Area extends React.Component {
             <div>
                 <div className="typeAreaSelect">
                     <div className={typeArea==='PA-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Simple')}}>PA-Simple</div> 
-                    <div className={typeArea==='PA-detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-detailed')}}>PA-detailed</div> 
+                    <div className={typeArea==='PA-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Detailed')}}>PA-Detailed</div> 
                     <div className={typeArea==='CF-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-Simple')}}>CF-Simple</div> 
-                    <div className={typeArea==='CF-detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-detailed')}}>CF-detailed</div>
+                    <div className={typeArea==='CF-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-Detailed')}}>CF-Detailed</div>
+                </div>
+                <div className="descriptionArea">
+                    <div>{Config.DESCRIPTION[typeArea]}</div>
                 </div>
                 <div className="filterArea">
                     <div className="filterSelect">
-                        <SimpleSelectProperties updateParam={this.updateParam1} text="(blocks):" param="Reg"/>
+                        <SelectProperties updateParam={this.updateParam1} text="(blocks):" param="Reg"/>
                         <FilterList items={groupedByParam1} keyStr={"Param1"} />
                     </div>
                     <div className="filterSelect">
-                        <SimpleSelectProperties updateParam={this.updateParam2} text="(Colours):" param="Reg"/>
+                        <SelectProperties updateParam={this.updateParam2} text="(Colours):" param="Reg"/>
                         <FilterListColours items={groupedByParam2} keyStr={"Param2"} />
                     </div>
                 </div>

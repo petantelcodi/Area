@@ -1,9 +1,9 @@
 [
-    { "value": "Con", "label": "Country-Entity" },
+    { "value": "Con", "label": "Country-Entity", "expandOnly":true },
     { "value": "Contp", "label": "Conflict" },
     { "value": "PP", "label": "Peace Process Number" },
     { "value": "PPName", "label": "Peace Process Name" },
-    { "value": "Reg", "label": "Region" },
+    { "value": "Reg", "label": "Region", "isDefaultValue":true },
     { "value": "AgtId", "label": "Agreement ID" },
     { "value": "Agt", "label": "Agreement Name" },
     { "value": "Dat", "label":  "Date Signed" },
