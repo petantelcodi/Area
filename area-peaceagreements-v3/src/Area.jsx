@@ -24,10 +24,10 @@ import SelectProperties from "./SelectProperties";
 import { OutputFileType } from "typescript";
 
 import Config from "./Config"
-import dataCFsim from "./data/CFsim.json";
-import dataCF from "./data/CF.json";
 import dataPAsim from "./data/PAsim.json";
+import dataCFsim from "./data/CFsim.json";
 import dataPA from "./data/PA.json";
+import dataCF from "./data/CF.json";
 
 export default class Area extends React.Component {
     constructor(props) {
@@ -137,21 +137,22 @@ export default class Area extends React.Component {
 
         var typeArea = this.state.typeArea;
         var data = [];
+        console.log("typeArea",typeArea)
         switch(typeArea){
             case 'CF-Simple':
                 data = dataCFsim;
                 console.log('CF-Simple');
                 break;
-            case 'PA-Detailed':
-                data = dataCF;
-                console.log('PA-Detailed');
-                break;
             case 'PA-Simple':
                 data = dataPAsim;
                 console.log('PA-Simple');
                 break;
-            case 'CF-Detailed':
+            case 'PA-Detailed':
                 data = dataPA;
+                console.log('PA-Detailed');
+                break;
+            case 'CF-Detailed':
+                data = dataCF;
                 console.log('CF-Detailed');
                 break;     
         }
@@ -268,9 +269,9 @@ export default class Area extends React.Component {
             <div>
                 <div className="typeAreaSelect">
                     <div className={typeArea==='PA-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Simple')}}>PA-Simple</div> 
-                    <div className={typeArea==='PA-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-detailed')}}>PA-Detailed</div> 
+                    <div className={typeArea==='PA-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Detailed')}}>PA-Detailed</div> 
                     <div className={typeArea==='CF-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-Simple')}}>CF-Simple</div> 
-                    <div className={typeArea==='CF-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-detailed')}}>CF-Detailed</div>
+                    <div className={typeArea==='CF-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-Detailed')}}>CF-Detailed</div>
                 </div>
                 <div className="descriptionArea">
                     <div>{Config.DESCRIPTION[typeArea]}</div>

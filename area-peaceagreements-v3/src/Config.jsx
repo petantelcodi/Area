@@ -7,7 +7,7 @@ const Config = {
 	AREA_TITLE: "PeaceAgreements.org",
   PARAM1 : "Agtp",
   PARAM2 : "Stage",
-  START_TYPE_AREA:"PA-Simple",
+  START_TYPE_AREA:"PA-Detailed",
   TYPE_AREA:[{name:"PA-Detailed",value:"PA-Detailed"},{name:"PA-Simple",value:"PA-Simple"},{name:"CF-Detailed",value:"CF-Detailed"},{name:"CF-Simple",value:"CF-Simple"}],
   DESCRIPTION:{
     "PA-Detailed":"PA: showing all Peace Agreements (detailled view with 65536 possible diagrams)",
