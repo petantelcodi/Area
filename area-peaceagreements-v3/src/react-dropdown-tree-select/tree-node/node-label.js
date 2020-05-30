@@ -75,7 +75,7 @@ class NodeLabel extends PureComponent {
             )}
           </span>
         ) : null}
-        <span {...nodeLabelProps}>{label}</span>
+        <span {...nodeLabelProps} onClick={this.handleCheckboxChange}>{label}</span>
       </label>
     )
   }

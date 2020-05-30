@@ -83,11 +83,10 @@
 			]
 		},
 		{
-			"label": "GROUPS",
+			"label": "Groups",
 			"expandOnly": true,
 			"children": [{
-					"label": "GCh",
-					"expandOnly": true,
+					"value": "GCh",
 					"children": [{
 							"value": "GChRhet"
 						},
@@ -103,8 +102,7 @@
 					]
 				},
 				{
-					"label": "GDis",
-					"expandOnly": true,
+					"value": "GDis",
 					"children": [{
 							"value": "GDisRhet"
 						},
@@ -120,8 +118,7 @@
 					]
 				},
 				{
-					"label": "GAge",
-					"expandOnly": true,
+					"value": "GAge",
 					"children": [{
 							"value": "GAgeRhet"
 						},
@@ -137,8 +134,7 @@
 					]
 				},
 				{
-					"label": "GMig",
-					"expandOnly": true,
+					"value": "GMig",
 					"children": [{
 							"value": "GMigRhet"
 						},
@@ -154,8 +150,7 @@
 					]
 				},
 				{
-					"label": "GRa",
-					"expandOnly": true,
+					"value": "GRa",
 					"children": [{
 							"value": "GRaRhet"
 						},
@@ -186,8 +181,7 @@
 					]
 				},
 				{
-					"label": "GInd",
-					"expandOnly": true,
+					"value": "GInd",
 					"children": [{
 							"value": "GIndRhet"
 						},
@@ -203,8 +197,7 @@
 					]
 				},
 				{
-					"label": "GOth",
-					"expandOnly": true,
+					"value": "GOth",
 					"children": [{
 							"value": "GOthRhet"
 						},
@@ -220,8 +213,7 @@
 					]
 				},
 				{
-					"label": "GRef",
-					"expandOnly": true,
+					"value": "GRef",
 					"children": [{
 							"value": "GRefRhet"
 						},
@@ -234,8 +226,7 @@
 					]
 				},
 				{
-					"label": "GSoc",
-					"expandOnly": true,
+					"value": "GSoc",
 					"children": [{
 							"value": "GSocRhet"
 						},
@@ -253,14 +244,13 @@
 			]
 		},
 		{
-			"label": "GENDER",
+			"label": "Gender",
 			"expandOnly": true,
 			"children": [{
 					"value": "GeWom"
 				},
 				{
-					"label": "GeMe",
-					"expandOnly": true,
+					"value": "GeMe",
 					"children": [{
 							"value": "GeMeNu"
 						},
@@ -290,8 +280,7 @@
 			"label": "State definition",
 			"expandOnly": true,
 			"children": [{
-				"label": "StDef",
-				"expandOnly": true,
+				"value": "StDef",
 				"children": [{
 						"value": "StGen"
 					},
@@ -326,8 +315,7 @@
 			"label": "Governance",
 			"expandOnly": true,
 			"children": [{
-					"label": "Pol",
-					"expandOnly": true,
+					"value": "Pol",
 					"children": [{
 							"value": "PolGen"
 						},
@@ -349,8 +337,7 @@
 					"value": "ElecComm"
 				},
 				{
-					"label": "PolPar",
-					"expandOnly": true,
+					"value": "PolPar",
 					"children": [{
 							"value": "PolParTrans"
 						},
@@ -374,8 +361,7 @@
 			"label": "Powersharing",
 			"expandOnly": true,
 			"children": [{
-					"label": "Polps",
-					"expandOnly": true,
+					"value": "Polps",
 					"children": [{
 							"value": "PpsSt"
 						},
@@ -406,8 +392,7 @@
 					]
 				},
 				{
-					"label": "Terps",
-					"expandOnly": true,
+					"value": "Terps",
 					"children": [{
 							"value": "TpsSub"
 						},
@@ -423,8 +408,7 @@
 					]
 				},
 				{
-					"label": "Eps",
-					"expandOnly": true,
+					"value": "Eps",
 					"children": [{
 							"value": "EpsRes"
 						},
@@ -437,8 +421,7 @@
 					]
 				},
 				{
-					"label": "Mps",
-					"expandOnly": true,
+					"value": "Mps",
 					"children": [{
 							"value": "MpsMe"
 						},
@@ -468,8 +451,7 @@
 					"value": "HrDem"
 				},
 				{
-					"label": "Prot",
-					"expandOnly": true,
+					"value": "Prot",
 					"children": [{
 							"value": "ProtCiv"
 						},
@@ -485,8 +467,7 @@
 					]
 				},
 				{
-					"label": "HrFra",
-					"expandOnly": true,
+					"value": "HrFra",
 					"children": [{
 							"value": "HrfSp"
 						},
@@ -502,8 +483,7 @@
 					]
 				},
 				{
-					"label": "HrCp",
-					"expandOnly": true,
+					"value": "HrCp",
 					"children": [{
 							"value": "CprLife"
 						},
@@ -549,8 +529,7 @@
 					]
 				},
 				{
-					"label": "HrSec",
-					"expandOnly": true,
+					"value": "HrSec",
 					"children": [{
 							"value": "SerProp"
 						},
@@ -584,8 +563,7 @@
 					"value": "HrNi"
 				},
 				{
-					"label": "HrNiMe",
-					"expandOnly": true,
+					"value": "HrNiMe",
 					"children": [{
 							"value": "HrNiNe"
 						},
@@ -595,8 +573,7 @@
 					]
 				},
 				{
-					"label": "HrIi",
-					"expandOnly": true,
+					"value": "HrIi",
 					"children": [{
 							"value": "HrIiMon"
 						},
@@ -615,8 +592,7 @@
 					"value": "HrDet"
 				},
 				{
-					"label": "Med",
-					"expandOnly": true,
+					"value": "Med",
 					"children": [{
 							"value": "MedGov"
 						},
@@ -632,8 +608,7 @@
 					]
 				},
 				{
-					"label": "HrCit",
-					"expandOnly": true,
+					"value": "HrCit",
 					"children": [{
 							"value": "CitGen"
 						},
@@ -654,8 +629,7 @@
 			"label": "Justice Sector Reform",
 			"expandOnly": true,
 			"children": [{
-					"label": "JusCr",
-					"expandOnly": true,
+					"value": "JusCr",
 					"children": [{
 							"value": "JusCrSp"
 						},
@@ -685,8 +659,7 @@
 			"label": "Socio-Economic Reconstruction",
 			"expandOnly": true,
 			"children": [{
-					"label": "Dev",
-					"expandOnly": true,
+					"value": "Dev",
 					"children": [{
 							"value": "DevSoc"
 						},
@@ -711,8 +684,7 @@
 					"value": "Bus"
 				},
 				{
-					"label": "Tax",
-					"expandOnly": true,
+					"value": "Tax",
 					"children": [{
 							"value": "TaxPo"
 						},
@@ -725,8 +697,7 @@
 					]
 				},
 				{
-					"label": "Ban",
-					"expandOnly": true,
+					"value": "Ban",
 					"children": [{
 							"value": "CenBan"
 						},
@@ -742,8 +713,7 @@
 					]
 				},
 				{
-					"label": "LaRef",
-					"expandOnly": true,
+					"value": "LaRef",
 					"children": [{
 							"value": "LaRefMan"
 						},
@@ -759,8 +729,7 @@
 					"value": "LaNom"
 				},
 				{
-					"label": "LaCH",
-					"expandOnly": true,
+					"value": "LaCH",
 					"children": [{
 							"label": "LaCHTa"
 						},
@@ -790,8 +759,7 @@
 					"value": "SsrGua"
 				},
 				{
-					"label": "Ce",
-					"expandOnly": true,
+					"value": "Ce",
 					"children": [{
 							"value": "CeProv"
 						},
@@ -807,8 +775,7 @@
 					"value": "SsrArm"
 				},
 				{
-					"label": "SsrDdr",
-					"expandOnly": true,
+					"value": "SsrDdr",
 					"children": [{
 							"value": "DdrDemil"
 						},
@@ -847,8 +814,7 @@
 					"value": "TjGen"
 				},
 				{
-					"label": "TjAm",
-					"expandOnly": true,
+					"value": "TjAm",
 					"children": [{
 							"value": "TjAmPro"
 						},
@@ -864,8 +830,7 @@
 					]
 				},
 				{
-					"label": "TjCou",
-					"expandOnly": true,
+					"value": "TjCou",
 					"children": [{
 							"value": "TjJaNc"
 						},
@@ -890,8 +855,7 @@
 					"value": "TjMis"
 				},
 				{
-					"label": "TjRep",
-					"expandOnly": true,
+					"value": "TjRep",
 					"children": [{
 							"value": "TjRSym"
 						},
