@@ -65,6 +65,7 @@ class DropdownTreeSelect extends Component {
       currentFocus: undefined,
     }
     this.clientId = props.id || clientIdGenerator.get(this)
+
   }
 
   initNewProps = ({ data, mode, showDropdown, showPartiallySelected, searchPredicate }) => {
@@ -101,6 +102,7 @@ class DropdownTreeSelect extends Component {
   }
 
   componentWillMount() {
+  //componentDidMount(){  
     this.initNewProps(this.props)
   }
 
@@ -330,8 +332,9 @@ class DropdownTreeSelect extends Component {
           </Trigger>
           {showDropdown && (
             <React.Fragment>
-            <div className="dropdownCloseButton" onClick={this.onCloseContent}><img className="imgDropdownCloseButton" src="close4.png"/></div>
             <div className="dropdown-content" {...this.getAriaAttributes()}>
+            <div className="dropdownCloseButton" onClick={this.onCloseContent}><img className="imgDropdownCloseButton" src="close4.png"/></div>
+            
               {inlineSearchInput && searchInput}
               {this.state.allNodesHidden ? (
                 <span className="no-matches">{texts.noMatches || 'No matches found'}</span>
@@ -351,6 +354,7 @@ class DropdownTreeSelect extends Component {
               )}
               
             </div>
+            
             </React.Fragment>
           )}
           

@@ -1,0 +1,983 @@
+[
+    {
+      "label": "Basic information",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "Con"
+        },
+        {
+          "label": "Contp"
+        },
+        {
+          "label": "PP"
+        },
+        {
+          "label": "PPName"
+        },
+        {
+          "label": "Reg"
+        },
+        {
+          "label": "AgtId"
+        },
+        {
+          "label": "Agt"
+        },
+        {
+          "label": "Dat"
+        },
+        {
+          "label": "Year"
+        },
+        {
+          "label": "Status"
+        },
+        {
+          "label": "Lgt"
+        },
+        {
+          "label": "N_characters"
+        },
+        {
+          "label": "Agtp"
+        },
+        {
+          "label": "Stage"
+        },
+        {
+          "label": "StageSub"
+        },
+        {
+          "label": "Part"
+        },
+        {
+          "label": "ThrdPart"
+        },
+        {
+          "label": "OthAgr"
+        },
+        {
+          "label": "Loc1ISO"
+        },
+        {
+          "label": "Loc2ISO"
+        },
+        {
+          "label": "Loc1GWNO"
+        },
+        {
+          "label": "Loc2GWNO"
+        },
+        {
+          "label": "UcdpCon"
+        },
+        {
+          "label": "UcdpAgr"
+        },
+        {
+          "label": "PamAgr"
+        },
+        {
+          "label": "CowWar"
+        }
+      ]
+    },
+    {
+      "label": "GROUPS",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "GCh",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GChRhet"
+            },
+            {
+              "label": "GChAntid"
+            },
+            {
+              "label": "GChSubs"
+            },
+            {
+              "label": "GChOth"
+            }
+          ]
+        },
+        {
+          "label": "GDis",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GDisRhet"
+            },
+            {
+              "label": "GDisAntid"
+            },
+            {
+              "label": "GDisSubs"
+            },
+            {
+              "label": "GDisOth"
+            }
+          ]
+        },
+        {
+          "label": "GAge",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GAgeRhet"
+            },
+            {
+              "label": "GAgeAntid"
+            },
+            {
+              "label": "GAgeSubs"
+            },
+            {
+              "label": "GAgeOth"
+            }
+          ]
+        },
+        {
+          "label": "GMig",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GMigRhet"
+            },
+            {
+              "label": "GMigAntid"
+            },
+            {
+              "label": "GMigSubs"
+            },
+            {
+              "label": "GMigOth"
+            }
+          ]
+        },
+        {
+          "label": "GRa",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GRaRhet"
+            },
+            {
+              "label": "GRaAntid"
+            },
+            {
+              "label": "GRaSubs"
+            },
+            {
+              "label": "GRaOth"
+            },
+            {
+              "label": "GRe"
+            },
+            {
+              "label": "GReRhet"
+            },
+            {
+              "label": "GReAntid"
+            },
+            {
+              "label": "GReSubs"
+            },
+            {
+              "label": "GReOth"
+            }
+          ]
+        },
+        {
+          "label": "GInd",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GIndRhet"
+            },
+            {
+              "label": "GIndAntid"
+            },
+            {
+              "label": "GIndSubs"
+            },
+            {
+              "label": "GIndOth"
+            }
+          ]
+        },
+        {
+          "label": "GOth",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GOthRhet"
+            },
+            {
+              "label": "GOthAntid"
+            },
+            {
+              "label": "GOthSubs"
+            },
+            {
+              "label": "GOthOth"
+            }
+          ]
+        },
+        {
+          "label": "GRef",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GRefRhet"
+            },
+            {
+              "label": "GRefSubs"
+            },
+            {
+              "label": "GRefOth"
+            }
+          ]
+        },
+        {
+          "label": "GSoc",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GSocRhet"
+            },
+            {
+              "label": "GSocAntid"
+            },
+            {
+              "label": "GSocSubs"
+            },
+            {
+              "label": "GSocOth"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "GENDER",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "GeWom"
+        },
+        {
+          "label": "GeMe",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "GeMeNu"
+            },
+            {
+              "label": "GeMeOth"
+            }
+          ]
+        },
+        {
+          "label": "GeSo"
+        },
+        {
+          "label": "GeLgbti"
+        },
+        {
+          "label": "GeLgbtiPos"
+        },
+        {
+          "label": "GeLgbtiNeg"
+        },
+        {
+          "label": "GeFa"
+        }
+      ]
+    },
+    {
+      "label": "State definition",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "StDef",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "StGen"
+            },
+            {
+              "label": "StCon"
+            },
+            {
+              "label": "StSd"
+            },
+            {
+              "label": "StRef"
+            },
+            {
+              "label": "StSym"
+            },
+            {
+              "label": "StInd"
+            },
+            {
+              "label": "StUni"
+            },
+            {
+              "label": "StBor"
+            },
+            {
+              "label": "StXbor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Governance",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "Pol",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "PolGen"
+            },
+            {
+              "label": "PolNewInd"
+            },
+            {
+              "label": "PolNewTemp"
+            }
+          ]
+        },
+        {
+          "label": "Cons"
+        },
+        {
+          "label": "Ele"
+        },
+        {
+          "label": "ElecComm"
+        },
+        {
+          "label": "PolPar",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "PolParTrans"
+            },
+            {
+              "label": "PolParOth"
+            }
+          ]
+        },
+        {
+          "label": "Civso"
+        },
+        {
+          "label": "Tral"
+        },
+        {
+          "label": "Pubad"
+        }
+      ]
+    },
+    {
+      "label": "Powersharing",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "Polps",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "PpsSt"
+            },
+            {
+              "label": "PpsSub"
+            },
+            {
+              "label": "PpsEx"
+            },
+            {
+              "label": "PpsOro"
+            },
+            {
+              "label": "PpsOthPr"
+            },
+            {
+              "label": "PpsVet"
+            },
+            {
+              "label": "PpsAut"
+            },
+            {
+              "label": "PpsInt"
+            },
+            {
+              "label": "PpsOth"
+            }
+          ]
+        },
+        {
+          "label": "Terps",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "TpsSub"
+            },
+            {
+              "label": "TpsLoc"
+            },
+            {
+              "label": "TpsAut"
+            },
+            {
+              "label": "TpsOth"
+            }
+          ]
+        },
+        {
+          "label": "Eps",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "EpsRes"
+            },
+            {
+              "label": "EpsFis"
+            },
+            {
+              "label": "EpsOth"
+            }
+          ]
+        },
+        {
+          "label": "Mps",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "MpsMe"
+            },
+            {
+              "label": "MpsJt"
+            },
+            {
+              "label": "MpsPro"
+            },
+            {
+              "label": "MpsOth"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Human rights and equality",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "HrGen"
+        },
+        {
+          "label": "EqGen"
+        },
+        {
+          "label": "HrDem"
+        },
+        {
+          "label": "Prot",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "ProtCiv"
+            },
+            {
+              "label": "ProtGrp"
+            },
+            {
+              "label": "ProtLgl"
+            },
+            {
+              "label": "ProtOth"
+            }
+          ]
+        },
+        {
+          "label": "HrFra",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "HrfSp"
+            },
+            {
+              "label": "HrfBor"
+            },
+            {
+              "label": "HrfTinc"
+            },
+            {
+              "label": "HrfOth"
+            }
+          ]
+        },
+        {
+          "label": "HrCp",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "CprLife"
+            },
+            {
+              "label": "CprTort"
+            },
+            {
+              "label": "CprEq"
+            },
+            {
+              "label": "CprSlav"
+            },
+            {
+              "label": "CprLib"
+            },
+            {
+              "label": "CprDet"
+            },
+            {
+              "label": "CprFmov"
+            },
+            {
+              "label": "CprFspe"
+            },
+            {
+              "label": "CprFass"
+            },
+            {
+              "label": "CprTria"
+            },
+            {
+              "label": "CprPriv"
+            },
+            {
+              "label": "CprVote"
+            },
+            {
+              "label": "CprReli"
+            },
+            {
+              "label": "CprOth"
+            }
+          ]
+        },
+        {
+          "label": "HrSec",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "SerProp"
+            },
+            {
+              "label": "SerWork"
+            },
+            {
+              "label": "SerHeal"
+            },
+            {
+              "label": "SerEdu"
+            },
+            {
+              "label": "SerStdl"
+            },
+            {
+              "label": "SerShel"
+            },
+            {
+              "label": "SerSs"
+            },
+            {
+              "label": "SerCult"
+            },
+            {
+              "label": "SerOth"
+            }
+          ]
+        },
+        {
+          "label": "HrNi"
+        },
+        {
+          "label": "HrNiMe",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "HrNiNe"
+            },
+            {
+              "label": "HrNiOth"
+            }
+          ]
+        },
+        {
+          "label": "HrIi",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "HrIiMon"
+            },
+            {
+              "label": "HrIiBod"
+            },
+            {
+              "label": "HrIiOth"
+            }
+          ]
+        },
+        {
+          "label": "HrMob"
+        },
+        {
+          "label": "HrDet"
+        },
+        {
+          "label": "Med",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "MedGov"
+            },
+            {
+              "label": "MedSubs"
+            },
+            {
+              "label": "MedLog"
+            },
+            {
+              "label": "MedOth"
+            }
+          ]
+        },
+        {
+          "label": "HrCit",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "CitGen"
+            },
+            {
+              "label": "CitRights"
+            },
+            {
+              "label": "CitDef"
+            },
+            {
+              "label": "CitOth"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Justice Sector Reform",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "JusCr",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "JusCrSp"
+            },
+            {
+              "label": "JusCrSys"
+            },
+            {
+              "label": "JusCrPow"
+            }
+          ]
+        },
+        {
+          "label": "JusEm"
+        },
+        {
+          "label": "JusJu"
+        },
+        {
+          "label": "JusPri"
+        },
+        {
+          "label": "JusTra"
+        }
+      ]
+    },
+    {
+      "label": "Socio-Economic Reconstruction",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "Dev",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "DevSoc"
+            },
+            {
+              "label": "DevHum"
+            },
+            {
+              "label": "DevInfra"
+            }
+          ]
+        },
+        {
+          "label": "NEC"
+        },
+        {
+          "label": "NatRes"
+        },
+        {
+          "label": "IntFu"
+        },
+        {
+          "label": "Bus"
+        },
+        {
+          "label": "Tax",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "TaxPo"
+            },
+            {
+              "label": "TaxRef"
+            },
+            {
+              "label": "TaxOth"
+            }
+          ]
+        },
+        {
+          "label": "Ban",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "CenBan"
+            },
+            {
+              "label": "BanPers"
+            },
+            {
+              "label": "BanInt"
+            },
+            {
+              "label": "BanXb"
+            }
+          ]
+        },
+        {
+          "label": "LaRef",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "LaRefMan"
+            },
+            {
+              "label": "LaRefRet"
+            },
+            {
+              "label": "LaRefOth"
+            }
+          ]
+        },
+        {
+          "label": "LaNom"
+        },
+        {
+          "label": "LaCH",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "LaCHTa"
+            },
+            {
+              "label": "LaCHIt"
+            },
+            {
+              "label": "LaCHPro"
+            },
+            {
+              "label": "LaCHOth"
+            }
+          ]
+        },
+        {
+          "label": "LaEn"
+        },
+        {
+          "label": "Wat"
+        }
+      ]
+    },
+    {
+      "label": "Security Sector",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "SsrGua"
+        },
+        {
+          "label": "Ce",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "CeProv"
+            },
+            {
+              "label": "CeGen"
+            }
+          ]
+        },
+        {
+          "label": "SsrPol"
+        },
+        {
+          "label": "SsrArm"
+        },
+        {
+          "label": "SsrDdr",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "DdrDemil"
+            },
+            {
+              "label": "DdrProg"
+            }
+          ]
+        },
+        {
+          "label": "SsrInt"
+        },
+        {
+          "label": "SsrPsf"
+        },
+        {
+          "label": "SsrFf"
+        },
+        {
+          "label": "Cor"
+        },
+        {
+          "label": "SsrCrOcr"
+        },
+        {
+          "label": "SsrDrugs"
+        },
+        {
+          "label": "Terr"
+        }
+      ]
+    },
+    {
+      "label": "Transitional Justice",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "TjGen"
+        },
+        {
+          "label": "TjAm",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "TjAmPro"
+            },
+            {
+              "label": "TjSan"
+            },
+            {
+              "label": "TjPower"
+            },
+            {
+              "label": "TjAmBan"
+            }
+          ]
+        },
+        {
+          "label": "TjCou",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "TjJaNc"
+            },
+            {
+              "label": "TjJaIc"
+            }
+          ]
+        },
+        {
+          "label": "TjMech"
+        },
+        {
+          "label": "TjPrire"
+        },
+        {
+          "label": "TjVet"
+        },
+        {
+          "label": "TjVic"
+        },
+        {
+          "label": "TjMis"
+        },
+        {
+          "label": "TjRep",
+          "expandOnly": true,
+          "children": [
+            {
+              "label": "TjRSym"
+            },
+            {
+              "label": "TjRMa"
+            }
+          ]
+        },
+        {
+          "label": "TjNR"
+        }
+      ]
+    },
+    {
+      "label": "Implementation",
+      "expandOnly": true,
+      "children": [
+        {
+          "label": "ImUN"
+        },
+        {
+          "label": "ImOth"
+        },
+        {
+          "label": "ImRef"
+        },
+        {
+          "label": "ImPK"
+        },
+        {
+          "label": "ImE"
+        },
+        {
+          "label": "ImSrc"
+        },
+        {
+          "label": "ConRen"
+        }
+      ]
+    }
+  ]

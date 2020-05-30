@@ -2,7 +2,7 @@
 import React from "react";
 import { groupBy} from "lodash";
 import _ from 'lodash';
-import PubSub from "pubsub-js";
+//import PubSub from "pubsub-js";
 import {useParams, withRouter} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import queryString from 'query-string';
@@ -23,7 +23,12 @@ import FilterForm from "./FilterForm";
 import SelectProperties from "./SelectProperties";
 import { OutputFileType } from "typescript";
 
+// Data & configs
 import Config from "./Config"
+//import catHierarchy from "./data/cats-hierarchy.json"
+import catHierarchy from "./data/cats-hierarchy-select.json"
+import config_filters from "./data/config_filters.json"
+
 import dataPAsim from "./data/PAsim.json";
 import dataCFsim from "./data/CFsim.json";
 import dataPA from "./data/PA.json";
@@ -38,15 +43,49 @@ export default class Area extends React.Component {
             filter: "",
             typeArea:Config.START_TYPE_AREA
         };
-        console.log('call constructor=========================');
-    }
-    
-    componentDidMount() {
-        //let query = this.useQuery();
-        //console.log('this.props.location.search:',this.props.location);
-        //console.log(query);
+        console.log('Call constructor=========================');
+
+        console.log('mounted ');
+
         
-        //PubSub.subscribe("filter-submit", this.onNewFilter);
+        /*
+        var selectFilterAr = []
+        var mainCatHierarchyAr = catHierarchy["cat hierarchy"];
+        for( let i=0; i<mainCatHierarchyAr.length; i++ ){
+            var objName = Object.keys(mainCatHierarchyAr[i])[0];
+
+            var children = mainCatHierarchyAr[i][objName];
+            var obj = {'label':objName, "children":[]}
+            if(children.length>0) obj.expandOnly = true;
+     
+            for( let j=0; j<children.length; j++ ){
+                var objLevel1 = {};
+                if(_.isObject(mainCatHierarchyAr[i][objName][j])){
+                    var objNameLevel1 = Object.keys(mainCatHierarchyAr[i][objName][j])[0];
+                    var childrenLevel1 = mainCatHierarchyAr[i][objName][j][objNameLevel1];
+                    objLevel1 = {'label':objNameLevel1, "children":[]}
+                    if(childrenLevel1.length>0) objLevel1.expandOnly = true;
+                    for( let k=0; k<childrenLevel1.length; k++ ){
+                        if(_.isObject(mainCatHierarchyAr[i][objName][j])){
+                            var objNameLevel2 = Object.keys(mainCatHierarchyAr[i][objName][j][objNameLevel1][k])[0];
+                            var childrenLevel2 = mainCatHierarchyAr[i][objName][j][objNameLevel1][k][objNameLevel2];
+                            var objLevel2 = {'label':objNameLevel1, "children":[]}
+                            console.log("childrenLevel2.length :",childrenLevel2.length)
+                            //if(childrenLevel2.length>0) objLevel2.expandOnly = true;
+                        }else{
+
+                        }
+                        objLevel1.children.push(objLevel2);
+                    }
+                }else{
+                    objLevel1 = {'label':mainCatHierarchyAr[i][objName][j]};
+                }
+                obj.children.push(objLevel1);
+            }
+            console.log('obj cat',obj)
+            selectFilterAr.push(obj);
+            
+        }*/
     }
     
     addIdPropertyToAr(ar){
@@ -74,14 +113,6 @@ export default class Area extends React.Component {
         })
     }
 
-    /*
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log(nextProps, nextState)
-        console.log('Greeting - shouldComponentUpdate lifecycle');
-        return false;
-    }
-    */
-
     // Methods from Childs
     onNewFilter = (value) => {
         console.log('New filter:'+value);
@@ -103,6 +134,83 @@ export default class Area extends React.Component {
         console.log('areaTypeSelect : ',value);
         this.setState({typeArea: value})
     }
+
+    getHumanFromID= (id) => {
+        var output = null;
+        try{
+            output =  config_filters[0][id].human
+        }catch(err){
+            output = id;
+            console.log("Error ::: looking for Human :::", output);
+        }
+        return output;
+    }
+
+    getDistincFromID= (id) => {
+        var output = null;
+        try{
+            output =  config_filters[0][id].distincnum
+        }catch(err){
+            output = id;
+            console.log("Error ::: looking for Distincnum :::", output);
+        }
+        return output;
+    }
+
+    createSelectJson = (ar,param) => {
+        // clone multidimentional array (which is tricky)
+        var selectObj = JSON.parse(JSON.stringify(catHierarchy.cat_hierarchy));
+           
+        for(let i=0;i<selectObj.length;i++){
+            // check if is selected
+            if(selectObj[i].value === param ){
+                console.log('selected tag',selectObj[i].value , param);
+                selectObj[i].isDefaultValue = true;
+            }
+            //if(selectObj[i].children=== undefined || selectObj[i].children.length==0) continue;
+            var totalItemsLevel1 = 0;
+            try{
+                totalItemsLevel1 =selectObj[i].children.length
+            }catch(err){}
+            for(let j=0;j<totalItemsLevel1;j++){
+                //
+                if(selectObj[i].children[j].label==='' || selectObj[i].children[j].label===undefined ){
+                    let id =  selectObj[i].children[j].value;
+                    console.log('value: ',this.getHumanFromID(id));
+                    if( id!==undefined && id!=="" ) selectObj[i].children[j].label = this.getHumanFromID(id);
+                    if(this.getDistincFromID(id)>Config.MAX_DISTINC) selectObj[i].children[j].hide = true;
+                }
+                if(selectObj[i].children[j].value === param ){
+                    console.log('selected tag',selectObj[i].children[j].value , param)
+                    selectObj[i].children[j].isDefaultValue = true;
+                    selectObj[i].expanded = true;
+                }
+                
+                //if(selectObj[i].children[j].children===undefined || selectObj[i].children[j].children.length==0) continue;
+                var totalItemsLevel2 = 0;
+                try{
+                    totalItemsLevel2 = selectObj[i].children[j].children.length
+                }catch(err){}
+
+                for(let h=0; h<totalItemsLevel2; h++){
+                    if(selectObj[i].children[j].children[h].label==='' || selectObj[i].children[j].children[h].label===undefined){
+                        let id =  selectObj[i].children[j].children[h].value;
+                        selectObj[i].children[j].children[h].label = this.getHumanFromID(id);
+                        if(this.getDistincFromID(id)>Config.MAX_DISTINC) selectObj[i].children[j].children[h].hide = true;
+                    }
+                    if(selectObj[i].children[j].children[h].value === param ){
+                        selectObj[i].children[j].children[h].isDefaultValue = true;
+                        selectObj[i].expanded = true;
+                        selectObj[i].children[j].expanded = true;
+                    }
+                }
+            }  
+        }
+        return selectObj;
+    }
+
+
+
     /*
     openPopupbox = (data) => {
         console.log(data);
@@ -127,6 +235,8 @@ export default class Area extends React.Component {
     render() {
         // exemple https://codesandbox.io/s/react-router-query-parameters-mfh8p?from-embed=&file=/example.js
         //let query = new URLSearchParams(useLocation().search);
+
+        //selectObj
 
         // Config variables
         const max_distinc = Config.MAX_DISTINC;
@@ -162,7 +272,12 @@ export default class Area extends React.Component {
         var param1 = this.state.param1;
         var param2 = this.state.param2;
         var filter = this.state.filter;
-        
+
+        var selectObjParam1 = this.createSelectJson(catHierarchy.cat_hierarchy,param1);
+        console.log("selectObjParam1",param1,selectObjParam1);
+        var selectObjParam2 = this.createSelectJson(catHierarchy.cat_hierarchy,param2);
+        console.log("selectObjParam2",param2,selectObjParam2);
+
         console.log("Current filter :",filter);
 
         var totalDataEntries = data.length;//this.props.data.length;
@@ -278,11 +393,11 @@ export default class Area extends React.Component {
                 </div>
                 <div className="filterArea">
                     <div className="filterSelect">
-                        <SelectProperties updateParam={this.updateParam1} text="(blocks):" param="Reg"/>
+                        <SelectProperties updateParam={this.updateParam1} items={selectObjParam1}  text="Blocks"/>
                         <FilterList items={groupedByParam1} keyStr={"Param1"} />
                     </div>
                     <div className="filterSelect">
-                        <SelectProperties updateParam={this.updateParam2} text="(Colours):" param="Reg"/>
+                        <SelectProperties updateParam={this.updateParam2} items={selectObjParam2} text="Colours"/>
                         <FilterListColours items={groupedByParam2} keyStr={"Param2"} />
                     </div>
                 </div>

@@ -1,18 +1,17 @@
 // Libraries
 import React from "react";
 //import Select from 'react-select-reborn';
-import DropdownTreeSelect from "./react-dropdown-tree-select/index";
-import basicCat from "./data/basicCat.json";
+import DropdownTreeSelect from "./react-dropdown-tree-select/";
 
+//import DropdownTreeSelect from "react-dropdown-tree-select";
+
+import basicCat from "./data/testCat.json";
+//import basicCat from "./data/cats-hierarchy-select.json";
 export default class SelectProperties extends React.Component {
     
     constructor(props) {
         super(props);
         this.state = {};
-    }
-
-    componentDidMount() {
-        
     }
 
     handleChange = selectedOption => {
@@ -39,13 +38,21 @@ export default class SelectProperties extends React.Component {
         const onNodeToggle = currentNode => {
             console.log('onNodeToggle::', currentNode)
         }
+        console.log('data select: ',this.props.data);
+        console.log('data select: ',JSON.stringify(this.props.data));
+        // keepTreeOnSearch  onChange={onChange} onAction={onAction} onNodeToggle={onNodeToggle}
 
+        if(this.props.items!==undefined){
+        // this.props.items basicCat
         return (
             <div>
-                <DropdownTreeSelect data={basicCat} keepTreeOnSearch mode="radioSelect" onChange={onChange} onAction={onAction} onNodeToggle={onNodeToggle} />
-                <div className="selectDescription">{this.props.text}</div>
+                <div className="filterSelectTitle">{this.props.text}:</div>
+                <DropdownTreeSelect data={this.props.items}  mode="radioSelect" keepTreeOnSearch  onChange={onChange} onAction={onAction} onNodeToggle={onNodeToggle}/>
             </div>
         );
+        }else{
+            return (<div></div>);
+        }
     }
 }
 

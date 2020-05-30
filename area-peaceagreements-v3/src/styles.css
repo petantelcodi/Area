@@ -34,6 +34,7 @@ body{
   width: 96%;
   height: auto;
   display: flex;
+  color:#f15f5f;
   border-bottom: white 1px solid;
   padding:3px;
   margin-bottom:10px;
@@ -120,6 +121,13 @@ rect {
   border:1px solid #ffffff;
   padding: 2px;
   margin: 2px;
+  height: auto;
+}
+.filterSelectTitle{
+  clear: both;
+  text-align: left;
+  padding: 2px;
+  margin: 2px;
 }
 
 .detailInfo{
@@ -165,17 +173,23 @@ form{
 /* design dropmenu */
 .react-dropdown-tree-select {
   text-align: left;
-  padding: 5px;
-  width:400px;
+  padding: 3px;
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width:calc(100%-4px);
+  margin:2px;
+  width:auto;
   height: flex;
+  border:1px solid #818080;
 }
-
 
 .tag-item{
   color: black;
+  max-width: 285px;
 }
 
 .dropdown-content{
+  position: relative;
   background-color: rgb(60, 60, 60);
   padding: 15px;
   max-height: 400px;
@@ -188,6 +202,7 @@ form{
   padding: 5px;
   padding-top: 7px;
   padding-bottom: 7px;
+  border: none;
 }
 
 .tag{
@@ -206,18 +221,26 @@ form{
 }
 
 .dropdownCloseButton{
-  position: absolute;
-  top:40px;
-  left:350px;
-  height: 25px;
-  padding-left: 5px;
-  width:60px;
-  /*border: 1px solid white;*/
-  /*background-color: darkgray;*/
+  position: sticky;
+  top:0px;
+  left:490px;
+  height: 0px;
+  width:20px;
   z-index: 100;
 }
 .imgDropdownCloseButton{
   width:20px;
   height:20px;
   cursor: pointer;
+}
+
+.toggle.collapsed:after {
+  content: "+";
+}
+
+.toggle.expanded:after {
+  content: "-";
+}
+.toggle:focus {
+  outline: -webkit-focus-ring-color auto 0px;
 }

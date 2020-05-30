@@ -4,7 +4,7 @@ import Config from "./Config"
 const FilterListColours = ({ items, keyStr }) => (
   <div>
     {Object.keys(items).map((obj, i) => (
-      <div key={keyStr+i.toString()} className="filterSelectProperties" style={{'background-color':Config.colorList[i],'border':'none'}}>{obj}</div>
+      <div key={keyStr+i.toString()} className="filterSelectProperties" style={{'backgroundColor':Config.colorList[i],'border':'none'}}>{obj}</div>
     ))}
   </div>
 );

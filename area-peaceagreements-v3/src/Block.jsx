@@ -27,11 +27,6 @@ export default class Block extends React.Component {
   // AgtId
   // colourData -> array for the colours
 
-  componentDidMount() {
-    //console.log('block mount again')
-    //this.setState({filter:this.props.filter});
-  }
-
   showData = () =>{
     //alert(JSON.stringify(this.props.items));
     //console.log(JSON.stringify(this.props.items));
