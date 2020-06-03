@@ -237,7 +237,18 @@ export default class Area extends React.Component {
         //let query = new URLSearchParams(useLocation().search);
 
         //selectObj
+        var urlParam1,urlParam2,urlFilter;
+        try{
+            
+            //var urlParam1 = this.props.match.params.number;
+            //console.log("===> url:",url);
 
+            var urlParam1 = this.props.match.params.param1;
+            var urlParam2 = this.props.match.params.param2;
+            var urlFilter = this.props.match.params.filter;
+            console.log("===> url param:",urlParam1,urlParam2,urlFilter); 
+            
+        }catch(err){console.log("====> url: ERROR",this.props );}
         // Config variables
         const max_distinc = Config.MAX_DISTINC;
         const area_x = Config.AREAX;
@@ -269,9 +280,9 @@ export default class Area extends React.Component {
         
         //const values = queryString.parse(this.props.location.search)
         //console.log(values)
-        var param1 = this.state.param1;
-        var param2 = this.state.param2;
-        var filter = this.state.filter;
+        var param1 = urlParam1!==undefined? urlParam1:this.state.param1;
+        var param2 = urlParam2!==undefined? urlParam2:this.state.param2;
+        var filter = urlFilter!==undefined? urlFilter:this.state.filter;
 
         var selectObjParam1 = this.createSelectJson(catHierarchy.cat_hierarchy,param1);
         console.log("selectObjParam1",param1,selectObjParam1);
@@ -403,7 +414,7 @@ export default class Area extends React.Component {
                 </div>
                 <div className="filterAreaSearch">
                     <FilterForm onNewFilter={this.onNewFilter} filter={filter}/>
-                    <div className="detailInfo"><p>{filter!==''?<span style={{color:'yellow'}}>Filter documents: {totalFoundFilter} &#124; </span>:null} Number of documents: {totalDataEntries}<br/></p></div>
+                    <div className="detailInfo"><p>{filter!==''?<span style={{color:'yellow'}}>Filter "{filter}" has {totalFoundFilter} documents &#124; </span>:null} Number of documents: {totalDataEntries}<br/></p></div>
                 </div>
                 <div className="vizArea">
                     <div className="groups">
