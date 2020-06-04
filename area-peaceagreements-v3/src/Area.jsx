@@ -2,9 +2,8 @@
 import React from "react";
 import { groupBy} from "lodash";
 import _ from 'lodash';
-//import PubSub from "pubsub-js";
 import {useParams, withRouter} from "react-router-dom";
-import {useLocation} from "react-router-dom";
+import {useLocation, Redirect} from "react-router-dom";
 import queryString from 'query-string';
 
 /*import {
@@ -25,7 +24,6 @@ import { OutputFileType } from "typescript";
 
 // Data & configs
 import Config from "./Config"
-//import catHierarchy from "./data/cats-hierarchy.json"
 import catHierarchy from "./data/cats-hierarchy-select.json"
 import config_filters from "./data/config_filters.json"
 
@@ -40,52 +38,12 @@ export default class Area extends React.Component {
         this.state = {
             param1 : Config.PARAM1,
             param2 : Config.PARAM2,
+            update: false,
             filter: "",
-            typeArea:Config.START_TYPE_AREA
+            typeArea: Config.START_TYPE_AREA
         };
         console.log('Call constructor=========================');
-
         console.log('mounted ');
-
-        
-        /*
-        var selectFilterAr = []
-        var mainCatHierarchyAr = catHierarchy["cat hierarchy"];
-        for( let i=0; i<mainCatHierarchyAr.length; i++ ){
-            var objName = Object.keys(mainCatHierarchyAr[i])[0];
-
-            var children = mainCatHierarchyAr[i][objName];
-            var obj = {'label':objName, "children":[]}
-            if(children.length>0) obj.expandOnly = true;
-     
-            for( let j=0; j<children.length; j++ ){
-                var objLevel1 = {};
-                if(_.isObject(mainCatHierarchyAr[i][objName][j])){
-                    var objNameLevel1 = Object.keys(mainCatHierarchyAr[i][objName][j])[0];
-                    var childrenLevel1 = mainCatHierarchyAr[i][objName][j][objNameLevel1];
-                    objLevel1 = {'label':objNameLevel1, "children":[]}
-                    if(childrenLevel1.length>0) objLevel1.expandOnly = true;
-                    for( let k=0; k<childrenLevel1.length; k++ ){
-                        if(_.isObject(mainCatHierarchyAr[i][objName][j])){
-                            var objNameLevel2 = Object.keys(mainCatHierarchyAr[i][objName][j][objNameLevel1][k])[0];
-                            var childrenLevel2 = mainCatHierarchyAr[i][objName][j][objNameLevel1][k][objNameLevel2];
-                            var objLevel2 = {'label':objNameLevel1, "children":[]}
-                            console.log("childrenLevel2.length :",childrenLevel2.length)
-                            //if(childrenLevel2.length>0) objLevel2.expandOnly = true;
-                        }else{
-
-                        }
-                        objLevel1.children.push(objLevel2);
-                    }
-                }else{
-                    objLevel1 = {'label':mainCatHierarchyAr[i][objName][j]};
-                }
-                obj.children.push(objLevel1);
-            }
-            console.log('obj cat',obj)
-            selectFilterAr.push(obj);
-            
-        }*/
     }
     
     addIdPropertyToAr(ar){
@@ -116,23 +74,24 @@ export default class Area extends React.Component {
     // Methods from Childs
     onNewFilter = (value) => {
         console.log('New filter:'+value);
-        //this.filter = value;
-        //this.state.filter = value;
         this.setState({filter:value});
-        //this.render();
+        this.update = true;
     }
 
     updateParam1 = (value) => {
         this.setState({param1: value})
+        this.update = true;
     }
 
     updateParam2 = (value) => {
         this.setState({param2: value})
+        this.update = true;
     }
 
     areaTypeSelect = (value) => {
         console.log('areaTypeSelect : ',value);
         this.setState({typeArea: value})
+        this.update = true;
     }
 
     getHumanFromID= (id) => {
@@ -243,10 +202,11 @@ export default class Area extends React.Component {
             //var urlParam1 = this.props.match.params.number;
             //console.log("===> url:",url);
 
-            var urlParam1 = this.props.match.params.param1;
-            var urlParam2 = this.props.match.params.param2;
-            var urlFilter = this.props.match.params.filter;
-            console.log("===> url param:",urlParam1,urlParam2,urlFilter); 
+            var urlParam1   = this.props.match.params.param1;
+            var urlParam2   = this.props.match.params.param2;
+            var urlFilter   = this.props.match.params.filter;
+            var urlTypeArea = this.props.match.params.typeArea;
+            console.log("===> url param:", urlParam1, urlParam2, urlFilter); 
             
         }catch(err){console.log("====> url: ERROR",this.props );}
         // Config variables
@@ -256,7 +216,14 @@ export default class Area extends React.Component {
         const colors_approach = Config.COLORS_APPROACH; 
         var area_title = "PeaceAgreements.org";
 
-        var typeArea = this.state.typeArea;
+        // Select parameters between URL and changes
+        var param1 = (urlParam1!==undefined && !this.update)? urlParam1:this.state.param1;
+        var param2 = (urlParam2!==undefined && !this.update)? urlParam2:this.state.param2;
+        var filter = (urlFilter!==undefined && !this.update)? urlFilter:this.state.filter;
+        var typeArea = (urlTypeArea!==undefined && !this.update)? urlTypeArea:this.state.typeArea;
+        //var typeArea = this.state.typeArea;
+        this.update = false;
+
         var data = [];
         console.log("typeArea",typeArea)
         switch(typeArea){
@@ -280,9 +247,7 @@ export default class Area extends React.Component {
         
         //const values = queryString.parse(this.props.location.search)
         //console.log(values)
-        var param1 = urlParam1!==undefined? urlParam1:this.state.param1;
-        var param2 = urlParam2!==undefined? urlParam2:this.state.param2;
-        var filter = urlFilter!==undefined? urlFilter:this.state.filter;
+       
 
         var selectObjParam1 = this.createSelectJson(catHierarchy.cat_hierarchy,param1);
         console.log("selectObjParam1",param1,selectObjParam1);
@@ -393,6 +358,7 @@ export default class Area extends React.Component {
 
         return (
             <div>
+                <Redirect to={'/p/'+typeArea+'/'+param1+'/'+param2+'/'+filter}/>
                 <div className="typeAreaSelect">
                     <div className={typeArea==='PA-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Simple')}}>PA-Simple</div> 
                     <div className={typeArea==='PA-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Detailed')}}>PA-Detailed</div> 

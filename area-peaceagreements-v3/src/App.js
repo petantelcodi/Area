@@ -24,7 +24,7 @@ export default function App() {
       <Switch>
       <div className="Area">
       <Route exact path='/' component={Area}/>
-      <Route path='/p/:param1?/:param2?/:filter?' component={Area}/>
+      <Route path='/p/:typeArea?/:param1?/:param2?/:filter?' component={Area}/>
       </div>
       </Switch>
     </BrowserRouter>

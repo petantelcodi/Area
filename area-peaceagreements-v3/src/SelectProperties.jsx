@@ -1,12 +1,8 @@
 // Libraries
 import React from "react";
-//import Select from 'react-select-reborn';
 import DropdownTreeSelect from "./react-dropdown-tree-select/";
+import {Redirect} from "react-router-dom";
 
-//import DropdownTreeSelect from "react-dropdown-tree-select";
-
-import basicCat from "./data/testCat.json";
-//import basicCat from "./data/cats-hierarchy-select.json";
 export default class SelectProperties extends React.Component {
     
     constructor(props) {
@@ -43,7 +39,6 @@ export default class SelectProperties extends React.Component {
         // keepTreeOnSearch  onChange={onChange} onAction={onAction} onNodeToggle={onNodeToggle}
 
         if(this.props.items!==undefined){
-        // this.props.items basicCat
         return (
             <div>
                 <div className="filterSelectTitle">{this.props.text}:</div>
