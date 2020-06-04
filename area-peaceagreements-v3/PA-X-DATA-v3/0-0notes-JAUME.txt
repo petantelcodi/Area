@@ -1,65 +1,77 @@
 
 ToDo:
 
-FET> Actualitzar la DATA csv2 json de v3
-FET> Cercar React dropdown hrml5
-> Enviar email a Christine and Co explicant com va la cosa.
-> DATA of the DATA's STructures: 
-    -> Initially working in a Google sheet:
-       https://docs.google.com/spreadsheets/d/1_aNRIoKe2hSIf_G-Yzb6pplwbyjo_HE3-99ARxMnUf0/edit#gid=466834714
-       > I'm not including Parameters witha distinct number over 29
-         EXception: only ofr CeadseFire:
-            StageSub(21 discinct values) = [PreMix	MultIss	ExtSub	Prin	ImpMod	Proc	Iss	ImpOth		FrAg	FrparOth	Ceas	Rel	Repre	Conf	PreOth	Reimp	ExtPar	FrCons	CeaMix	Resub	Reoth]   
-         Check file: pax-disticnt-values.csv
-Continue in a Jupyter.notebook: pax-data-esctructure
+:::::::::::::::::Alluviat::::::::::::::
+1) Build the necessary data files
 
+
+2) create few alluvials: RAWgraphs, Onservable, Other D3js? Others?
+
+
+3) Manipulate the SVG with JS, try SVG.js -> https://svgjs.com/docs/3.0/manipulating/
+
+    > Set multiple attributes at once:
+    > zoom & pan plugin
+    > Add links, 
+    > highlight similar tags qith encoded colours
+    > 
 
 ---------------
-NOT
-Daniel D3:ç
- > Fer Sankey Verttical (?)
- > Fer xollapsable cada nivell via clic a la pastilla
+
+D3js 
+ > Fer Sankey Vertical (?)
+DIFICIL > Fer collapsable cada nivell via clic a l'etiqueta o algo així --> Aixo amb JS sobre el SVG final!
  > Veure si hi ha altres llinies de link més "artístiques"
  > Afegir links URL a cada paraula
  > Etiquetes sempre a la drta de les pasilles
  > Donar un padding a cada pastilla per a poder fer les etiquetes (font-size) més grans sense overlapping
- > 
--------------------------
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Prepare the data by Category and prepare examples for some of the next:
 
+ADDING A PARAMETER by grouping:
+TRANSFOR "Dat" to "Dat" and "Year"
+look dor: 
+"Dat": "(\d\d\d\d)-(\d\d)-(\d\d)",
+replace with: 
+"Dat": "$1-$2-$3", "Year":"$1",
 
 
 DELIVER SEVERAL DIAGRAMS:
+
+DONE
 1) Alluvial
-OK -> Just the diagram
+OK -> EXamples/dedogram-barchart.html
    -> addons to make it browsable:
 OK      > Add links to each node with <text id="">
         > fisheye (??) like https://observablehq.com/@pstuffa/cartesian-fisheye-distortion
 
-
+DONE
 2- Dendrogram + Grouped Horizontal Bar Chart
 https://bl.ocks.org/vpletzke/9607d012e725638343ee01a8e8fa6310
 OK _ with 3 categories, just for testing -> http://localhost:8000/dedogram-barchart.html
 
-
+DONE
 3- Sunburst Plot navegable 
 HERE A LOT MORE EXAMPLES -> https://observablehq.com/@cbuie/expose-of-graph-visualizations1
 And
 Zoomable Sunburst
 https://observablehq.com/@d3/zoomable-sunburst
 
+
 4-d3-hypertree ImageNet Class Hierarchy
 https://observablehq.com/d/0ae10b10308ced78
 data es  carrega per URL json
 
+
  5- Radial Tidy Tree -> Not showing proportions, just hierarchy
 https://observablehq.com/@d3/radial-tidy-tree
+
 
 6- Hierarchical Bar Chart -> ineresting but poor... can I add something sexy to it??
 https://observablehq.com/@d3/hierarchical-bar-chart
 
+!!
 7- Where’s that $2 trillion going?
 https://observablehq.com/@mbostock/wheres-that-2-trillion-going
 
@@ -73,6 +85,13 @@ https://observablehq.com/@julesblm/geological-timescale
 10. Navigable Nested Tree -> Hierarchycal, navigable
 https://observablehq.com/@git-ashish/navigable-nested-tree
 
+
+DONE
+11. GRAPHVIZ 
+He instal·lat graphviz, python3-graphviz i pgraphviz -> http://pygraphviz.github.io/documentation/latest/tutorial.html
+Resources:
+    > output formats: https://graphviz.org/doc/info/output.html
+    > colors: https://graphviz.gitlab.io/_pages/doc/info/colors.html#brewer_license
 
 
 !!!!!!!!!!!!!!!!!!!
@@ -104,12 +123,21 @@ https://docs.google.com/spreadsheets/d/1EEInuOxZuouDcV67cqB3YQ_KLysxJtvPAEp8dBx2
 
 - Afegir el tema de la variable Max_distinct: O afegirlo  al runtime o córrer un script que genera el numero disctinc per a cada parametre i es posa com un argument més al fitxer de configuracio d'Area --> JAUME afegir argument distinc l fitxer config (config, mirar de tenir)
 
-DONE--> bew area config file generated in github ofr REACT 
-area-peaceagreements-v3/PA-X-DATA-v3/config-area-detailed-v3.json 
+---------------------> DONE -> new config file is: /home/jaume/Dropbox/0-CODES-Project/CODE-Area-PETANTELCODI/Area/area-peaceagreements-v3/src/data/config_filters.json_NEW-WITH-DISTINCTvar
+
+---
 
 - Canviar el nom del fitxer de configuració a un únic. Abans n'hi havia un per CF i un per PA que son iiguals. L'actual és a PA-X-DATA-v3/config-area-detailed-v3.json --> JAUME pujar els data definitius a v3/scr/data CF.jsn i PA.json
 
-- Pot ser interessant les variables de config que tinc jo per al Títol i la Descripció d'Area. I decidir un lloc per posar-les (a dalt)
+---------------------> DONE -> new files are in PETANTELCODI/Area/area-peaceagreements-v3/src/data/
+1) CF.json
+2) CFsim.json  -> only 6 params to  select
+3) PA.json
+4) PAsim.json  -> only 6 params to  select
+
+--
+
+- Incloure en REACT les variables de config que tinc jo per al Títol i la Descripció d'Area. I decidir un lloc per posar-les (a dalt)
 
 4 BOTONS a portada:
 --> PA-Simple, PA-detailed, CF-Simple, CF-detailed -> MAR pensa com ho setegem al Config!
@@ -119,9 +147,18 @@ DROPDOWNS
 - Crec que pot quedar millor posar-los a dreta (param1) i esquerre (param2) en comptes d'un a sobre l'altre 
 - Crec que aquest està prou bé i amb un dropdown es poden seleccionar els dos parametres (Callimitar-ho a dos...) https://dowjones.github.io/react-dropdown-tree-select/#/story/with-material-design-styles  -> CHECK si l
 
+------------------> PROPOSTA SOLUCIÖ: fer 11 dropdowns, un per a cada CATAGORIA. I mostrarun popup per a triar.los, tal com es mostra aquí: -
+    Aquñí un croquis fet amb Figma (editor vestorial i ni vestioriak compartit online -> https://www.figma.com/file/R4qM5PEFSkHUyGBDMF8U8k/Untitled?node-id=0%3A1
+    
+    Poden ser dropdowns standarf topus bootstrap: https://reactstrap.github.io/components/button-dropdown/
+    O poder ser és fashion, com aquests -> https://react.rocks/tag/Dropdown
+    EN tot casm cada un dels 11 son normals (d'un nivell)
+
+-----
+
 ----------
 DISSENY COLORS
-- alguna idea més per a donar un toc més dramàti? (com diu la Christine)
+- alguna idea més per a donar un toc més dramàtic? (com diu la Christine)
 - Revisar el llistat de colors actuals per a param2
 
 ----------
