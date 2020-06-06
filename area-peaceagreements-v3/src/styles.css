@@ -244,3 +244,35 @@ form{
 .toggle:focus {
   outline: -webkit-focus-ring-color auto 0px;
 }
+
+
+rect:hover {
+  fill: white;
+  animation-name: color;
+  animation-duration: 6.75s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color {
+  0% {
+    fill: #222;
+  }
+  50% {
+    background-color: #ffffff;
+  }
+  100% {
+    background-color: #222;
+  }
+}
+
+.popupbox-titleBar{
+  color:black;
+}
+
+.popupbox-content{
+  color:black;
+  text-align: left;
+  max-height:950px;
+  overflow: hidden;
+  overflow-y: scroll;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import PubSub from 'pubsub-js';
 
 export default class FilterForm extends React.Component {
     constructor(props) {
@@ -17,9 +16,7 @@ export default class FilterForm extends React.Component {
     }
   
     handleSubmit(event) {
-      //PubSub.publish("filter-submit", this.state.value);
       this.props.onNewFilter(this.state.value);
-      //this.props.parent.state.filter = this.state.value;
       event.preventDefault();
     }
 

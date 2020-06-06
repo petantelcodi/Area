@@ -6,23 +6,17 @@
   "main": "src/index.js",
   "dependencies": {
     "array.partial": "^1.0.5",
-    "color": "^3.1.2",
-    "d3": "^5.0.0",
     "lodash": "4.17.15",
-    "pubsub-js": "^1.8.0",
-    "query-string": "^6.12.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-dropdown-tree-select": "^2.3.2",
     "react-infinite-scroll-component": "^4.0.2",
+    "react-popupbox": "^2.0.8",
     "react-router-dom": "latest",
     "react-scripts": "3.0.1",
-    "react-select": "^3.1.0",
-    "react-select-reborn": "^3.2.0"
+    "react-select": "^3.1.0"
   },
-  "devDependencies": {
-    "typescript": "3.8.3"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

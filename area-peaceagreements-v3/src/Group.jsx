@@ -1,7 +1,7 @@
 import React from "react";
 import Block from "./Block";
 
-const Group = ({ items,colorAr, param2, filter, blockWidth, blockHeight, dim_block, groupWidth,openPopupbox,groupId }) => (
+const Group = ({ items,colorAr, param2, filter, blockWidth, blockHeight,  columnsBlocks, rowsBlocks, openPopupbox,groupId }) => (
   <g>
     {items.map((item, index) => (
       <Block
@@ -13,13 +13,14 @@ const Group = ({ items,colorAr, param2, filter, blockWidth, blockHeight, dim_blo
         blockHeight={blockHeight}
         key={"block_" + item.id}
         index={index}
-        dim_block={dim_block}
-        groupWidth={groupWidth}
+        columnsBlocks={columnsBlocks}
+        rowsBlocks={rowsBlocks}
         openPopupbox={openPopupbox}
         groupId={groupId}
       />
     ))}
   </g>
 );
-
+//dim_block={dim_block}
+//groupWidth={groupWidth}
 export default Group;

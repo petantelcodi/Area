@@ -2,16 +2,15 @@
 import React from "react";
 import { groupBy} from "lodash";
 import _ from 'lodash';
-import {useParams, withRouter} from "react-router-dom";
-import {useLocation, Redirect} from "react-router-dom";
-import queryString from 'query-string';
+import { Redirect} from "react-router-dom";
 
-/*import {
+import {
     PopupboxManager,
     PopupboxContainer
 } from 'react-popupbox';
+
 import "react-popupbox/dist/react-popupbox.css"
-*/
+
 // options: http://fraina.github.io/react-popupbox/
 
 // Area components
@@ -20,7 +19,6 @@ import FilterList from "./FilterList";
 import FilterListColours from "./FilterListColours";
 import FilterForm from "./FilterForm";
 import SelectProperties from "./SelectProperties";
-import { OutputFileType } from "typescript";
 
 // Data & configs
 import Config from "./Config"
@@ -44,6 +42,7 @@ export default class Area extends React.Component {
         };
         console.log('Call constructor=========================');
         console.log('mounted ');
+        
     }
     
     addIdPropertyToAr(ar){
@@ -123,10 +122,9 @@ export default class Area extends React.Component {
         for(let i=0;i<selectObj.length;i++){
             // check if is selected
             if(selectObj[i].value === param ){
-                console.log('selected tag',selectObj[i].value , param);
+                //console.log('selected tag',selectObj[i].value , param);
                 selectObj[i].isDefaultValue = true;
             }
-            //if(selectObj[i].children=== undefined || selectObj[i].children.length==0) continue;
             var totalItemsLevel1 = 0;
             try{
                 totalItemsLevel1 =selectObj[i].children.length
@@ -135,17 +133,16 @@ export default class Area extends React.Component {
                 //
                 if(selectObj[i].children[j].label==='' || selectObj[i].children[j].label===undefined ){
                     let id =  selectObj[i].children[j].value;
-                    console.log('value: ',this.getHumanFromID(id));
+                    //console.log('value: ',this.getHumanFromID(id));
                     if( id!==undefined && id!=="" ) selectObj[i].children[j].label = this.getHumanFromID(id);
                     if(this.getDistincFromID(id)>Config.MAX_DISTINC) selectObj[i].children[j].hide = true;
                 }
                 if(selectObj[i].children[j].value === param ){
-                    console.log('selected tag',selectObj[i].children[j].value , param)
+                    //console.log('selected tag',selectObj[i].children[j].value , param)
                     selectObj[i].children[j].isDefaultValue = true;
                     selectObj[i].expanded = true;
                 }
                 
-                //if(selectObj[i].children[j].children===undefined || selectObj[i].children[j].children.length==0) continue;
                 var totalItemsLevel2 = 0;
                 try{
                     totalItemsLevel2 = selectObj[i].children[j].children.length
@@ -168,15 +165,15 @@ export default class Area extends React.Component {
         return selectObj;
     }
 
-
-
-    /*
+    
     openPopupbox = (data) => {
-        console.log(data);
+        console.log("openPopupbox :",data);
+        console.log("openPopupbox :",data['year']);
+        
         const content = (
           <div>
-              {Object.keys(data).map((obj, i) => (
-                <p>{obj} : {i}</p>
+              {Object.keys(data).map((obj) => (
+                <p>{obj} : {data[obj]}</p>
               ))}
           </div>
         )
@@ -189,38 +186,32 @@ export default class Area extends React.Component {
             fadeIn: true,
             fadeInSpeed: 500
         } })
+        
     }
-    */
+    
     render() {
         // exemple https://codesandbox.io/s/react-router-query-parameters-mfh8p?from-embed=&file=/example.js
         //let query = new URLSearchParams(useLocation().search);
 
-        //selectObj
-        var urlParam1,urlParam2,urlFilter;
+        var urlParam1,urlParam2,urlFilter,urlTypeArea;
         try{
-            
-            //var urlParam1 = this.props.match.params.number;
-            //console.log("===> url:",url);
-
-            var urlParam1   = this.props.match.params.param1;
-            var urlParam2   = this.props.match.params.param2;
-            var urlFilter   = this.props.match.params.filter;
-            var urlTypeArea = this.props.match.params.typeArea;
+            urlParam1   = this.props.match.params.param1;
+            urlParam2   = this.props.match.params.param2;
+            urlFilter   = this.props.match.params.filter;
+            urlTypeArea = this.props.match.params.typeArea;
             console.log("===> url param:", urlParam1, urlParam2, urlFilter); 
-            
         }catch(err){console.log("====> url: ERROR",this.props );}
+
         // Config variables
-        const max_distinc = Config.MAX_DISTINC;
         const area_x = Config.AREAX;
         const area_y = Config.AREAY;
-        const colors_approach = Config.COLORS_APPROACH; 
-        var area_title = "PeaceAgreements.org";
 
         // Select parameters between URL and changes
         var param1 = (urlParam1!==undefined && !this.update)? urlParam1:this.state.param1;
         var param2 = (urlParam2!==undefined && !this.update)? urlParam2:this.state.param2;
         var filter = (urlFilter!==undefined && !this.update)? urlFilter:this.state.filter;
         var typeArea = (urlTypeArea!==undefined && !this.update)? urlTypeArea:this.state.typeArea;
+
         //var typeArea = this.state.typeArea;
         this.update = false;
 
@@ -243,23 +234,20 @@ export default class Area extends React.Component {
                 data = dataCF;
                 console.log('CF-Detailed');
                 break;     
+            default:
+                data = dataCFsim;
+                break;
         }
-        
-        //const values = queryString.parse(this.props.location.search)
-        //console.log(values)
-       
 
         var selectObjParam1 = this.createSelectJson(catHierarchy.cat_hierarchy,param1);
         console.log("selectObjParam1",param1,selectObjParam1);
         var selectObjParam2 = this.createSelectJson(catHierarchy.cat_hierarchy,param2);
         console.log("selectObjParam2",param2,selectObjParam2);
-
         console.log("Current filter :",filter);
 
-        var totalDataEntries = data.length;//this.props.data.length;
+        var totalDataEntries = data.length;
         console.log('Total data length: ',totalDataEntries);
 
-        //var data = this.props.data;
         // Sort by date (From older to new)
         data = _.sortBy(  data, 'Dat' );
         // Add id to Array
@@ -271,11 +259,16 @@ export default class Area extends React.Component {
         try{ delete groupedByParam2[param2]; }catch(err){}
         // Array for colours
         var count = 0;
+        for (const prop in groupedByParam2) {
+            count = count+1;
+            groupedByParam2[prop] = count;
+        }
+        /*
         Object.keys( groupedByParam2).map(function(key, index) {
             count = count+1;
             groupedByParam2[key] = count;
         });
-
+        */
         // Nesting Array  output obj with array in each property of the object
         var groupedByParam1 = groupBy(dataWithId, param1);
         // Delete property with same name as param1
@@ -291,9 +284,12 @@ export default class Area extends React.Component {
 
             // Get object in order of object that is in menu
             var myObjectSorted = {};
-            Object.keys( groupedByParam2).map(function(key, index) {
-                myObjectSorted[key] = myObject[key];
-            }); 
+            for (const prop in groupedByParam2) {
+                myObjectSorted[prop] = myObject[prop];
+            }
+            //Object.keys( groupedByParam2).map(function(key, index) {
+            //    myObjectSorted[key] = myObject[key];
+            //}); 
             
             var arSorted = this.ObjToAr(myObjectSorted);
             console.log('ArSorted: ',arSorted);
@@ -301,20 +297,22 @@ export default class Area extends React.Component {
             for(let j=0; j<arSorted.length; j++){
                 var sortedAr = _.sortBy(  arSorted[j].value, 'Dat' );
                 // Sort for find if has filter
-                var foundFilter = false;
                 if(this.props.filter!=="" && sortedAr.length>0){
                     //console.log('filter:',this.props.filter);
                     console.log('sortedAr[0]: ',sortedAr)
                     
                     for(let k=0; k<sortedAr.length; k++){
                         sortedAr[k].foundFilter = false;
-                        Object.entries(sortedAr[k]).forEach(([key, value]) => {
+                        for (const prop in sortedAr[k]) {
+                            let value = sortedAr[k][prop];
+                        //Object.entries(sortedAr[k]).forEach(([key, value]) => {
                             //console.log(value, typeof value)
                             if(typeof value === 'string' && !(value==="0") && !(value==="1") && value.toLowerCase().indexOf(filter.toLowerCase())!==-1){ 
                                 sortedAr[k].foundFilter = true;
                                 totalFoundFilter +=1;
-                            } 
-                        });
+                            }
+                        } 
+                        //});
                     }
                     
                 }
@@ -330,26 +328,36 @@ export default class Area extends React.Component {
         var groupedByParam1SortedByName = _.sortBy( groupedByParam1SortedBySize, 'key' ); 
 
         // Calculate size group SVG
-        var dim_groups = Math.sqrt(groupedByParam1SortedByName.length);
-        if (dim_groups !== Math.floor(dim_groups)) {
-            dim_groups = Math.floor(dim_groups) +1;//+ 1
-        }
-        var groupWidth = Math.floor(area_x / dim_groups);
-        var groupHeight = Math.floor(area_y / dim_groups);
+        var totalGroups = groupedByParam1SortedByName.length; 
+        
+        // Calculate Groups size
+        var columnsGroups = Math.ceil(Math.sqrt(totalGroups));
+        var fullRowsGroups = Math.floor(totalGroups / columnsGroups);
+        var orphansGroups = totalGroups % columnsGroups;  
+        var rowsGroups =  (orphansGroups === 0 ? fullRowsGroups : (fullRowsGroups+1));
+        var widthGroups =  (area_x/ columnsGroups)-1; // -1px for margin
+        var heightGroups = (area_y /rowsGroups); // reduce height if there are orphans
+        var textTitleSpace = 20; // important!!
+        // Calculate Blocks size
+        var groupWidth = widthGroups; 
+        var groupHeight = heightGroups;
+        console.log('columnsGroups',columnsGroups,'rowsGroups',rowsGroups,'groupWidth',groupWidth,'area_x',area_x,'heightGroups',heightGroups,'area_x',area_y);
 
         // Calculate size block rect
         var maxBlocksInAGroup = groupedByParam1SortedBySize[0].value.length;
-        console.log('groupedByParam1SortedBySize:',groupedByParam1SortedBySize)
-        console.log('maxBlocksInAGroup',maxBlocksInAGroup);
-        var dim_block = Math.sqrt(maxBlocksInAGroup);
-        if (dim_block !== Math.floor(dim_block)) {
-            dim_block = Math.floor(dim_block) + 1;
-        }
-        var blockWidth = Math.floor((groupWidth ) / dim_block); // FIXMEE another corrector (!)
-        var blockHeight = Math.floor((groupHeight) / dim_block); // FIXMEE another corrector (!)
-        console.log('blockWidth: ',blockWidth);
-        console.log('blockHeight: ',blockHeight);
+
+        var columnsBlocks = Math.ceil(Math.sqrt(maxBlocksInAGroup));
+        var fullRowsBlocks = Math.floor(maxBlocksInAGroup / columnsBlocks);
+        var orphansBlocks = maxBlocksInAGroup % columnsBlocks;  
+        var rowsBlocks =  (orphansBlocks === 0 ? fullRowsBlocks : (fullRowsBlocks+1));
+
+        var widthBlocks =  Math.floor(widthGroups/ columnsBlocks);
+        var heightBlocks = Math.floor((heightGroups-textTitleSpace) /fullRowsBlocks); // reduce height if there are orphans
+      
+        //var totalBlocksWidth = widthBlocks ; //(groupWidth/blockWidth);
+        //var totalBlocksHeight = heightBlocks;//(groupHeight/blockHeight);
         
+        console.log('columnsBlocks:',columnsBlocks,'rowsBlocks:  ',rowsBlocks,' :: ',maxBlocksInAGroup, '<=', rowsBlocks*columnsBlocks)
         
         console.log(groupedByParam2["Africa excl MENA"]);
         console.log("groupedByParam2",groupedByParam2);
@@ -392,18 +400,18 @@ export default class Area extends React.Component {
                         filter={filter}
                         groupWidth={groupWidth}
                         groupHeight={groupHeight}
-                        blockWidth={blockWidth}
-                        blockHeight={blockHeight}
-                        dim_block={dim_block}
+                        blockWidth={widthBlocks}
+                        blockHeight={heightBlocks}
+                        columnsBlocks={columnsBlocks}
+                        rowsBlocks={rowsBlocks}
                         openPopupbox={this.openPopupbox}
                         />
                     </div>
                     
                 </div>
-                
+                <PopupboxContainer />
             </div>
         );
-    
     }
 
 }

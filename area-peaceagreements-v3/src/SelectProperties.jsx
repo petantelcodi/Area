@@ -1,7 +1,6 @@
 // Libraries
 import React from "react";
 import DropdownTreeSelect from "./react-dropdown-tree-select/";
-import {Redirect} from "react-router-dom";
 
 export default class SelectProperties extends React.Component {
     

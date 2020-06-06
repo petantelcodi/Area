@@ -3,7 +3,7 @@ import Group from "./Group";
 //import MaskLines from "./MaskLines";
 
 //<LinesMask/>
-const Groups = ({ items, colorAr, param1, param2, filter, groupWidth, groupHeight, blockWidth, blockHeight, dim_block, openPopupbox }) => (
+const Groups = ({ items, colorAr, param1, param2, filter, groupWidth, groupHeight, blockWidth, blockHeight, columnsBlocks,rowsBlocks, openPopupbox }) => (
   <div id="AreaGroups">
     {items.map((item, i) => (
       <div id={"group_"+i.toString()} key={"group_"+i.toString()} className="group">
@@ -16,8 +16,8 @@ const Groups = ({ items, colorAr, param1, param2, filter, groupWidth, groupHeigh
           filter={filter} 
           blockWidth={blockWidth} 
           blockHeight={blockHeight}          
-          dim_block={dim_block}
-          groupWidth={groupWidth}
+          columnsBlocks={columnsBlocks}
+          rowsBlocks={rowsBlocks}
           openPopupbox={openPopupbox}
           groupId={i}
           />   
@@ -26,5 +26,5 @@ const Groups = ({ items, colorAr, param1, param2, filter, groupWidth, groupHeigh
     ))}
   </div>
 );
-
+//groupWidth={groupWidth}
 export default Groups;
