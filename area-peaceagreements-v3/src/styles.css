@@ -2,12 +2,21 @@ body{
   background-color:rgb(23, 23, 23);
 }
 
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Area{
   font-family: sans-serif;
   text-align: center;
   width: 1100px;
   color:white;
   padding: 2%;
+  
+
+
 }
 
 .filterArea{
@@ -265,6 +274,10 @@ rect:hover {
   }
 }
 
+.popupbox{
+  margin-left:-32px;
+}
+
 .popupbox-titleBar{
   color:black;
 }
@@ -272,7 +285,19 @@ rect:hover {
 .popupbox-content{
   color:black;
   text-align: left;
-  max-height:950px;
+  max-height:650px;
+  max-width:900px;
   overflow: hidden;
   overflow-y: scroll;
+  scrollbar-width: auto !important;
+}
+
+.popupbox-content::-webkit-scrollbar:vertical {
+  width: 5px !important;
+}
+
+.popupbox-content::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, .5);
 }
