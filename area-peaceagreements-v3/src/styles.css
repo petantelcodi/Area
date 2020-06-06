@@ -290,6 +290,7 @@ rect:hover {
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: auto !important;
+  line-height: 130%;
 }
 
 .popupbox-content::-webkit-scrollbar:vertical {
