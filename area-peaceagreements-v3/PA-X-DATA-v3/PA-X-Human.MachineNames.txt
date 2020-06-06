@@ -49,6 +49,8 @@ Citizenship: HrCit
 
 Date Signed: Dat
 
+Year signed: Year
+
 UN Signatory: ImUN
 
 Substantive: GMigSubs
@@ -493,7 +495,7 @@ Autonomy: TpsAut
 
 New political institutions: PolNewInd
 
-Country-Entity: ﻿Con
+Country-Entity: Con
 
 Police: SsrPol
 

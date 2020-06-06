@@ -1,4 +1,4 @@
-Index,AgreementId,Name,Region,Country,Peace Process,Peace Process Name,Stage,Signed Date,Agreement/Conflict Level,Conflict Nature,Agreement Status
+Index,"AgtId","Agt","Reg","Con","PP","PPname","Stage","Dat","Agtp","StGen","Status"
 1,9,Rules Governing the Work of the Working Groups,Europe and Eurasia,Georgia/Abkhazia,43,Abkhazia peace process,Pre,1997-06-12,Intra,Government/territory,Multiparty signed/agreed
 2,10,Final Document of the Moscow Meeting (Moscow Ceasefire),Europe and Eurasia,Georgia/Russia/Abkhazia,43,Abkhazia peace process,Cea,1992-09-03,Intra,Government/territory,Multiparty signed/agreed
 3,12,Memorandum of understanding between the Georgian and Abkhaz sides at the negotiations held in Geneva,Europe and Eurasia,Georgia/Abkhazia,43,Abkhazia peace process,SubPar,1993-12-01,Intra,Territory,Multiparty signed/agreed
