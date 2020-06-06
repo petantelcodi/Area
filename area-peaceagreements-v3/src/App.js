@@ -8,9 +8,7 @@ import {
 // Area components
 import Area from "./Area"
 
-// CSS
-import "./reset.css";
-import "./styles.css";
+
 
 // Data
 //import data from "./data/data.json";

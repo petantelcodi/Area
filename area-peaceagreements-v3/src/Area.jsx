@@ -9,7 +9,10 @@ import {
     PopupboxContainer
 } from 'react-popupbox';
 
+// CSS
+import "./reset.css";
 import "react-popupbox/dist/react-popupbox.css"
+import "./styles.css";
 
 // options: http://fraina.github.io/react-popupbox/
 
@@ -23,7 +26,9 @@ import SelectProperties from "./SelectProperties";
 // Data & configs
 import Config from "./Config"
 import catHierarchy from "./data/cats-hierarchy-select.json"
+import catHierarchy_simple from "./data/cats-hierarchy-select-simple.json"
 import config_filters from "./data/config_filters.json"
+import config_filters_simple from "./data/config_filters_simple.json"
 
 import dataPAsim from "./data/PAsim.json";
 import dataCFsim from "./data/CFsim.json";
@@ -42,7 +47,6 @@ export default class Area extends React.Component {
         };
         console.log('Call constructor=========================');
         console.log('mounted ');
-        
     }
     
     addIdPropertyToAr(ar){
@@ -115,10 +119,16 @@ export default class Area extends React.Component {
         return output;
     }
 
-    createSelectJson = (ar,param) => {
-        // clone multidimentional array (which is tricky)
-        var selectObj = JSON.parse(JSON.stringify(catHierarchy.cat_hierarchy));
-           
+    createSelectJson = (type,param) => {
+        // Clone multidimentional array (which is tricky)
+        if(type.indexOf('Simple')!==-1){
+            // Simple JSON
+            var selectObj = JSON.parse(JSON.stringify(catHierarchy_simple));
+        }else{
+            // Detailed JSON
+            var selectObj = JSON.parse(JSON.stringify(catHierarchy.cat_hierarchy));
+        }
+        
         for(let i=0;i<selectObj.length;i++){
             // check if is selected
             if(selectObj[i].value === param ){
@@ -169,11 +179,11 @@ export default class Area extends React.Component {
     openPopupbox = (data) => {
         console.log("openPopupbox :",data);
         console.log("openPopupbox :",data['year']);
-        
+        delete data.id
         const content = (
           <div>
               {Object.keys(data).map((obj) => (
-                <p>{obj} : {data[obj]}</p>
+                <p><span className="strongText">{obj}</span> : {data[obj]}</p>
               ))}
           </div>
         )
@@ -239,9 +249,9 @@ export default class Area extends React.Component {
                 break;
         }
 
-        var selectObjParam1 = this.createSelectJson(catHierarchy.cat_hierarchy,param1);
+        var selectObjParam1 = this.createSelectJson(typeArea,param1);
         console.log("selectObjParam1",param1,selectObjParam1);
-        var selectObjParam2 = this.createSelectJson(catHierarchy.cat_hierarchy,param2);
+        var selectObjParam2 = this.createSelectJson(typeArea,param2);
         console.log("selectObjParam2",param2,selectObjParam2);
         console.log("Current filter :",filter);
 
@@ -263,12 +273,7 @@ export default class Area extends React.Component {
             count = count+1;
             groupedByParam2[prop] = count;
         }
-        /*
-        Object.keys( groupedByParam2).map(function(key, index) {
-            count = count+1;
-            groupedByParam2[key] = count;
-        });
-        */
+        
         // Nesting Array  output obj with array in each property of the object
         var groupedByParam1 = groupBy(dataWithId, param1);
         // Delete property with same name as param1
@@ -286,10 +291,7 @@ export default class Area extends React.Component {
             var myObjectSorted = {};
             for (const prop in groupedByParam2) {
                 myObjectSorted[prop] = myObject[prop];
-            }
-            //Object.keys( groupedByParam2).map(function(key, index) {
-            //    myObjectSorted[key] = myObject[key];
-            //}); 
+            } 
             
             var arSorted = this.ObjToAr(myObjectSorted);
             console.log('ArSorted: ',arSorted);
@@ -353,9 +355,6 @@ export default class Area extends React.Component {
 
         var widthBlocks =  Math.floor(widthGroups/ columnsBlocks);
         var heightBlocks = Math.floor((heightGroups-textTitleSpace) /fullRowsBlocks); // reduce height if there are orphans
-      
-        //var totalBlocksWidth = widthBlocks ; //(groupWidth/blockWidth);
-        //var totalBlocksHeight = heightBlocks;//(groupHeight/blockHeight);
         
         console.log('columnsBlocks:',columnsBlocks,'rowsBlocks:  ',rowsBlocks,' :: ',maxBlocksInAGroup, '<=', rowsBlocks*columnsBlocks)
         

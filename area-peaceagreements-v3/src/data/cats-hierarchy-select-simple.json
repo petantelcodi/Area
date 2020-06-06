@@ -1,0 +1,14 @@
+[
+    { "value": "AgtId", "label": "Agreement ID" },
+    { "value": "Agt", "label": "Agreement Name" },
+    { "value": "Reg", "label": "Region" },
+    { "value": "Con", "label": "Country-Entity" },
+    { "value": "PP", "label": "Peace Process Number" },
+    { "value": "PPName", "label": "Peace Process Name" },
+    { "value": "Stage", "label": "Agreement stage" },
+    { "value": "Dat", "label":  "Date Signed" },
+    { "value": "Year", "label": "Year Signed" },
+    { "value": "Agtp", "label": "Agreement-conflict" },
+    { "value": "StGen", "label": "Nature of State - general" },
+    { "value": "Status", "label": "Agreement Definition and Status" }
+]

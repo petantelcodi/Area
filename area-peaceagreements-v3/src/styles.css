@@ -14,9 +14,11 @@ body{
   width: 1100px;
   color:white;
   padding: 2%;
-  
 
+}
 
+.strongText{
+  font-weight: bold !important;
 }
 
 .filterArea{
@@ -289,8 +291,9 @@ rect:hover {
   max-width:900px;
   overflow: hidden;
   overflow-y: scroll;
-  scrollbar-width: auto !important;
+  /*scrollbar-width: auto !important;*/
   line-height: 130%;
+  scrollbar-width: thin;
 }
 
 .popupbox-content::-webkit-scrollbar:vertical {

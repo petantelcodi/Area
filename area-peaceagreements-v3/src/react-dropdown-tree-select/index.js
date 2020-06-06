@@ -333,7 +333,7 @@ class DropdownTreeSelect extends Component {
           {showDropdown && (
             <React.Fragment>
             <div className="dropdown-content" {...this.getAriaAttributes()}>
-            <div className="dropdownCloseButton" onClick={this.onCloseContent}><img className="imgDropdownCloseButton" src="close4.png"/></div>
+            <div className="dropdownCloseButton" onClick={this.onCloseContent}><img className="imgDropdownCloseButton" src="/close4.png"/></div>
             
               {inlineSearchInput && searchInput}
               {this.state.allNodesHidden ? (
