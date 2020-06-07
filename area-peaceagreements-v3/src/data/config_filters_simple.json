@@ -1,74 +1,86 @@
 {
-    "AgtId": {
-      "human": "Agreement ID",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "Agt": {
-      "human": "Agreement Name",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "Reg": {
-      "human": " Region",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "Con": {
-      "human": "Country-Entity",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "PP": {
-      "human": "Peace Process Number",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "PPName": {
-      "human": "Peace Process Name",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "Stage": {
-      "human": "Agreement stage",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "Dat": {
-      "human": "Date Signed",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "Year": {
-      "human": "Year Signed",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "Agtp": {
-      "human": "Agreement-conflict type",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "StGen": {
-      "human": "Nature of State - general",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    },
-    "Status": {
-      "human": "Agreement Definition and Status",
-      "areafilter": "0",
-      "type": "text",
-      "exclude": "0"
-    }
+  "Con ": {
+    "human": "Country-Entity",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 168
+  },
+  "PP ": {
+    "human": "Peace Process Number",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 155
+  },
+  "PPName ": {
+    "human": "Peace Process Name",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 155
+  },
+  "Reg ": {
+    "human": " Region",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 6
+  },
+  "AgtId ": {
+    "human": "Agreement ID",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 1832
+  },
+  "Agt ": {
+    "human": "Agreement Name",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 1794
+  },
+  "Year": {
+    "human": "Year",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 30
+  },
+  "Dat ": {
+    "human": "Date Signed",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 1504
+  },
+  "Status ": {
+    "human": "Agreement Definition and Status",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 4
+  },
+  "Agtp ": {
+    "human": "Agreement-conflict type",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 4
+  },
+  "Stage ": {
+    "human": "Agreement stage",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 7
+  },
+  "StGen ": {
+    "human": "Nature of State - general",
+    "areafilte": "0",
+    "type": "text",
+    "exclude": "0",
+    "distincnum": 2
   }
+}
