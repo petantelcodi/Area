@@ -119,12 +119,16 @@
               "GeMeOth"
             ]
           },
-          "GeSo",
-          "GeLgbti",
-          "GeLgbtiPos",
-          "GeLgbtiNeg",
+          {
+            "GeLgbti": [
+              "GeLgbtiPos",
+          	  "GeLgbtiNeg"
+            ]
+          },
+          {
           "GeFa"
-        ]
+          }
+		]
       },
       {
         "State definition": [

@@ -260,16 +260,14 @@
 					]
 				},
 				{
-					"value": "GeSo"
-				},
-				{
-					"value": "GeLgbti"
-				},
-				{
-					"value": "GeLgbtiPos"
-				},
-				{
-					"value": "GeLgbtiNeg"
+					"value": "GeLgbti",
+					"children": [{
+							"value": "GeLgbtiPos"
+						},
+						{
+							"value": "GeLgbtiNeg"
+						}
+					]
 				},
 				{
 					"value": "GeFa"
