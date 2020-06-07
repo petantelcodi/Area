@@ -7,7 +7,7 @@ const Groups = ({ items, colorAr, param1, param2, filter, groupWidth, groupHeigh
   <div id="AreaGroups">
     {items.map((item, i) => (
       <div id={"group_"+i.toString()} key={"group_"+i.toString()} className="group">
-        <p>{item.key}</p>
+        <div className="titleGroups">{item.key} <span className="titleGroupNumbers">[{item.value.length}]</span></div>
         <svg width={groupWidth} height={groupHeight} id={"#svg_group_"+i.toString()} position="relative">
           <Group
           items={item.value} 

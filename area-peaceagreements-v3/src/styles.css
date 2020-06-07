@@ -16,7 +16,12 @@ body{
   padding: 2%;
 
 }
-
+.titleGroupNumbers{
+  color: #818080;
+}
+.titleGroups{
+  margin-bottom:4px;
+}
 .strongText{
   font-weight: bold !important;
 }
@@ -104,6 +109,7 @@ rect {
 
 .lineBlockCross{
   stroke:rgb(30,30,30);
+  /*stroke:rgb(255,255,255);*/
   stroke-width:1;
 }
 

@@ -179,11 +179,29 @@ export default class Area extends React.Component {
     openPopupbox = (data) => {
         console.log("openPopupbox :",data);
         console.log("openPopupbox :",data['year']);
-        delete data.id
+        var objClean = {'Mentioned in this Agreement':''};
+        // clean obj with properties zero
+        for (const prop in data) {
+            if(data[prop]!==0 ){ //&& data[prop]!==1
+                objClean[this.getHumanFromID(prop)] = data[prop]
+            }
+            if(data[prop]===1){
+                objClean['Mentioned in this Agreement'] += this.getHumanFromID(prop)+',';
+            }
+        }
+        /*
+        if(objClean['Mentioned in this Agreement'] ==='' ){
+            delete objClean['Mentioned in this Agreement'];
+        }else{
+            objClean['Mentioned in this Agreement'] = objClean['Mentioned in this Agreement'].substring(0, objClean['Mentioned in this Agreement'].length - 1);
+        } 
+        */
+        delete objClean.id;
+        delete objClean.foundFilter;
         const content = (
           <div>
-              {Object.keys(data).map((obj) => (
-                <p><span className="strongText">{obj}</span> : {data[obj]}</p>
+              {Object.keys(objClean).map((obj) => (
+                <p><span className="strongText">{obj}</span> : {objClean[obj]}</p>
               ))}
           </div>
         )

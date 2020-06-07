@@ -29,14 +29,8 @@ export default class Block extends React.Component {
     //console.log(JSON.stringify(this.props.items));
     //console.log(this.props.item);
     var obj = this.props.item;
-    var objClean = {};
-    // clean obj with properties zero
-    for (const prop in obj) {
-      if(obj[prop]!==0){
-        objClean[prop] = obj[prop]
-      }
-    }
-    this.props.openPopupbox(objClean);
+    
+    this.props.openPopupbox(obj);
   }
 
   render() {
