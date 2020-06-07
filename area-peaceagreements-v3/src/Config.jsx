@@ -2,7 +2,7 @@
 const Config = {
   MAX_DISTINC : 35,
 	AREAX : 1000,
-	AREAY : 900,
+	AREAY : 740, 
 	COLORS_APPROACH : "fix", // fix, random, gradient
 	AREA_TITLE: "PeaceAgreements.org",
   PARAM1 : "Agtp",
