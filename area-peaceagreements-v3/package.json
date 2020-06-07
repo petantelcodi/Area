@@ -4,6 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
+  "homepage": "./",
   "dependencies": {
     "array.partial": "^1.0.5",
     "lodash": "4.17.15",
