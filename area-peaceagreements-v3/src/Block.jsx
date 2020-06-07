@@ -63,8 +63,8 @@ export default class Block extends React.Component {
       //color = colorFilter;
     }
     // Render
-    return <g onClick={this.showData} >
-      <rect ref={'block_rect_'+this.props.groupId+'_'+this.props.item.id} x={my_x} y={my_y} stroke="#000000" className="block"  width={this.props.blockWidth} height={this.props.blockHeight} fill={color}  />
+    return <g onClick={this.showData} className="block">
+      <rect ref={'block_rect_'+this.props.groupId+'_'+this.props.item.id} x={my_x} y={my_y} stroke="#000000"   width={this.props.blockWidth} height={this.props.blockHeight} fill={color}  />
       {foundFilter && this.props.filter!==""?<g><line x1={my_x} y1={my_y} x2={my_x+this.props.blockWidth} y2={my_y+this.props.blockHeight} className="lineBlockCross" /><line x1={my_x} y1={my_y+this.props.blockHeight} x2={my_x+this.props.blockWidth} y2={my_y} className="lineBlockCross"  /></g>:null}
       </g>;
   }

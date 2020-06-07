@@ -263,7 +263,7 @@ form{
 }
 
 
-rect:hover {
+.block:hover > rect {
   fill: white;
   animation-name: color;
   animation-duration: 6.75s;
