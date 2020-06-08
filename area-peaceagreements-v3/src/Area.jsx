@@ -175,7 +175,28 @@ export default class Area extends React.Component {
         return selectObj;
     }
 
-    
+    getParams = (location) => {
+        const searchParams = new URLSearchParams(location.search);
+        let p = searchParams.get("p") ;
+        let ar;
+        try{
+            ar = p.split('/');
+            return {
+                typeArea:ar[0], param1: ar[1] , param2: ar[2] , filter: ar[3] 
+            };
+        }catch(err){
+            return {
+                typeArea:undefined, param1: undefined , param2: undefined , filter: undefined 
+            };
+        }
+        
+       
+    }
+/*
+    updateURL = (urlVars) => {
+        this.props.history.push(`?p=${urlVars}`);
+    };
+*/
     openPopupbox = (data) => {
         console.log("openPopupbox :",data);
         console.log("openPopupbox :",data['year']);
@@ -221,6 +242,7 @@ export default class Area extends React.Component {
         // exemple https://codesandbox.io/s/react-router-query-parameters-mfh8p?from-embed=&file=/example.js
         //let query = new URLSearchParams(useLocation().search);
 
+        /*
         var urlParam1,urlParam2,urlFilter,urlTypeArea;
         try{
             urlParam1   = this.props.match.params.param1;
@@ -229,16 +251,18 @@ export default class Area extends React.Component {
             urlTypeArea = this.props.match.params.typeArea;
             console.log("===> url param:", urlParam1, urlParam2, urlFilter); 
         }catch(err){console.log("====> url: ERROR",this.props );}
-
+        */
         // Config variables
         const area_x = Config.AREAX;
         const area_y = Config.AREAY;
 
         // Select parameters between URL and changes
-        var param1 = (urlParam1!==undefined && !this.update)? urlParam1:this.state.param1;
-        var param2 = (urlParam2!==undefined && !this.update)? urlParam2:this.state.param2;
-        var filter = (urlFilter!==undefined && !this.update)? urlFilter:this.state.filter;
-        var typeArea = (urlTypeArea!==undefined && !this.update)? urlTypeArea:this.state.typeArea;
+        var urlVars = this.getParams(this.props.location);
+        console.log('new new params',urlVars)
+        var param1 = (urlVars.param1!==undefined && !this.update)? urlVars.param1:this.state.param1;
+        var param2 = (urlVars.param2!==undefined && !this.update)? urlVars.param2:this.state.param2;
+        var filter = (urlVars.filter!==undefined && !this.update)? urlVars.filter:this.state.filter;
+        var typeArea = (urlVars.typeArea!==undefined && !this.update)? urlVars.typeArea:this.state.typeArea;
 
         //var typeArea = this.state.typeArea;
         this.update = false;
@@ -381,9 +405,13 @@ export default class Area extends React.Component {
         console.log("groupedBy:", groupedByParam1);
         console.log("groupedBySorted:", groupedByParam1SortedByName);
 
+        
+        //<Redirect to={'/index.html?/'+typeArea+'/'+param1+'/'+param2+'/'+filter}/>
+        //this.updateURL(typeArea+'/'+param1+'/'+param2+'/'+filter);
+        console.log('redirect','/?p='+typeArea+'/'+param1+'/'+param2+'/'+filter);
         return (
             <div>
-                <Redirect to={'/p/'+typeArea+'/'+param1+'/'+param2+'/'+filter}/>
+                <Redirect to={'/?p='+typeArea+'/'+param1+'/'+param2+'/'+filter}/>
                 <div className="typeAreaSelect">
                     <div className={typeArea==='PA-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Simple')}}>PA-Simple</div> 
                     <div className={typeArea==='PA-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Detailed')}}>PA-Detailed</div> 

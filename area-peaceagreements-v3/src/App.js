@@ -16,13 +16,13 @@ import Area from "./Area"
 //import cat_hierarchy from "./data/cats-hierarchy.json";
 
 export default function App() {
-//<Area data={data} cat_filters={cat_filters} cat_hierarchy={cat_hierarchy} />
+
+//<Route path='/index.html?/:typeArea?/:param1?/:param2?/:filter?' component={Area}/>
   return (
     <BrowserRouter>
       <Switch>
       <div className="Area">
-      <Route exact path='/' component={Area}/>
-      <Route path='/p/:typeArea?/:param1?/:param2?/:filter?' component={Area}/>
+      <Route exact path='/' component={Area}/> 
       </div>
       </Switch>
     </BrowserRouter>
