@@ -36,7 +36,7 @@
       "distincnum": 155
     },
     "Reg": {
-      "human": " Region",
+      "human": "Region",
       "areafilte": "0",
       "type": "text",
       "exclude": "0",
@@ -99,7 +99,7 @@
       "distincnum": 7
     },
     "StageSub": {
-      "human": "subcoding of stage",
+      "human": "Subcoding of stage",
       "areafilte": "0",
       "type": "text",
       "exclude": "0",

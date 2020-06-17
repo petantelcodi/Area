@@ -3,6 +3,7 @@ import React from "react";
 import { groupBy} from "lodash";
 import _ from 'lodash';
 import { Redirect} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import {
     PopupboxManager,
@@ -57,6 +58,31 @@ export default class Area extends React.Component {
         return newArWithId;
     }
 
+    sortObjKeysAlphabetically(obj){ 
+        /*
+        return Object.keys(obj).sort((a,b) => a > b).reduce((result, key) => {
+            result[key] = obj[key];
+            return result;
+        }, {});
+        */
+
+        var count = 0;
+        const keys = Object.keys(obj).sort();
+        console.log(keys,keys.length );
+        let objTemp = {};
+        for(var i = 0; i< keys.length;i++){
+            count = count+1;
+            let key = keys[i];
+            //console.log(key, count);
+            try{
+                if(key.split('##').length===2) key = key.split('##')[1];
+            }catch(err){}
+            objTemp[key] = count;
+            //console.log(key, count);
+        }
+        return objTemp;
+    }
+
     ObjToArSortedBySize(obj){ 
         return Object.keys(obj)
         .map(function(k) {
@@ -82,22 +108,46 @@ export default class Area extends React.Component {
     }
 
     updateParam1 = (value) => {
-        this.setState({param1: value})
+        this.setState({param1: value});
         this.update = true;
+        // Push url to browser history
+        var urlVars = this.getParams(this.props.location);
+        var urlValue = urlVars.typeArea+'/'+urlVars.param1+'/'+value+'/';
+        this.props.history.push('?p='+urlValue);
+        // Call parent frame with new url
+        try{
+            window.parent.postMessage('updateUrl',urlValue);
+        }catch(err){}
     }
 
     updateParam2 = (value) => {
-        this.setState({param2: value})
+        this.setState({param2: value});
         this.update = true;
+        // Push url to browser history
+        var urlVars = this.getParams(this.props.location);
+        var urlValue = urlVars.typeArea+'/'+urlVars.param1+'/'+value+'/';
+        this.props.history.push('?p='+urlValue);
+        // Call parent frame with new url
+        try{
+            window.parent.postMessage('updateUrl',urlValue);
+        }catch(err){}
     }
 
     areaTypeSelect = (value) => {
         console.log('areaTypeSelect : ',value);
-        this.setState({typeArea: value})
+        this.setState({typeArea: value});
         this.update = true;
+        // Set to browser history
+        var urlVars = this.getParams(this.props.location);
+        var urlValue = urlVars.typeArea+'/'+urlVars.param1+'/'+value+'/';
+        this.props.history.push('?p='+urlValue);
+        // Call parent frame with new url
+        try{
+            window.parent.postMessage('updateUrl',urlValue);
+        }catch(err){}
     }
 
-    getHumanFromID= (id) => {
+    getHumanFromID = (id) => {
         var output = null;
         try{
             output =  config_filters[0][id].human
@@ -108,10 +158,10 @@ export default class Area extends React.Component {
         return output;
     }
 
-    getDistincFromID= (id) => {
+    getDistincFromID = (id) => {
         var output = null;
         try{
-            output =  config_filters[0][id].distincnum
+            output =  config_filters[0][id].distincnum;
         }catch(err){
             output = id;
             console.log("Error ::: looking for Distincnum :::", output);
@@ -162,7 +212,7 @@ export default class Area extends React.Component {
                     if(selectObj[i].children[j].children[h].label==='' || selectObj[i].children[j].children[h].label===undefined){
                         let id =  selectObj[i].children[j].children[h].value;
                         selectObj[i].children[j].children[h].label = this.getHumanFromID(id);
-                        if(this.getDistincFromID(id)>Config.MAX_DISTINC) selectObj[i].children[j].children[h].hide = true;
+                        if(this.getDistincFromID(id)> Config.MAX_DISTINC) selectObj[i].children[j].children[h].hide = true;
                     }
                     if(selectObj[i].children[j].children[h].value === param ){
                         selectObj[i].children[j].children[h].isDefaultValue = true;
@@ -239,19 +289,7 @@ export default class Area extends React.Component {
     }
     
     render() {
-        // exemple https://codesandbox.io/s/react-router-query-parameters-mfh8p?from-embed=&file=/example.js
-        //let query = new URLSearchParams(useLocation().search);
-
-        /*
-        var urlParam1,urlParam2,urlFilter,urlTypeArea;
-        try{
-            urlParam1   = this.props.match.params.param1;
-            urlParam2   = this.props.match.params.param2;
-            urlFilter   = this.props.match.params.filter;
-            urlTypeArea = this.props.match.params.typeArea;
-            console.log("===> url param:", urlParam1, urlParam2, urlFilter); 
-        }catch(err){console.log("====> url: ERROR",this.props );}
-        */
+        
         // Config variables
         const area_x = Config.AREAX;
         const area_y = Config.AREAY;
@@ -309,15 +347,22 @@ export default class Area extends React.Component {
         var groupedByParam2 = groupBy(dataWithId, param2);
         // Delete property with same name as param2
         try{ delete groupedByParam2[param2]; }catch(err){}
+        console.log('non sorted groupedByParam2: ',groupedByParam2)
+        groupedByParam2 = this.sortObjKeysAlphabetically(groupedByParam2);
+        console.log('Sorted groupedByParam2: ',groupedByParam2)
         // Array for colours
-        var count = 0;
+        
+
+/*
         for (const prop in groupedByParam2) {
             count = count+1;
             groupedByParam2[prop] = count;
+            console.log(prop,count);
         }
-        
+ */       
         // Nesting Array  output obj with array in each property of the object
         var groupedByParam1 = groupBy(dataWithId, param1);
+        
         // Delete property with same name as param1
         try{ delete groupedByParam1[param1]; }catch(err){}
         // Sort and 
@@ -398,20 +443,22 @@ export default class Area extends React.Component {
         var widthBlocks =  Math.floor(widthGroups/ columnsBlocks);
         var heightBlocks = Math.floor((heightGroups-textTitleSpace) /fullRowsBlocks); // reduce height if there are orphans
         
-        console.log('columnsBlocks:',columnsBlocks,'rowsBlocks:  ',rowsBlocks,' :: ',maxBlocksInAGroup, '<=', rowsBlocks*columnsBlocks)
-        
-        console.log(groupedByParam2["Africa excl MENA"]);
+        console.log('columnsBlocks:',columnsBlocks,'rowsBlocks:  ',rowsBlocks,' :: ',maxBlocksInAGroup, '<=', rowsBlocks*columnsBlocks) 
         console.log("groupedByParam2",groupedByParam2);
         console.log("groupedBy:", groupedByParam1);
         console.log("groupedBySorted:", groupedByParam1SortedByName);
 
+        const url = '/?p='+typeArea+'/'+param1+'/'+param2+'/'+filter
         
+        
+//      windows.history.pushState({}, 'Area', url);
+
         //<Redirect to={'/index.html?/'+typeArea+'/'+param1+'/'+param2+'/'+filter}/>
         //this.updateURL(typeArea+'/'+param1+'/'+param2+'/'+filter);
-        console.log('redirect','/?p='+typeArea+'/'+param1+'/'+param2+'/'+filter);
+        console.log('redirect',url);
         return (
             <div>
-                <Redirect to={'/?p='+typeArea+'/'+param1+'/'+param2+'/'+filter}/>
+                <Redirect to={url}/>
                 <div className="typeAreaSelect">
                     <div className={typeArea==='PA-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Simple')}}>PA-Simple</div> 
                     <div className={typeArea==='PA-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Detailed')}}>PA-Detailed</div> 
