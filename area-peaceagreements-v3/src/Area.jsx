@@ -59,7 +59,7 @@ export default class Area extends React.Component {
             let value = x[this.state.param2];
             console.log('test:',value);
             try{
-                if(value.split(this.separatorForArbitrarySortingValues).length===2) value = value.split(this.separatorForArbitrarySortingValues)[1];
+                if(value.split(this.state.separatorForArbitrarySortingValues).length===2) value = value.split(this.state.separatorForArbitrarySortingValues)[1];
             }catch(err){}
             x[this.state.param2] = value;
             return x;
@@ -78,7 +78,7 @@ export default class Area extends React.Component {
             let key = keys[i];
             //console.log(key, count);
             try{
-                if(key.split(this.separatorForArbitrarySortingValues).length===2) key = key.split(this.separatorForArbitrarySortingValues)[1];
+                if(key.split(this.state.separatorForArbitrarySortingValues).length===2) key = key.split(this.state.separatorForArbitrarySortingValues)[1];
             }catch(err){}
             objTemp[key] = count;
             //console.log(key, count);
