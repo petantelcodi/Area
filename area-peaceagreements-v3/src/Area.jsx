@@ -44,7 +44,8 @@ export default class Area extends React.Component {
             param2 : Config.PARAM2,
             update: false,
             filter: "",
-            typeArea: Config.START_TYPE_AREA
+            typeArea: Config.START_TYPE_AREA,
+            separatorForArbitrarySortingValues: Config.SEPARATOR_FOR_ARBITRARY_SORTING_VALUES
         };
         console.log('Call constructor=========================');
         console.log('mounted ');
@@ -52,19 +53,21 @@ export default class Area extends React.Component {
     
     addIdPropertyToAr(ar){
         var newArWithId = ar.map((x, i) => {
+            // Add id
             x.id = i + 1;
+            // Clean properties value 
+            let value = x[this.state.param2];
+            console.log('test:',value);
+            try{
+                if(value.split(this.separatorForArbitrarySortingValues).length===2) value = value.split(this.separatorForArbitrarySortingValues)[1];
+            }catch(err){}
+            x[this.state.param2] = value;
             return x;
         });
         return newArWithId;
     }
 
     sortObjKeysAlphabetically(obj){ 
-        /*
-        return Object.keys(obj).sort((a,b) => a > b).reduce((result, key) => {
-            result[key] = obj[key];
-            return result;
-        }, {});
-        */
 
         var count = 0;
         const keys = Object.keys(obj).sort();
@@ -75,7 +78,7 @@ export default class Area extends React.Component {
             let key = keys[i];
             //console.log(key, count);
             try{
-                if(key.split('##').length===2) key = key.split('##')[1];
+                if(key.split(this.separatorForArbitrarySortingValues).length===2) key = key.split(this.separatorForArbitrarySortingValues)[1];
             }catch(err){}
             objTemp[key] = count;
             //console.log(key, count);
@@ -340,18 +343,18 @@ export default class Area extends React.Component {
 
         // Sort by date (From older to new)
         data = _.sortBy(  data, 'Dat' );
-        // Add id to Array
-        var dataWithId = this.addIdPropertyToAr(data);
+        
 
         // Nesting param2 from data
-        var groupedByParam2 = groupBy(dataWithId, param2);
+        var groupedByParam2 = groupBy(data, param2);
         // Delete property with same name as param2
         try{ delete groupedByParam2[param2]; }catch(err){}
         console.log('non sorted groupedByParam2: ',groupedByParam2)
         groupedByParam2 = this.sortObjKeysAlphabetically(groupedByParam2);
         console.log('Sorted groupedByParam2: ',groupedByParam2)
-        // Array for colours
-        
+
+        // Add id to Array
+        var dataWithId = this.addIdPropertyToAr(data);
 
 /*
         for (const prop in groupedByParam2) {

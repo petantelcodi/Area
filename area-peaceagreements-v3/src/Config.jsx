@@ -50,7 +50,8 @@ const Config = {
     "#D3E19B",
     "#646D40",
     "#757575"
-  ]
+  ],
+  SEPARATOR_FOR_ARBITRARY_SORTING_VALUES:"##"
 }
 
 export default Config;
