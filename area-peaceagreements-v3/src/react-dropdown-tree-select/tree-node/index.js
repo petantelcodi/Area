@@ -21,6 +21,7 @@ const getNodeCx = props => {
     expandOnly,
     partial,
     hide,
+    remove,
     className,
     showPartiallySelected,
     readOnly,

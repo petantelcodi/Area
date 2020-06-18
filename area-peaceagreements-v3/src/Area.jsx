@@ -57,7 +57,7 @@ export default class Area extends React.Component {
             x.id = i + 1;
             // Clean properties value 
             let value = x[this.state.param2];
-            console.log('test:',value);
+            //console.log('test:',value);
             try{
                 if(value.split(this.state.separatorForArbitrarySortingValues).length===2) value = value.split(this.state.separatorForArbitrarySortingValues)[1];
             }catch(err){}
@@ -68,7 +68,6 @@ export default class Area extends React.Component {
     }
 
     sortObjKeysAlphabetically(obj){ 
-
         var count = 0;
         const keys = Object.keys(obj).sort();
         console.log(keys,keys.length );
@@ -76,12 +75,10 @@ export default class Area extends React.Component {
         for(var i = 0; i< keys.length;i++){
             count = count+1;
             let key = keys[i];
-            //console.log(key, count);
             try{
                 if(key.split(this.state.separatorForArbitrarySortingValues).length===2) key = key.split(this.state.separatorForArbitrarySortingValues)[1];
             }catch(err){}
             objTemp[key] = count;
-            //console.log(key, count);
         }
         return objTemp;
     }
@@ -198,7 +195,10 @@ export default class Area extends React.Component {
                     let id =  selectObj[i].children[j].value;
                     //console.log('value: ',this.getHumanFromID(id));
                     if( id!==undefined && id!=="" ) selectObj[i].children[j].label = this.getHumanFromID(id);
-                    if(this.getDistincFromID(id)>Config.MAX_DISTINC) selectObj[i].children[j].hide = true;
+                    if(this.getDistincFromID(id)>Config.MAX_DISTINC){
+                        selectObj[i].children[j].remove = true;
+                        selectObj[i].children[j].hide = true;
+                    } 
                 }
                 if(selectObj[i].children[j].value === param ){
                     //console.log('selected tag',selectObj[i].children[j].value , param)
@@ -215,7 +215,10 @@ export default class Area extends React.Component {
                     if(selectObj[i].children[j].children[h].label==='' || selectObj[i].children[j].children[h].label===undefined){
                         let id =  selectObj[i].children[j].children[h].value;
                         selectObj[i].children[j].children[h].label = this.getHumanFromID(id);
-                        if(this.getDistincFromID(id)> Config.MAX_DISTINC) selectObj[i].children[j].children[h].hide = true;
+                        if(this.getDistincFromID(id)> Config.MAX_DISTINC){
+                            selectObj[i].children[j].children[h].remove = true;
+                            selectObj[i].children[j].children[h].hide = true;
+                        } 
                     }
                     if(selectObj[i].children[j].children[h].value === param ){
                         selectObj[i].children[j].children[h].isDefaultValue = true;

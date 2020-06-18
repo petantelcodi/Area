@@ -19,7 +19,8 @@ class TreeManager {
       hierarchical: this.hierarchical,
       rootPrefixId,
     })
-    this.tree = list
+    this.tree = list;
+    
     this.defaultValues = defaultValues
     this.showPartialState = !this.hierarchical && showPartiallySelected
     this.searchMaps = new Map()
@@ -95,7 +96,12 @@ class TreeManager {
 
     matches.forEach(m => {
       const node = this.getNodeById(m)
-      node.hide = false
+
+      if(node.remove===true){
+        node.hide = true
+      }else{
+        node.hide = false
+      }
 
       // add a marker to tell `addParentsToTree` to not hide this node; even if it's an ancestor node
       node._isMatch = true
@@ -122,9 +128,14 @@ class TreeManager {
 
   restoreNodes() {
     this.tree.forEach(node => {
-      node.hide = false
+      //node.hide = false
+      console.log('node.delete :',node.delete)
+      if(node.remove===true){
+        node.hide = true
+      }else{
+        node.hide = false
+      }
     })
-
     return this.tree
   }
 
@@ -132,7 +143,6 @@ class TreeManager {
     this.defaultValues.forEach(id => {
       this.setNodeCheckedState(id, true)
     })
-
     return this.tree
   }
 
