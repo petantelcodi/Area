@@ -248,24 +248,32 @@ export default class Area extends React.Component {
         
        
     }
-/*
-    updateURL = (urlVars) => {
-        this.props.history.push(`?p=${urlVars}`);
-    };
-*/
+   
     openPopupbox = (data) => {
         console.log("openPopupbox :",data);
         console.log("openPopupbox :",data['year']);
-        var objClean = {'Mentioned in this Agreement':''};
+
+        const agreementID = data.AgtId;
+        const agreementName = data.Agt;
+        const id = data.id;
+        const dateSigned = data.Dat;
+
+        var excludeProp = ['Agt','Dat','id','foundFilter','AgtId','Year'];
+
+        //var objClean = {'Mentioned in this Agreement':''};
+        var objClean = {};
         // clean obj with properties zero
         for (const prop in data) {
-            if(data[prop]!==0 ){ //&& data[prop]!==1
+            if(data[prop]!==0 && !_.includes(excludeProp,prop) ){ //&& data[prop]!==1
                 objClean[this.getHumanFromID(prop)] = data[prop]
             }
+            /*
             if(data[prop]===1){
                 objClean['Mentioned in this Agreement'] += this.getHumanFromID(prop)+',';
             }
+            */
         }
+
         /*
         if(objClean['Mentioned in this Agreement'] ==='' ){
             delete objClean['Mentioned in this Agreement'];
@@ -273,14 +281,23 @@ export default class Area extends React.Component {
             objClean['Mentioned in this Agreement'] = objClean['Mentioned in this Agreement'].substring(0, objClean['Mentioned in this Agreement'].length - 1);
         } 
         */
-        delete objClean.id;
-        delete objClean.foundFilter;
+
         const content = (
-          <div>
-              {Object.keys(objClean).map((obj) => (
-                <p><span className="strongText">{obj}</span> : {objClean[obj]}</p>
-              ))}
-          </div>
+            <div>
+                <div className="header_title"> 
+                    <span className="buttonWithOutBorder"><span className="strongText">Agreement ID:</span> {agreementID}</span><br/> 
+                    <span className="buttonWithOutBorder"><span className="strongText">Agreement Name:</span> {agreementName}</span><br/> 
+                    <span className="buttonWithOutBorder"><span className="strongText">Date Signed:</span> {dateSigned}</span><br/>
+                </div>
+                <div className="header"> 
+                    <span className="button"><a href={'https://www.peaceagreements.org/viewmasterdocument/'+agreementID}>View the Document</a></span> 
+                </div>
+                <div>
+                    {Object.keys(objClean).map((obj) => (
+                        <p><span className="strongText">{obj}</span> : {objClean[obj]}</p>
+                    ))}
+                </div>
+            </div>
         )
         PopupboxManager.open({ content, config: {
             titleBar: {
@@ -358,14 +375,7 @@ export default class Area extends React.Component {
 
         // Add id to Array
         var dataWithId = this.addIdPropertyToAr(data);
-
-/*
-        for (const prop in groupedByParam2) {
-            count = count+1;
-            groupedByParam2[prop] = count;
-            console.log(prop,count);
-        }
- */       
+      
         // Nesting Array  output obj with array in each property of the object
         var groupedByParam1 = groupBy(dataWithId, param1);
         

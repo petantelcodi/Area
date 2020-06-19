@@ -311,3 +311,36 @@ form{
   border: 2px solid white; /* should match background, can't be transparent */
   background-color: rgba(0, 0, 0, .5);
 }
+
+.header_title{
+  
+  padding: 3px;
+  padding-top: 6px;
+  margin-bottom:5px;
+  padding-bottom: 10px;  
+  border-bottom:1px solid #000; 
+  
+  background-image: linear-gradient(#ffffff, #fa8787); background-color: #eeeded;
+  /*color:white;
+  background-color: rgb(73, 73, 73);*/
+}
+
+.header{
+  margin-bottom:10px;
+}
+
+.buttonWithOutBorder{ 
+  padding: 2px;
+  margin-right:5px;
+}
+
+.button{ 
+  border: solid #000 1px;
+  padding: 2px;
+  margin-right:5px;
+}
+
+.button > a{
+  color:#000;
+  border:none;
+}
