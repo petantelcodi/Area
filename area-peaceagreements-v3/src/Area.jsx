@@ -290,7 +290,7 @@ export default class Area extends React.Component {
                     <span className="buttonWithOutBorder"><span className="strongText">Date Signed:</span> {dateSigned}</span><br/>
                 </div>
                 <div className="header"> 
-                <span> Get Agreement in:</span> <span >[<a href={'https://www.peaceagreements.org/viewmasterdocument/'+agreementID}  className="linkPDFDocument"  target="_blank">PDF</a>]</span>  <span>[ <a href={'https://www.peaceagreements.org/view/'+agreementID} className="linkPDFDocument" target="_blank">HTML</a> ]</span>  
+                <span> Get Agreement in:</span> <span >[<a href={'https://www.peaceagreements.org/viewmasterdocument/'+agreementID}  className="linkPDFDocument"  target="_blank" rel="noopener noreferrer">PDF</a>]</span>  <span>[ <a href={'https://www.peaceagreements.org/view/'+agreementID} className="linkPDFDocument" target="_blank" rel="noopener noreferrer">HTML</a> ]</span>  
                 </div>
                 <div>
                     {Object.keys(objClean).map((obj) => (
@@ -466,12 +466,8 @@ export default class Area extends React.Component {
 
         const url = '/?p='+typeArea+'/'+param1+'/'+param2+'/'+filter
         
-        
-//      windows.history.pushState({}, 'Area', url);
-
-        //<Redirect to={'/index.html?/'+typeArea+'/'+param1+'/'+param2+'/'+filter}/>
-        //this.updateURL(typeArea+'/'+param1+'/'+param2+'/'+filter);
         console.log('redirect',url);
+        console.log('groupedByParam1["undefined"] ',!(groupedByParam1['undefined']!==undefined),' groupedByParam2["undefined"]', !(groupedByParam2['undefined']!==undefined));
         return (
             <div>
                 <Redirect to={url}/>
@@ -500,6 +496,7 @@ export default class Area extends React.Component {
                 </div>
                 <div className="vizArea">
                     <div className="groups">
+                        { !(groupedByParam1["undefined"]!==undefined) && !(groupedByParam2["undefined"]!==undefined)?
                         <Groups
                         items={groupedByParam1SortedBySize}
                         colorAr={groupedByParam2}
@@ -514,8 +511,8 @@ export default class Area extends React.Component {
                         rowsBlocks={rowsBlocks}
                         openPopupbox={this.openPopupbox}
                         />
+                        :null}
                     </div>
-                    
                 </div>
                 <PopupboxContainer />
             </div>

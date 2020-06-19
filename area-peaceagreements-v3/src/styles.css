@@ -355,3 +355,10 @@ form{
   color:#000;
   border:none;
 }
+.leftText{
+  text-align: left;
+}
+.textNoExist{
+  padding: 4px;
+  padding-top: 7px;
+}
