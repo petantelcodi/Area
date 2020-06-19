@@ -290,7 +290,7 @@ export default class Area extends React.Component {
                     <span className="buttonWithOutBorder"><span className="strongText">Date Signed:</span> {dateSigned}</span><br/>
                 </div>
                 <div className="header"> 
-                <span className="button"><a href={'https://www.peaceagreements.org/viewmasterdocument/'+agreementID}>View the Document</a></span>  <span>[ <a href={'https://www.peaceagreements.org/viewmasterdocument/'+agreementID} className="linkPDFDocument">https://www.peaceagreements.org/viewmasterdocument/{agreementID}</a> ]</span>  
+                <span> Get Agreement in:</span> <span >[<a href={'https://www.peaceagreements.org/viewmasterdocument/'+agreementID}  className="linkPDFDocument"  target="_blank">PDF</a>]</span>  <span>[ <a href={'https://www.peaceagreements.org/view/'+agreementID} className="linkPDFDocument" target="_blank">HTML</a> ]</span>  
                 </div>
                 <div>
                     {Object.keys(objClean).map((obj) => (

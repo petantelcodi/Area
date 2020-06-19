@@ -327,6 +327,8 @@ form{
 
 .header{
   margin-bottom:10px;
+  padding-bottom: 3px;
+  border-bottom: solid #bdbaba 1px;
 }
 
 .buttonWithOutBorder{ 
