@@ -339,7 +339,16 @@ form{
   padding: 2px;
   margin-right:5px;
 }
-
+.linkPDFDocument{
+  color: #000;
+  text-decoration: none;
+  border:none;
+}
+.linkPDFDocument:hover{
+  color: #000;
+  text-decoration: underline;
+  border:none;
+}
 .button > a{
   color:#000;
   border:none;
