@@ -7,13 +7,13 @@ const Config = {
 	AREA_TITLE: "PeaceAgreements.org",
   PARAM1 : "Agtp",
   PARAM2 : "Stage",
-  START_TYPE_AREA:"PA-Detailled",
-  TYPE_AREA:[{name:"PA-Detailled",value:"PA-Detailled"},{name:"PA-Simple",value:"PA-Simple"},{name:"CF-Detailled",value:"CF-Detailled"},{name:"CF-Simple",value:"CF-Simple"}],
+  START_TYPE_AREA:"PA-Detailed",
+  TYPE_AREA:[{name:"PA-Detailed",value:"PA-Detailed"},{name:"PA-Simple",value:"PA-Simple"},{name:"CF-Detailed",value:"CF-Detailed"},{name:"CF-Simple",value:"CF-Simple"}],
   DESCRIPTION:{
-    "PA-Detailled":"PA: showing all Peace Agreements (detailled view with 65536 possible diagrams)",
+    "PA-Detailed":"PA: showing all Peace Agreements (Detailed view with 65536 possible diagrams)",
     "PA-Simple":"PAsim: showing all Peace Agreements (simple view with 36 possible diagrams)",
-    "CF-Detailled":"CF: showing all Cease Fire agreements (detailled view with 65536 possible diagrams)",
-    "CF-Simple":"CFsim: showing all Cease Fire agreements (simple view with 36 possible diagrams)",
+    "CF-Detailed":"CF: showing all Ceasefire agreements (Detailed view with 65536 possible diagrams)",
+    "CF-Simple":"CFsim: showing all Ceasefire agreements (simple view with 36 possible diagrams)",
   },  
   colorList:[
     "#CC5151",

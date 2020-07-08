@@ -175,7 +175,7 @@ export default class Area extends React.Component {
             // Simple JSON
             var selectObj = JSON.parse(JSON.stringify(catHierarchy_simple));
         }else{
-            // Detailled JSON
+            // Detailed JSON
             var selectObj = JSON.parse(JSON.stringify(catHierarchy.cat_hierarchy));
         }
         
@@ -339,13 +339,13 @@ export default class Area extends React.Component {
                 data = dataPAsim;
                 console.log('PA-Simple');
                 break;
-            case 'PA-Detailled':
+            case 'PA-Detailed':
                 data = dataPA;
-                console.log('PA-Detailled');
+                console.log('PA-Detailed');
                 break;
-            case 'CF-Detailled':
+            case 'CF-Detailed':
                 data = dataCF;
-                console.log('CF-Detailled');
+                console.log('CF-Detailed');
                 break;     
             default:
                 data = dataCFsim;
@@ -473,9 +473,9 @@ export default class Area extends React.Component {
                 <Redirect to={url}/>
                 <div className="typeAreaSelect">
                     <div className={typeArea==='PA-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Simple')}}>PA-Simple</div> 
-                    <div className={typeArea==='PA-Detailled'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Detailled')}}>PA-Detailled</div> 
+                    <div className={typeArea==='PA-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('PA-Detailed')}}>PA-Detailed</div> 
                     <div className={typeArea==='CF-Simple'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-Simple')}}>CF-Simple</div> 
-                    <div className={typeArea==='CF-Detailled'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-Detailled')}}>CF-Detailled</div>
+                    <div className={typeArea==='CF-Detailed'?"typeAreaBtSelect typeAreaBtSelected":"typeAreaBtSelect"} onClick={()=>{this.areaTypeSelect('CF-Detailed')}}>CF-Detailed</div>
                 </div>
                 <div className="descriptionArea">
                     <div>{Config.DESCRIPTION[typeArea]}</div>
