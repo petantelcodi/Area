@@ -83,6 +83,7 @@ rect {
   width: 50%;
   height: auto;
   float: left;
+  text-align: left;
 }
 
 .groups{
@@ -361,4 +362,5 @@ form{
 .textNoExist{
   padding: 4px;
   padding-top: 7px;
+  
 }
